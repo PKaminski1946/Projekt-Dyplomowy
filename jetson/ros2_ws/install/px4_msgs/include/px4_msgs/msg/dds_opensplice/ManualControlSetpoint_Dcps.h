@@ -1,1 +1,0 @@
-/home/patryk/ros2_ws/build/px4_msgs/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h

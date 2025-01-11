@@ -1,1 +1,0 @@
-/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages/ament_package/template/environment_hook/library_path.sh

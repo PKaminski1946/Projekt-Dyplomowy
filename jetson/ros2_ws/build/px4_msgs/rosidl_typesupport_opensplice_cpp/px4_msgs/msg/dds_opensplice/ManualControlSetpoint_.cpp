@@ -1,2 +1,0 @@
-#include "ManualControlSetpoint_.h"
-

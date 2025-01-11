@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/patryk/ros2_ws/build/px4_msgs/libpx4_msgs__rosidl_typesupport_introspection_cpp.so" "TARGETS" "px4_msgs__rosidl_typesupport_introspection_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

@@ -1,1 +1,0 @@
-/home/patryk/ros2_ws/build/px4_msgs/rosidl_typesupport_opensplice_c/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_opensplice_c.h
