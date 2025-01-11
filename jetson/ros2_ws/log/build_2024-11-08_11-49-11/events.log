@@ -1,0 +1,220 @@
+[0.000000] (-) TimerEvent: {}
+[0.000497] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000669] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.001005] (controller) JobStarted: {'identifier': 'controller'}
+[0.091330] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.095599] (-) TimerEvent: {}
+[0.196756] (-) TimerEvent: {}
+[0.297756] (-) TimerEvent: {}
+[0.398504] (-) TimerEvent: {}
+[0.499250] (-) TimerEvent: {}
+[0.600046] (-) TimerEvent: {}
+[0.700788] (-) TimerEvent: {}
+[0.801510] (-) TimerEvent: {}
+[0.902253] (-) TimerEvent: {}
+[1.003011] (-) TimerEvent: {}
+[1.103735] (-) TimerEvent: {}
+[1.204505] (-) TimerEvent: {}
+[1.305228] (-) TimerEvent: {}
+[1.405957] (-) TimerEvent: {}
+[1.506704] (-) TimerEvent: {}
+[1.607468] (-) TimerEvent: {}
+[1.708543] (-) TimerEvent: {}
+[1.809342] (-) TimerEvent: {}
+[1.907205] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[1.909758] (-) TimerEvent: {}
+[1.912168] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[1.915771] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/patryk/ros2_ws/build/px4_msgs', '--', '-j4', '-l4'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GTK_CSD', '0'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5304'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.5'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-NPqr4Rb7N2KY/agent.4839'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4839'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.6.5'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[2.010043] (-) TimerEvent: {}
+[2.111040] (-) TimerEvent: {}
+[2.211826] (-) TimerEvent: {}
+[2.312569] (-) TimerEvent: {}
+[2.413681] (-) TimerEvent: {}
+[2.426139] (px4_msgs) StdoutLine: {'line': b'[  1%] Built target px4_msgs__dds_opensplice_idl\n'}
+[2.435766] (px4_msgs) StdoutLine: {'line': b'[  3%] Built target px4_msgs__cpp\n'}
+[2.436817] (px4_msgs) StdoutLine: {'line': b'[  9%] Built target px4_msgs__rosidl_generator_c\n'}
+[2.513850] (-) TimerEvent: {}
+[2.583443] (px4_msgs) StdoutLine: {'line': b'[ 15%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[2.589965] (px4_msgs) StdoutLine: {'line': b'[ 21%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.614037] (-) TimerEvent: {}
+[2.692250] (px4_msgs) StdoutLine: {'line': b'[ 27%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.694515] (px4_msgs) StdoutLine: {'line': b'[ 43%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp\n'}
+[2.710402] (px4_msgs) StdoutLine: {'line': b'[ 49%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[2.714219] (-) TimerEvent: {}
+[2.729443] (px4_msgs) StdoutLine: {'line': b'[ 54%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[2.814464] (-) TimerEvent: {}
+[2.836736] (px4_msgs) StdoutLine: {'line': b'[ 60%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.866833] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c\n'}
+[2.914696] (-) TimerEvent: {}
+[2.957033] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs\n'}
+[3.014918] (-) TimerEvent: {}
+[3.052627] (px4_msgs) StdoutLine: {'line': b'[ 80%] Built target px4_msgs__py\n'}
+[3.115136] (-) TimerEvent: {}
+[3.184329] (px4_msgs) StdoutLine: {'line': b'[ 84%] Built target px4_msgs__python\n'}
+[3.215325] (-) TimerEvent: {}
+[3.316445] (-) TimerEvent: {}
+[3.328149] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.340805] (px4_msgs) StdoutLine: {'line': b'[ 92%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[3.352559] (px4_msgs) StdoutLine: {'line': b'[ 96%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.368032] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext\n'}
+[3.414039] (px4_msgs) CommandEnded: {'returncode': 0}
+[3.417061] (-) TimerEvent: {}
+[3.518943] (-) TimerEvent: {}
+[3.620344] (-) TimerEvent: {}
+[3.721047] (-) TimerEvent: {}
+[3.755222] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'install'}
+[3.792255] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/patryk/ros2_ws/build/px4_msgs', '--target', 'install', '--', '-j4', '-l4'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GTK_CSD', '0'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5304'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.5'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-NPqr4Rb7N2KY/agent.4839'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4839'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.6.5'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[3.821275] (-) TimerEvent: {}
+[3.922147] (-) TimerEvent: {}
+[4.022969] (-) TimerEvent: {}
+[4.024999] (px4_msgs) StdoutLine: {'line': b'[  1%] Built target px4_msgs__cpp\n'}
+[4.029498] (px4_msgs) StdoutLine: {'line': b'[  3%] Built target px4_msgs__dds_opensplice_idl\n'}
+[4.046446] (px4_msgs) StdoutLine: {'line': b'[  9%] Built target px4_msgs__rosidl_generator_c\n'}
+[4.123156] (-) TimerEvent: {}
+[4.134667] (px4_msgs) StdoutLine: {'line': b'[ 15%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[4.173030] (px4_msgs) StdoutLine: {'line': b'[ 21%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.220597] (px4_msgs) StdoutLine: {'line': b'[ 37%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp\n'}
+[4.223347] (-) TimerEvent: {}
+[4.229324] (px4_msgs) StdoutLine: {'line': b'[ 43%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.293248] (px4_msgs) StdoutLine: {'line': b'[ 49%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[4.294210] (px4_msgs) StdoutLine: {'line': b'[ 54%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[4.323521] (-) TimerEvent: {}
+[4.360183] (px4_msgs) StdoutLine: {'line': b'[ 60%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.387329] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c\n'}
+[4.423712] (-) TimerEvent: {}
+[4.475689] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs\n'}
+[4.523908] (-) TimerEvent: {}
+[4.568737] (px4_msgs) StdoutLine: {'line': b'[ 80%] Built target px4_msgs__py\n'}
+[4.624162] (-) TimerEvent: {}
+[4.682642] (px4_msgs) StdoutLine: {'line': b'[ 84%] Built target px4_msgs__python\n'}
+[4.724358] (-) TimerEvent: {}
+[4.814001] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[4.816897] (px4_msgs) StdoutLine: {'line': b'[ 92%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext\n'}
+[4.824522] (-) TimerEvent: {}
+[4.838816] (px4_msgs) StdoutLine: {'line': b'[ 96%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.839931] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.922981] (px4_msgs) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[4.924658] (-) TimerEvent: {}
+[4.960172] (px4_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.963603] (px4_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.966018] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/rosidl_interfaces/px4_msgs\n'}
+[4.969625] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so\n'}
+[4.973149] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/library_path.sh\n'}
+[4.975943] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_cpp.so\n'}
+[4.981043] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_c.h\n'}
+[4.982330] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.985098] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.988043] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.h\n'}
+[4.989452] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.h\n'}
+[4.991424] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.h\n'}
+[4.992965] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.h\n'}
+[4.995327] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.998056] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so\n'}
+[5.000931] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.002264] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.004981] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.007487] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.hpp\n'}
+[5.009112] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.hpp\n'}
+[5.010517] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__traits.hpp\n'}
+[5.013328] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_c.h\n'}
+[5.014705] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.017384] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so\n'}
+[5.020698] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h\n'}
+[5.022053] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_c__visibility_control.h\n'}
+[5.024725] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_c.so\n'}
+[5.025471] (-) TimerEvent: {}
+[5.028688] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.idl\n'}
+[5.033306] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.h\n'}
+[5.034662] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h\n'}
+[5.035989] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.h\n'}
+[5.037569] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.h\n'}
+[5.039022] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_ManualControlSetpoint_.h\n'}
+[5.040553] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_cpp.hpp\n'}
+[5.041909] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_cpp__visibility_control.h\n'}
+[5.044554] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_cpp.so\n'}
+[5.046996] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.049523] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[5.051128] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/pythonpath.sh\n'}
+[5.053524] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py\n'}
+[5.059605] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/__init__.py\n'}
+[5.060427] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint.py\n'}
+[5.060918] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[5.062879] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[5.065476] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[5.068010] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[5.070617] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__python.so\n'}
+[5.072265] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.idl\n'}
+[5.073824] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.msg\n'}
+[5.075038] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/package_run_dependencies/px4_msgs\n'}
+[5.077248] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/parent_prefix_path/px4_msgs\n'}
+[5.078906] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/ament_prefix_path.sh\n'}
+[5.080632] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/path.sh\n'}
+[5.082289] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.bash\n'}
+[5.084389] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.sh\n'}
+[5.086492] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.zsh\n'}
+[5.089169] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/packages/px4_msgs\n'}
+[5.091893] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[5.093742] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.095419] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.097594] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.099005] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.100939] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig.cmake\n'}
+[5.102394] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig-version.cmake\n'}
+[5.103646] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/package.xml\n'}
+[5.125689] (-) TimerEvent: {}
+[5.226515] (-) TimerEvent: {}
+[5.273583] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/patryk/ros2_ws/build/controller/build', '--no-deps', 'install_data'], 'cwd': '/home/patryk/ros2_ws/build/controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GTK_CSD': '0', 'USER': 'patryk', 'LANGUAGE': 'en_US', 'LC_TIME': 'pl_PL.UTF-8', 'OSPL_INFOFILE': '<stdout>', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '5304', 'XDG_SESSION_TYPE': 'x11', 'LD_LIBRARY_PATH': '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:', 'SHLVL': '1', 'OLDPWD': '/home/patryk', 'OSPL_URI': 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml', 'HOME': '/home/patryk', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.5', 'PYENV_SHELL': 'bash', 'OSPL_VERBOSITY': '2', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'GTK_MODULES': 'gail:atk-bridge', 'ROS_PYTHON_VERSION': '3', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'LC_MONETARY': 'pl_PL.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'OSPL_TMPL_PATH': '/usr/etc/opensplice/idlpp', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux', 'ROS_DISTRO': 'dashing', 'LOGNAME': 'patryk', 'JETSON_SERIAL_NUMBER': '1420322025424', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'JETSON_CODENAME': 'Batuu', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig', 'XDG_SESSION_ID': 'c1', 'TERM': 'xterm-256color', 'LIB_DARKNET': '/home/patryk/darknet/libdarknet.so', 'SAL_USE_VCLPLUGIN': 'gtk', 'OSPL_ERRORFILE': '<stderr>', 'PATH': '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_US', 'XDG_MENU_PREFIX': 'lxde-', 'LC_ADDRESS': 'pl_PL.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'OSPL_HOME': '/usr', 'XDG_CURRENT_DESKTOP': 'LXDE', 'LC_TELEPHONE': 'pl_PL.UTF-8', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_CONFIG_HOME': '/home/patryk/.config', 'JETSON_SOC': 'tegra210', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/patryk/.Xauthority', 'XDG_DATA_HOME': '/home/patryk/.local/share', 'AMENT_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux', 'SSH_AUTH_SOCK': '/tmp/ssh-NPqr4Rb7N2KY/agent.4839', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/patryk', 'LC_NAME': 'pl_PL.UTF-8', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'pl_PL.UTF-8', '_LXSESSION_PID': '4839', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pl_PL.UTF-8', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/patryk/ros2_ws/build/controller', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'LC_NUMERIC': 'pl_PL.UTF-8', 'PYTHONPATH': '/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages', 'LC_PAPER': 'pl_PL.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6.5', 'VTE_VERSION': '5202', 'CMAKE_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[5.326816] (-) TimerEvent: {}
+[5.427681] (-) TimerEvent: {}
+[5.461911] (px4_msgs) CommandEnded: {'returncode': 0}
+[5.528450] (-) TimerEvent: {}
+[5.629421] (-) TimerEvent: {}
+[5.730582] (-) TimerEvent: {}
+[5.831660] (-) TimerEvent: {}
+[5.932408] (-) TimerEvent: {}
+[5.952345] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 0}
+[6.032624] (-) TimerEvent: {}
+[6.133298] (-) TimerEvent: {}
+[6.233988] (-) TimerEvent: {}
+[6.334669] (-) TimerEvent: {}
+[6.435344] (-) TimerEvent: {}
+[6.536081] (-) TimerEvent: {}
+[6.636775] (-) TimerEvent: {}
+[6.737500] (-) TimerEvent: {}
+[6.773518] (controller) StderrLine: {'line': b"/home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[6.774402] (controller) StderrLine: {'line': b'  % (opt, underscore_opt)\n'}
+[6.837729] (-) TimerEvent: {}
+[6.938441] (-) TimerEvent: {}
+[7.020319] (controller) StdoutLine: {'line': b'running develop\n'}
+[7.038794] (-) TimerEvent: {}
+[7.140140] (-) TimerEvent: {}
+[7.240783] (-) TimerEvent: {}
+[7.341476] (-) TimerEvent: {}
+[7.442160] (-) TimerEvent: {}
+[7.542844] (-) TimerEvent: {}
+[7.643539] (-) TimerEvent: {}
+[7.744286] (-) TimerEvent: {}
+[7.844931] (-) TimerEvent: {}
+[7.945622] (-) TimerEvent: {}
+[7.986481] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[7.988627] (controller) StdoutLine: {'line': b'writing controller.egg-info/PKG-INFO\n'}
+[7.989229] (controller) StdoutLine: {'line': b'writing dependency_links to controller.egg-info/dependency_links.txt\n'}
+[7.989945] (controller) StdoutLine: {'line': b'writing entry points to controller.egg-info/entry_points.txt\n'}
+[7.990854] (controller) StdoutLine: {'line': b'writing requirements to controller.egg-info/requires.txt\n'}
+[7.991477] (controller) StdoutLine: {'line': b'writing top-level names to controller.egg-info/top_level.txt\n'}
+[8.021530] (controller) StdoutLine: {'line': b"reading manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[8.028428] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[8.045824] (-) TimerEvent: {}
+[8.146517] (-) TimerEvent: {}
+[8.247229] (-) TimerEvent: {}
+[8.315020] (controller) StdoutLine: {'line': b'running build_ext\n'}
+[8.315876] (controller) StdoutLine: {'line': b'Creating /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller.egg-link (link to .)\n'}
+[8.319482] (controller) StdoutLine: {'line': b'Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller\n'}
+[8.327527] (controller) StdoutLine: {'line': b'\n'}
+[8.328214] (controller) StdoutLine: {'line': b'Installed /home/patryk/ros2_ws/build/controller\n'}
+[8.328878] (controller) StdoutLine: {'line': b'running install_data\n'}
+[8.347497] (-) TimerEvent: {}
+[8.448365] (-) TimerEvent: {}
+[8.471117] (controller) CommandEnded: {'returncode': 0}
+[8.514845] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[8.518659] (-) EventReactorShutdown: {}

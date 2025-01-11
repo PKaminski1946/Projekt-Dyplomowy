@@ -1,0 +1,5 @@
+[2.010s] Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller:/opt/ros/dashing /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+[2.369s] make: *** wait: No child processes.  Stop.
+[2.370s] make: *** Waiting for unfinished jobs....
+[2.371s] make: *** wait: No child processes.  Stop.
+[2.375s] Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller:/opt/ros/dashing /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4

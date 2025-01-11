@@ -1,0 +1,42 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl Hybrid
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd ../materials/textures/Hybrid.png
+
+newmtl Hybrid_Interior
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd ../materials/textures/Hybrid_Interior.png
+
+newmtl Wheels3
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd ../materials/textures/Wheels3.png
+
+newmtl Windows
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.262700 0.262700 0.262700
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.100000
+illum 1

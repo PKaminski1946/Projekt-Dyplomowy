@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.000492] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000666] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.000799] (controller) JobStarted: {'identifier': 'controller'}
+[0.074261] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.094628] (-) TimerEvent: {}
+[0.195748] (-) TimerEvent: {}
+[0.279909] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[0.286009] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 'SIGINT'}
+[0.296114] (-) TimerEvent: {}
+[0.298089] (-) EventReactorShutdown: {}

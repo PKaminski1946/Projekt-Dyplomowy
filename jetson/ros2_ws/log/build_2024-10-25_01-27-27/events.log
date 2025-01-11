@@ -1,0 +1,390 @@
+[0.000000] (-) TimerEvent: {}
+[0.001373] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.002108] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.003827] (controller) JobStarted: {'identifier': 'controller'}
+[0.101516] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.102378] (-) TimerEvent: {}
+[0.205061] (-) TimerEvent: {}
+[0.306066] (-) TimerEvent: {}
+[0.406871] (-) TimerEvent: {}
+[0.507714] (-) TimerEvent: {}
+[0.608500] (-) TimerEvent: {}
+[0.709247] (-) TimerEvent: {}
+[0.810144] (-) TimerEvent: {}
+[0.910837] (-) TimerEvent: {}
+[1.011514] (-) TimerEvent: {}
+[1.112241] (-) TimerEvent: {}
+[1.212972] (-) TimerEvent: {}
+[1.313714] (-) TimerEvent: {}
+[1.414469] (-) TimerEvent: {}
+[1.515227] (-) TimerEvent: {}
+[1.616640] (-) TimerEvent: {}
+[1.717383] (-) TimerEvent: {}
+[1.818187] (-) TimerEvent: {}
+[1.919100] (-) TimerEvent: {}
+[1.920701] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[1.925462] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[1.929307] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/patryk/ros2_ws/build/px4_msgs', '--', '-j4', '-l4'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GTK_CSD', '0'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5317'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.5'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-9iGVYSWYKoOs/agent.4816'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4816'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.6.5'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[2.019398] (-) TimerEvent: {}
+[2.120439] (-) TimerEvent: {}
+[2.188621] (px4_msgs) StderrLine: {'line': b"make: Warning: File 'Makefile' has modification time 4541 s in the future\n"}
+[2.220682] (-) TimerEvent: {}
+[2.321460] (-) TimerEvent: {}
+[2.422200] (-) TimerEvent: {}
+[2.522951] (-) TimerEvent: {}
+[2.619943] (px4_msgs) StderrLine: {'line': b"make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 4541 s in the future\n"}
+[2.623138] (-) TimerEvent: {}
+[2.628472] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 4541 s in the future\n"}
+[2.629616] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 4541 s in the future\n"}
+[2.631946] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.684264] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.690006] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 4541 s in the future\n"}
+[2.695139] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.710485] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.715469] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 4541 s in the future\n"}
+[2.721660] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.723277] (-) TimerEvent: {}
+[2.725010] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.727216] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.730754] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.748091] (px4_msgs) StdoutLine: {'line': b'[  1%] Built target px4_msgs__cpp\n'}
+[2.769322] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.770405] (px4_msgs) StdoutLine: {'line': b'[  7%] Built target px4_msgs__rosidl_generator_c\n'}
+[2.771088] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.781940] (px4_msgs) StdoutLine: {'line': b'[  9%] Built target px4_msgs__dds_opensplice_idl\n'}
+[2.794685] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.796448] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.823493] (-) TimerEvent: {}
+[2.864084] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.865966] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.871275] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.872384] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.877287] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.879051] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.879799] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.887258] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.893040] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.896401] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.897985] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.898708] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[2.923708] (-) TimerEvent: {}
+[2.937480] (px4_msgs) StdoutLine: {'line': b'[ 15%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[2.938418] (px4_msgs) StdoutLine: {'line': b'[ 21%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[2.939930] (px4_msgs) StdoutLine: {'line': b'[ 27%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.952805] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 3649 s in the future\n"}
+[2.961326] (px4_msgs) StdoutLine: {'line': b'[ 33%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.964127] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 3648 s in the future\n"}
+[2.977595] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/flags.make' has modification time 3649 s in the future\n"}
+[3.009885] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.016624] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.021948] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.023886] (-) TimerEvent: {}
+[3.029268] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.035294] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.058325] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.066481] (px4_msgs) StdoutLine: {'line': b'[ 39%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[3.090760] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.092884] (px4_msgs) StdoutLine: {'line': b'[ 45%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.108928] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.123992] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.124648] (-) TimerEvent: {}
+[3.161156] (px4_msgs) StdoutLine: {'line': b'[ 60%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp\n'}
+[3.192380] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.224877] (-) TimerEvent: {}
+[3.265364] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.287453] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.302740] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.325052] (-) TimerEvent: {}
+[3.338955] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c\n'}
+[3.349740] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 4540 s in the future\n"}
+[3.392790] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.397417] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 4540 s in the future\n"}
+[3.398183] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.425224] (-) TimerEvent: {}
+[3.434485] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs\n'}
+[3.444620] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 4540 s in the future\n"}
+[3.491082] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.496200] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 4540 s in the future\n"}
+[3.499644] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.525470] (-) TimerEvent: {}
+[3.536208] (px4_msgs) StdoutLine: {'line': b'[ 80%] Built target px4_msgs__py\n'}
+[3.549190] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.609785] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.615553] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.625667] (-) TimerEvent: {}
+[3.636800] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.674589] (px4_msgs) StdoutLine: {'line': b'[ 84%] Built target px4_msgs__python\n'}
+[3.691721] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.693631] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.695350] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.696295] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.725860] (-) TimerEvent: {}
+[3.749504] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.751806] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.758458] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.774015] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.781612] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.789417] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.790383] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.796062] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.803170] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.807582] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 3648 s in the future\n"}
+[3.814303] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.826058] (-) TimerEvent: {}
+[3.844142] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext\n'}
+[3.845913] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.855982] (px4_msgs) StdoutLine: {'line': b'[ 92%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.862830] (px4_msgs) StdoutLine: {'line': b'[ 96%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[3.890587] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.893641] (px4_msgs) StderrLine: {'line': b'make[1]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.926232] (-) TimerEvent: {}
+[3.932362] (px4_msgs) StderrLine: {'line': b'make: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[3.938434] (px4_msgs) CommandEnded: {'returncode': 0}
+[4.026497] (-) TimerEvent: {}
+[4.128057] (-) TimerEvent: {}
+[4.229232] (-) TimerEvent: {}
+[4.281897] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'install'}
+[4.325986] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/patryk/ros2_ws/build/px4_msgs', '--target', 'install', '--', '-j4', '-l4'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GTK_CSD', '0'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5317'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.5'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-9iGVYSWYKoOs/agent.4816'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4816'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '4.6.5'), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[4.330579] (-) TimerEvent: {}
+[4.381674] (px4_msgs) StderrLine: {'line': b"make: Warning: File 'Makefile' has modification time 4539 s in the future\n"}
+[4.430770] (-) TimerEvent: {}
+[4.472166] (px4_msgs) StderrLine: {'line': b"make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 4539 s in the future\n"}
+[4.476965] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 4539 s in the future\n"}
+[4.478058] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.480366] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 4539 s in the future\n"}
+[4.522380] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.524680] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.531005] (-) TimerEvent: {}
+[4.533828] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 4539 s in the future\n"}
+[4.537413] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.538931] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.542047] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 4539 s in the future\n"}
+[4.544038] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.547281] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.550863] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.584558] (px4_msgs) StdoutLine: {'line': b'[  1%] Built target px4_msgs__cpp\n'}
+[4.592013] (px4_msgs) StdoutLine: {'line': b'[  3%] Built target px4_msgs__dds_opensplice_idl\n'}
+[4.597513] (px4_msgs) StdoutLine: {'line': b'[  9%] Built target px4_msgs__rosidl_generator_c\n'}
+[4.598572] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.603017] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.604083] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.625083] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.631180] (-) TimerEvent: {}
+[4.650266] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.665066] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.665844] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.672574] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.673328] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.676679] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.682465] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.687950] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.688937] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.703394] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.727541] (px4_msgs) StdoutLine: {'line': b'[ 15%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.728685] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.731346] (-) TimerEvent: {}
+[4.734921] (px4_msgs) StdoutLine: {'line': b'[ 21%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[4.736479] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.750400] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.755864] (px4_msgs) StdoutLine: {'line': b'[ 27%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.759349] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.771529] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.803870] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.807426] (px4_msgs) StdoutLine: {'line': b'[ 43%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp\n'}
+[4.809623] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.814937] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.817089] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.822703] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.831529] (-) TimerEvent: {}
+[4.833696] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.845244] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.848904] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.853337] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.854730] (px4_msgs) StdoutLine: {'line': b'[ 49%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[4.859047] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.885954] (px4_msgs) StdoutLine: {'line': b'[ 54%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.902415] (px4_msgs) StdoutLine: {'line': b'[ 60%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[4.916413] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.931756] (-) TimerEvent: {}
+[4.938209] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/flags.make' has modification time 3647 s in the future\n"}
+[4.954143] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[4.994455] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c\n'}
+[5.002274] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 4538 s in the future\n"}
+[5.031924] (-) TimerEvent: {}
+[5.046206] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.051250] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 4538 s in the future\n"}
+[5.052068] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.087632] (px4_msgs) StdoutLine: {'line': b'[ 78%] Built target px4_msgs\n'}
+[5.095512] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 4538 s in the future\n"}
+[5.132195] (-) TimerEvent: {}
+[5.138835] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.144333] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 4538 s in the future\n"}
+[5.145339] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.185420] (px4_msgs) StdoutLine: {'line': b'[ 80%] Built target px4_msgs__py\n'}
+[5.194830] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.232439] (-) TimerEvent: {}
+[5.238768] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.245311] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.267333] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.283107] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controller', 'build', '--build-base', '/home/patryk/ros2_ws/build/controller/build', 'install', '--record', '/home/patryk/ros2_ws/build/controller/install.log', '--install-scripts', '$base/lib/controller', '--single-version-externally-managed'], 'cwd': '/home/patryk/ros2_ws/src/controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GTK_CSD': '0', 'USER': 'patryk', 'LANGUAGE': 'en_US', 'LC_TIME': 'pl_PL.UTF-8', 'OSPL_INFOFILE': '<stdout>', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '5317', 'XDG_SESSION_TYPE': 'x11', 'LD_LIBRARY_PATH': '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:', 'SHLVL': '1', 'OLDPWD': '/home/patryk', 'OSPL_URI': 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml', 'HOME': '/home/patryk', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.5', 'PYENV_SHELL': 'bash', 'OSPL_VERBOSITY': '2', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'GTK_MODULES': 'gail:atk-bridge', 'ROS_PYTHON_VERSION': '3', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'LC_MONETARY': 'pl_PL.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'OSPL_TMPL_PATH': '/usr/etc/opensplice/idlpp', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux', 'ROS_DISTRO': 'dashing', 'LOGNAME': 'patryk', 'JETSON_SERIAL_NUMBER': '1420322025424', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'JETSON_CODENAME': 'Batuu', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig', 'XDG_SESSION_ID': 'c1', 'TERM': 'xterm-256color', 'LIB_DARKNET': '/home/patryk/darknet/libdarknet.so', 'SAL_USE_VCLPLUGIN': 'gtk', 'OSPL_ERRORFILE': '<stderr>', 'PATH': '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_US', 'XDG_MENU_PREFIX': 'lxde-', 'LC_ADDRESS': 'pl_PL.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'OSPL_HOME': '/usr', 'XDG_CURRENT_DESKTOP': 'LXDE', 'LC_TELEPHONE': 'pl_PL.UTF-8', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_CONFIG_HOME': '/home/patryk/.config', 'JETSON_SOC': 'tegra210', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/patryk/.Xauthority', 'XDG_DATA_HOME': '/home/patryk/.local/share', 'AMENT_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux', 'SSH_AUTH_SOCK': '/tmp/ssh-9iGVYSWYKoOs/agent.4816', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/patryk', 'LC_NAME': 'pl_PL.UTF-8', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'pl_PL.UTF-8', '_LXSESSION_PID': '4816', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pl_PL.UTF-8', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/patryk/ros2_ws/build/controller', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'LC_NUMERIC': 'pl_PL.UTF-8', 'PYTHONPATH': '/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages', 'LC_PAPER': 'pl_PL.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6.5', 'VTE_VERSION': '5202', 'CMAKE_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[5.304878] (px4_msgs) StdoutLine: {'line': b'[ 84%] Built target px4_msgs__python\n'}
+[5.314525] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.315518] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.316398] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.320623] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.332606] (-) TimerEvent: {}
+[5.379234] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.381521] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.382749] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.387192] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.388634] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.390035] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.395944] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.409272] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.410193] (px4_msgs) StderrLine: {'line': b"make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 3646 s in the future\n"}
+[5.413029] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.424580] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.432654] (px4_msgs) StderrLine: {'line': b'make[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.433363] (-) TimerEvent: {}
+[5.451882] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[5.468372] (px4_msgs) StdoutLine: {'line': b'[ 92%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext\n'}
+[5.476131] (px4_msgs) StdoutLine: {'line': b'[ 96%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[5.497047] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.500124] (px4_msgs) StderrLine: {'line': b'make[1]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.533619] (-) TimerEvent: {}
+[5.545454] (px4_msgs) StderrLine: {'line': b"make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 4538 s in the future\n"}
+[5.546408] (px4_msgs) StderrLine: {'line': b'make[1]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[5.582364] (px4_msgs) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[5.623353] (px4_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.624382] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/rosidl_interfaces/px4_msgs\n'}
+[5.626123] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so\n'}
+[5.628312] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/library_path.sh\n'}
+[5.629865] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_cpp.so\n'}
+[5.631305] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.632229] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.633287] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_c.h\n'}
+[5.633902] (-) TimerEvent: {}
+[5.634387] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.635221] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[5.636071] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.636969] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.637564] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.h\n'}
+[5.638031] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.h\n'}
+[5.638510] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.h\n'}
+[5.639057] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.h\n'}
+[5.639746] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.c\n'}
+[5.640442] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.640912] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so\n'}
+[5.641347] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.641803] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.642342] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.642828] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.643921] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_fastrtps\n'}
+[5.644640] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.645172] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.645654] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.646259] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.hpp\n'}
+[5.646884] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.hpp\n'}
+[5.647733] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__traits.hpp\n'}
+[5.648302] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.648754] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.649220] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.649697] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_c.h\n'}
+[5.650155] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.c\n'}
+[5.650634] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so\n'}
+[5.651143] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.651803] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.652435] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h\n'}
+[5.653049] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_c__visibility_control.h\n'}
+[5.653589] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice_c\n'}
+[5.654371] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_c.so\n'}
+[5.655041] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice\n'}
+[5.655522] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.idl\n'}
+[5.656374] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.656977] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.657432] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_cpp.hpp\n'}
+[5.657913] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice\n'}
+[5.658422] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.h\n'}
+[5.658915] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_ManualControlSetpoint_.h\n'}
+[5.659366] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.h\n'}
+[5.660049] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.h\n'}
+[5.660598] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h\n'}
+[5.661334] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_cpp__visibility_control.h\n'}
+[5.661966] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_cpp.so\n'}
+[5.662682] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs\n'}
+[5.663371] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg\n'}
+[5.664544] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.665391] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.cpp\n'}
+[5.669053] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[5.669728] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/pythonpath.sh\n'}
+[5.670262] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py\n'}
+[5.734135] (-) TimerEvent: {}
+[5.834947] (-) TimerEvent: {}
+[5.935762] (-) TimerEvent: {}
+[6.001874] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg\n'}
+[6.002882] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint_s.c\n'}
+[6.003645] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/__init__.py\n'}
+[6.004385] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint.py\n'}
+[6.005183] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[6.008058] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[6.011097] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[6.014119] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[6.016667] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__python.so\n'}
+[6.017317] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.idl\n'}
+[6.017957] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.msg\n'}
+[6.018421] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/package_run_dependencies/px4_msgs\n'}
+[6.018947] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/parent_prefix_path/px4_msgs\n'}
+[6.019530] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/ament_prefix_path.sh\n'}
+[6.020239] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/path.sh\n'}
+[6.020780] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.bash\n'}
+[6.021227] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.sh\n'}
+[6.021816] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.zsh\n'}
+[6.022391] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/packages/px4_msgs\n'}
+[6.023074] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[6.023552] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.024138] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.024629] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.025143] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.025631] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig.cmake\n'}
+[6.026142] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig-version.cmake\n'}
+[6.026646] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/package.xml\n'}
+[6.028917] (px4_msgs) StderrLine: {'line': b'make: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[6.035305] (px4_msgs) CommandEnded: {'returncode': 0}
+[6.040275] (-) TimerEvent: {}
+[6.143745] (-) TimerEvent: {}
+[6.245546] (-) TimerEvent: {}
+[6.346236] (-) TimerEvent: {}
+[6.446933] (-) TimerEvent: {}
+[6.527444] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 0}
+[6.547071] (-) TimerEvent: {}
+[6.647904] (-) TimerEvent: {}
+[6.748796] (-) TimerEvent: {}
+[6.849592] (-) TimerEvent: {}
+[6.860542] (controller) StderrLine: {'line': b"/home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[6.861308] (controller) StderrLine: {'line': b'  % (opt, underscore_opt)\n'}
+[6.949805] (-) TimerEvent: {}
+[7.021966] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[7.025422] (controller) StdoutLine: {'line': b'writing ../../build/controller/controller.egg-info/PKG-INFO\n'}
+[7.029066] (controller) StdoutLine: {'line': b'writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt\n'}
+[7.030285] (controller) StdoutLine: {'line': b'writing entry points to ../../build/controller/controller.egg-info/entry_points.txt\n'}
+[7.031135] (controller) StdoutLine: {'line': b'writing requirements to ../../build/controller/controller.egg-info/requires.txt\n'}
+[7.032294] (controller) StdoutLine: {'line': b'writing top-level names to ../../build/controller/controller.egg-info/top_level.txt\n'}
+[7.050218] (-) TimerEvent: {}
+[7.061260] (controller) StdoutLine: {'line': b"reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[7.070576] (controller) StdoutLine: {'line': b"writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[7.071380] (controller) StdoutLine: {'line': b'running build\n'}
+[7.071944] (controller) StdoutLine: {'line': b'running build_py\n'}
+[7.075756] (controller) StdoutLine: {'line': b'running install\n'}
+[7.077497] (controller) StdoutLine: {'line': b'running install_lib\n'}
+[7.085011] (controller) StdoutLine: {'line': b'running install_data\n'}
+[7.087905] (controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.094914] (controller) StdoutLine: {'line': b"removing '/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[7.096168] (controller) StdoutLine: {'line': b'Copying ../../build/controller/controller.egg-info to /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info\n'}
+[7.100980] (controller) StdoutLine: {'line': b'running install_scripts\n'}
+[7.150383] (-) TimerEvent: {}
+[7.184982] (controller) StdoutLine: {'line': b'Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller\n'}
+[7.188741] (controller) StdoutLine: {'line': b"writing list of installed files to '/home/patryk/ros2_ws/build/controller/install.log'\n"}
+[7.250652] (-) TimerEvent: {}
+[7.297805] (controller) CommandEnded: {'returncode': 0}
+[7.328773] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[7.332718] (-) EventReactorShutdown: {}

@@ -1,0 +1,25 @@
+[0.000000] (-) TimerEvent: {}
+[0.000567] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.001559] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.002249] (controller) JobStarted: {'identifier': 'controller'}
+[0.100594] (-) TimerEvent: {}
+[0.109648] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.200881] (-) TimerEvent: {}
+[0.301821] (-) TimerEvent: {}
+[0.402530] (-) TimerEvent: {}
+[0.503270] (-) TimerEvent: {}
+[0.603977] (-) TimerEvent: {}
+[0.704735] (-) TimerEvent: {}
+[0.805431] (-) TimerEvent: {}
+[0.906167] (-) TimerEvent: {}
+[1.006852] (-) TimerEvent: {}
+[1.107573] (-) TimerEvent: {}
+[1.208251] (-) TimerEvent: {}
+[1.308934] (-) TimerEvent: {}
+[1.409628] (-) TimerEvent: {}
+[1.510373] (-) TimerEvent: {}
+[1.611134] (-) TimerEvent: {}
+[1.707214] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[1.711955] (-) TimerEvent: {}
+[1.712363] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 'SIGINT'}
+[1.723290] (-) EventReactorShutdown: {}

@@ -1,0 +1,26 @@
+{
+  "package_name": "px4_msgs",
+  "output_dir": "/home/patryk/ros2_ws/build/px4_msgs/rosidl_generator_py/px4_msgs",
+  "template_dir": "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/patryk/ros2_ws/build/px4_msgs/rosidl_adapter/px4_msgs:msg/ManualControlSetpoint.idl",
+    "/home/patryk/ros2_ws/build/px4_msgs/rosidl_adapter/px4_msgs:msg/VehicleLocalPosition.idl"
+  ],
+  "target_dependencies": [
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages/rosidl_generator_py/__init__.py",
+    "/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/home/patryk/ros2_dashing/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/patryk/ros2_ws/build/px4_msgs/rosidl_adapter/px4_msgs/msg/ManualControlSetpoint.idl",
+    "/home/patryk/ros2_ws/build/px4_msgs/rosidl_adapter/px4_msgs/msg/VehicleLocalPosition.idl"
+  ]
+}

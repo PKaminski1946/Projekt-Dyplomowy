@@ -1,0 +1,260 @@
+[1.824s] Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+[1.880s] make: Warning: File 'Makefile' has modification time 431 s in the future
+[1.970s] make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 431 s in the future
+[1.975s] make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 431 s in the future
+[1.976s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/progress.make' has modification time 431 s in the future
+[1.977s] make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 431 s in the future
+[2.020s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.021s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.022s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.025s] make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 431 s in the future
+[2.026s] make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 431 s in the future
+[2.027s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.028s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/progress.make' has modification time 431 s in the future
+[2.029s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.032s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.070s] [  3%] Built target px4_msgs__cpp
+[2.071s] [  3%] Built target px4_msgs__dds_opensplice_idl
+[2.079s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/progress.make' has modification time 431 s in the future
+[2.080s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/progress.make' has modification time 431 s in the future
+[2.087s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/progress.make' has modification time 431 s in the future
+[2.090s] [  9%] Built target px4_msgs__rosidl_generator_c
+[2.128s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/progress.make' has modification time 431 s in the future
+[2.135s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.138s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.143s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.145s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/progress.make' has modification time 431 s in the future
+[2.146s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/progress.make' has modification time 431 s in the future
+[2.149s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.154s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/progress.make' has modification time 431 s in the future
+[2.160s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.175s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.198s] [ 15%] Built target px4_msgs__rosidl_typesupport_cpp
+[2.208s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/progress.make' has modification time 431 s in the future
+[2.210s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.222s] [ 21%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[2.232s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/progress.make' has modification time 431 s in the future
+[2.233s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/progress.make' has modification time 431 s in the future
+[2.238s] [ 27%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp
+[2.247s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/progress.make' has modification time 431 s in the future
+[2.257s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.277s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.292s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/progress.make' has modification time 431 s in the future
+[2.297s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.298s] [ 43%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp
+[2.301s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.307s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/progress.make' has modification time 431 s in the future
+[2.311s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.330s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.335s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/progress.make' has modification time 431 s in the future
+[2.338s] [ 49%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[2.347s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/progress.make' has modification time 431 s in the future
+[2.370s] [ 54%] Built target px4_msgs__rosidl_typesupport_c
+[2.378s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.394s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.416s] [ 60%] Built target px4_msgs__rosidl_typesupport_fastrtps_c
+[2.417s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/progress.make' has modification time 431 s in the future
+[2.432s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.470s] [ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c
+[2.478s] make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 431 s in the future
+[2.517s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.522s] make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 431 s in the future
+[2.522s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.558s] [ 78%] Built target px4_msgs
+[2.566s] make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 431 s in the future
+[2.606s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.611s] make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 431 s in the future
+[2.612s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.648s] [ 80%] Built target px4_msgs__py
+[2.656s] make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/progress.make' has modification time 431 s in the future
+[2.698s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.704s] make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/progress.make' has modification time 431 s in the future
+[2.725s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.761s] [ 84%] Built target px4_msgs__python
+[2.772s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.774s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.775s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.778s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.825s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.833s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.834s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.840s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.841s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.842s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.864s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.868s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.873s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.878s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/progress.make' has modification time 430 s in the future
+[2.888s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.900s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.916s] [ 88%] Built target px4_msgs__rosidl_typesupport_c__pyext
+[2.920s] [ 92%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext
+[2.940s] [ 96%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[2.952s] [100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext
+[2.955s] make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.993s] make: warning:  Clock skew detected.  Your build may be incomplete.
+[3.001s] Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+[3.394s] Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs --target install -- -j4 -l4
+[3.438s] make: Warning: File 'Makefile' has modification time 430 s in the future
+[3.528s] make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 430 s in the future
+[3.533s] make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 430 s in the future
+[3.534s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/progress.make' has modification time 430 s in the future
+[3.538s] make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 430 s in the future
+[3.578s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.579s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.585s] make[2]: Warning: File 'CMakeFiles/px4_msgs__cpp.dir/progress.make' has modification time 430 s in the future
+[3.587s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.591s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_generator_c.dir/progress.make' has modification time 430 s in the future
+[3.595s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.598s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.606s] make[2]: Warning: File 'CMakeFiles/px4_msgs__dds_opensplice_idl.dir/progress.make' has modification time 430 s in the future
+[3.607s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.632s] [  1%] Built target px4_msgs__cpp
+[3.634s] [  7%] Built target px4_msgs__rosidl_generator_c
+[3.641s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/progress.make' has modification time 430 s in the future
+[3.645s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/progress.make' has modification time 430 s in the future
+[3.647s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/progress.make' has modification time 430 s in the future
+[3.664s] [  9%] Built target px4_msgs__dds_opensplice_idl
+[3.677s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/progress.make' has modification time 430 s in the future
+[3.687s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.693s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/progress.make' has modification time 430 s in the future
+[3.699s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.722s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.731s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/progress.make' has modification time 429 s in the future
+[3.732s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.737s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.740s] [ 15%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[3.741s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.741s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/progress.make' has modification time 429 s in the future
+[3.745s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.750s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/progress.make' has modification time 429 s in the future
+[3.753s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/progress.make' has modification time 429 s in the future
+[3.772s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.786s] [ 21%] Built target px4_msgs__rosidl_typesupport_cpp
+[3.809s] [ 27%] Built target px4_msgs__rosidl_typesupport_c
+[3.815s] [ 33%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp
+[3.822s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/progress.make' has modification time 429 s in the future
+[3.825s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/progress.make' has modification time 429 s in the future
+[3.826s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.831s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/progress.make' has modification time 429 s in the future
+[3.835s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.875s] [ 39%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[3.879s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.885s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/progress.make' has modification time 429 s in the future
+[3.889s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.906s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.907s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/progress.make' has modification time 429 s in the future
+[3.921s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.943s] [ 45%] Built target px4_msgs__rosidl_typesupport_fastrtps_c
+[3.959s] [ 60%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp
+[3.982s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/progress.make' has modification time 429 s in the future
+[4.035s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.057s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/progress.make' has modification time 429 s in the future
+[4.072s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.109s] [ 78%] Built target px4_msgs__rosidl_typesupport_opensplice_c
+[4.117s] make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 429 s in the future
+[4.157s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.162s] make[2]: Warning: File 'CMakeFiles/px4_msgs.dir/progress.make' has modification time 429 s in the future
+[4.162s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.199s] [ 78%] Built target px4_msgs
+[4.208s] make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 429 s in the future
+[4.250s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.256s] make[2]: Warning: File 'px4_msgs__py/CMakeFiles/px4_msgs__py.dir/progress.make' has modification time 429 s in the future
+[4.257s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.293s] [ 80%] Built target px4_msgs__py
+[4.303s] make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/progress.make' has modification time 429 s in the future
+[4.345s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.351s] make[2]: Warning: File 'CMakeFiles/px4_msgs__python.dir/progress.make' has modification time 429 s in the future
+[4.372s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.409s] [ 84%] Built target px4_msgs__python
+[4.419s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.420s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.421s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.425s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.467s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.483s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.485s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.497s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.501s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.503s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.510s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.512s] make[2]: Warning: File 'CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/progress.make' has modification time 429 s in the future
+[4.519s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.530s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.534s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.536s] make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.581s] [ 88%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext
+[4.584s] [ 92%] Built target px4_msgs__rosidl_typesupport_c__pyext
+[4.591s] [ 96%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.598s] [100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[4.602s] make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.649s] make[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 429 s in the future
+[4.650s] make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.688s] [36mInstall the project...[0m
+[4.726s] -- Install configuration: ""
+[4.729s] -- Execute custom install script
+[4.730s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/rosidl_interfaces/px4_msgs
+[4.732s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so
+[4.733s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/library_path.sh
+[4.735s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_cpp.so
+[4.738s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_c.h
+[4.739s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.740s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_c.so
+[4.742s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.h
+[4.743s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.h
+[4.745s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.h
+[4.747s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.h
+[4.748s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.748s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so
+[4.749s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_cpp.hpp
+[4.750s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.767s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.775s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.hpp
+[4.775s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.hpp
+[4.776s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__traits.hpp
+[4.777s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_c.h
+[4.777s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.778s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so
+[4.778s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h
+[4.779s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_c__visibility_control.h
+[4.779s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_c.so
+[4.780s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.idl
+[4.781s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.h
+[4.781s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h
+[4.782s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.h
+[4.782s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.h
+[4.783s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_ManualControlSetpoint_.h
+[4.783s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_cpp.hpp
+[4.784s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_cpp__visibility_control.h
+[4.784s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_cpp.so
+[4.785s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_cpp.hpp
+[4.786s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so
+[4.786s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/pythonpath.sh
+[4.787s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py
+[4.788s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/__init__.py
+[4.788s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint.py
+[4.789s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+[4.789s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so
+[4.791s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+[4.793s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so
+[4.794s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__python.so
+[4.795s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.idl
+[4.796s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.msg
+[4.798s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/package_run_dependencies/px4_msgs
+[4.799s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/parent_prefix_path/px4_msgs
+[4.800s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/ament_prefix_path.sh
+[4.801s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/path.sh
+[4.802s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.bash
+[4.803s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.sh
+[4.805s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.zsh
+[4.806s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/packages/px4_msgs
+[4.807s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake-extras.cmake
+[4.808s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.809s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.810s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.811s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.812s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig.cmake
+[4.813s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig-version.cmake
+[4.814s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/package.xml
+[5.152s] make: warning:  Clock skew detected.  Your build may be incomplete.
+[5.162s] Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs --target install -- -j4 -l4

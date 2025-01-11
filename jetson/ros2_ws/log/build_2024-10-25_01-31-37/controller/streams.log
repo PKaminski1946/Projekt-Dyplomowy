@@ -1,0 +1,39 @@
+[5.679s] Invoking command in '/home/patryk/ros2_ws/build/controller': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/patryk/ros2_ws/build/controller/build
+[7.229s] /home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[7.229s]   % (opt, underscore_opt)
+[7.490s] running develop
+[8.549s] Removing /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller.egg-link (link to .)
+[8.674s] Invoked command in '/home/patryk/ros2_ws/build/controller' returned '0': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/patryk/ros2_ws/build/controller/build
+[8.687s] Invoking command in '/home/patryk/ros2_ws/src/controller': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/patryk/ros2_ws/build/controller/build install --record /home/patryk/ros2_ws/build/controller/install.log --install-scripts $base/lib/controller --single-version-externally-managed
+[10.244s] /home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[10.244s]   % (opt, underscore_opt)
+[10.426s] running egg_info
+[10.430s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[10.431s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[10.432s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[10.432s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[10.433s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[10.471s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[10.480s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[10.481s] running build
+[10.481s] running build_py
+[10.485s] running install
+[10.486s] running install_lib
+[10.490s] creating /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.490s] copying /home/patryk/ros2_ws/build/controller/build/lib/controller/controller_normal_control.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.491s] copying /home/patryk/ros2_ws/build/controller/build/lib/controller/__init__.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.492s] copying /home/patryk/ros2_ws/build/controller/build/lib/controller/controller.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.493s] copying /home/patryk/ros2_ws/build/controller/build/lib/controller/controller_backup.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.494s] copying /home/patryk/ros2_ws/build/controller/build/lib/controller/controller_old_sim.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller
+[10.498s] byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/controller_normal_control.py to controller_normal_control.cpython-36.pyc
+[10.508s] byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/__init__.py to __init__.cpython-36.pyc
+[10.509s] byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/controller.py to controller.cpython-36.pyc
+[10.513s] byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/controller_backup.py to controller_backup.cpython-36.pyc
+[10.518s] byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/controller_old_sim.py to controller_old_sim.cpython-36.pyc
+[10.527s] running install_data
+[10.531s] running install_egg_info
+[10.538s] Copying ../../build/controller/controller.egg-info to /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info
+[10.542s] running install_scripts
+[10.630s] Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller
+[10.632s] writing list of installed files to '/home/patryk/ros2_ws/build/controller/install.log'
+[10.747s] Invoked command in '/home/patryk/ros2_ws/src/controller' returned '0': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/patryk/ros2_ws/build/controller/build install --record /home/patryk/ros2_ws/build/controller/install.log --install-scripts $base/lib/controller --single-version-externally-managed

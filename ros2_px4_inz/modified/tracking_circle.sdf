@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <world name="tracking_circle">
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system"/>
+    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system"/>
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system"/>
+    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system"/>
+    <plugin name="gz::sim::systems::Imu" filename="gz-sim-imu-system"/>
+    <plugin name="gz::sim::systems::AirPressure" filename="gz-sim-air-pressure-system"/>
+    <plugin name="gz::sim::systems::ApplyLinkWrench" filename="gz-sim-apply-link-wrench-system"/>
+    <plugin name="gz::sim::systems::NavSat" filename="gz-sim-navsat-system"/>
+    <plugin name="gz::sim::systems::Sensors" filename="gz-sim-sensors-system">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <gui fullscreen="false">
+      <!-- 3D scene -->
+      <plugin filename="MinimalScene" name="3D View">
+        <gz-gui>
+          <title>3D View</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="string" key="state">docked</property>
+        </gz-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.8 0.8 0.8</background_color>
+        <camera_pose>-6 0 6 0 0.5 0</camera_pose>
+        <camera_clip>
+          <near>0.25</near>
+          <far>25000</far>
+        </camera_clip>
+      </plugin>
+      <!-- Plugins that add functionality to the scene -->
+      <plugin filename="EntityContextMenuPlugin" name="Entity context menu">
+        <gz-gui>
+          <property key="state" type="string">floating</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="GzSceneManager" name="Scene Manager">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="InteractiveViewControl" name="Interactive view control">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="CameraTracking" name="Camera Tracking">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="MarkerManager" name="Marker manager">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="SelectEntities" name="Select Entities">
+        <gz-gui>
+          <anchors target="Select entities">
+            <line own="right" target="right"/>
+            <line own="top" target="top"/>
+          </anchors>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="VisualizationCapabilities" name="Visualization Capabilities">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="Spawn" name="Spawn Entities">
+        <gz-gui>
+          <anchors target="Select entities">
+            <line own="right" target="right"/>
+            <line own="top" target="top"/>
+          </anchors>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin name="World control" filename="WorldControl">
+        <gz-gui>
+          <title>World control</title>
+          <property type="bool" key="showTitleBar">0</property>
+          <property type="bool" key="resizable">0</property>
+          <property type="double" key="height">72</property>
+          <property type="double" key="width">121</property>
+          <property type="double" key="z">1</property>
+          <property type="string" key="state">floating</property>
+          <anchors target="3D View">
+            <line own="left" target="left"/>
+            <line own="bottom" target="bottom"/>
+          </anchors>
+        </gz-gui>
+        <play_pause>1</play_pause>
+        <step>1</step>
+        <start_paused>1</start_paused>
+      </plugin>
+      <plugin name="World stats" filename="WorldStats">
+        <gz-gui>
+          <title>World stats</title>
+          <property type="bool" key="showTitleBar">0</property>
+          <property type="bool" key="resizable">0</property>
+          <property type="double" key="height">110</property>
+          <property type="double" key="width">290</property>
+          <property type="double" key="z">1</property>
+          <property type="string" key="state">floating</property>
+          <anchors target="3D View">
+            <line own="right" target="right"/>
+            <line own="bottom" target="bottom"/>
+          </anchors>
+        </gz-gui>
+        <sim_time>1</sim_time>
+        <real_time>1</real_time>
+        <real_time_factor>1</real_time_factor>
+        <iterations>1</iterations>
+      </plugin>
+      <plugin name="Entity tree" filename="EntityTree"/>
+    </gui>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1 1</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg> 8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+
+
+    <!-- <model name="s_sign">
+      <pose>3 0 0  0 0 3.14 </pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>/home/developer/PX4-Autopilot/Tools/simulation/gz/models/model.dae</uri></mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model> -->
+
+
+
+    <actor name="test_actor">
+      <skin>
+        <filename>/home/developer/PX4-Autopilot/Tools/simulation/gz/models/car/meshes/scaled_car.obj</filename>
+        <scale>0.1</scale>
+      </skin>
+
+      <script>
+        <loop>True</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>True</auto_start>
+
+        <!-- <trajectory id="0" type="walk" tension="0.6">
+          <waypoint>
+            <time>0</time>
+            <pose>5 0 0 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>100</time>
+            <pose>5.1 0 0 0 0 3.14</pose>
+          </waypoint>
+        </trajectory> -->
+
+        <trajectory id="0" type="walk" tension="0.6">
+<waypoint>
+    <time>0</time>
+    <pose>13.0 0.0 0.0 0.0 0.0 3.141592653589793</pose>
+</waypoint>
+<waypoint>
+    <time>0.3</time>
+    <pose>12.989933382359421 0.31711959828282255 0.0 0.0 0.0 3.2050591718441326</pose>
+</waypoint>
+<waypoint>
+    <time>0.6</time>
+    <pose>12.959774064153976 0.6329622678687463 0.0 0.0 0.0 3.2685256900984716</pose>
+</waypoint>
+<waypoint>
+    <time>0.8999999999999999</time>
+    <pose>12.909643486313534 0.946256221802051 0.0 0.0 0.0 3.331992208352811</pose>
+</waypoint>
+<waypoint>
+    <time>1.2</time>
+    <pose>12.839743506981781 1.255739935905396 0.0 0.0 0.0 3.39545872660715</pose>
+</waypoint>
+<waypoint>
+    <time>1.5</time>
+    <pose>12.750355588704728 1.5601672284924355 0.0 0.0 0.0 3.4589252448614896</pose>
+</waypoint>
+<waypoint>
+    <time>1.8</time>
+    <pose>12.641839665080363 1.858312278301638 0.0 0.0 0.0 3.5223917631158286</pose>
+</waypoint>
+<waypoint>
+    <time>2.1</time>
+    <pose>12.514632691433107 2.148974560445858 0.0 0.0 0.0 3.585858281370168</pose>
+</waypoint>
+<waypoint>
+    <time>2.4</time>
+    <pose>12.369246885348925 2.4309836805023437 0.0 0.0 0.0 3.649324799624507</pose>
+</waypoint>
+<waypoint>
+    <time>2.6999999999999997</time>
+    <pose>12.206267664155906 2.703204087277988 0.0 0.0 0.0 3.7127913178788465</pose>
+</waypoint>
+<waypoint>
+    <time>2.9999999999999996</time>
+    <pose>12.026351287655293 2.9645396452732022 0.0 0.0 0.0 3.7762578361331856</pose>
+</waypoint>
+<waypoint>
+    <time>3.2999999999999994</time>
+    <pose>11.83022221559489 3.2139380484326963 0.0 0.0 0.0 3.839724354387525</pose>
+</waypoint>
+<waypoint>
+    <time>3.599999999999999</time>
+    <pose>11.61867019052535 3.45039505741056 0.0 0.0 0.0 3.903190872641864</pose>
+</waypoint>
+<waypoint>
+    <time>3.899999999999999</time>
+    <pose>11.392547057785661 3.672958543287667 0.0 0.0 0.0 3.9666573908962035</pose>
+</waypoint>
+<waypoint>
+    <time>4.199999999999999</time>
+    <pose>11.152763335422613 3.880732321458784 0.0 0.0 0.0 4.030123909150543</pose>
+</waypoint>
+<waypoint>
+    <time>4.499999999999999</time>
+    <pose>10.90028454785599 4.072879760251679 0.0 0.0 0.0 4.093590427404882</pose>
+</waypoint>
+<waypoint>
+    <time>4.799999999999999</time>
+    <pose>10.636127338052512 4.248627149747572 0.0 0.0 0.0 4.157056945659221</pose>
+</waypoint>
+<waypoint>
+    <time>5.099999999999999</time>
+    <pose>10.361355373863415 4.40726681723791 0.0 0.0 0.0 4.22052346391356</pose>
+</waypoint>
+<waypoint>
+    <time>5.399999999999999</time>
+    <pose>10.077075065009431 4.548159976772592 0.0 0.0 0.0 4.2839899821679</pose>
+</waypoint>
+<waypoint>
+    <time>5.699999999999998</time>
+    <pose>9.78443110795936 4.670739301325534 0.0 0.0 0.0 4.347456500422239</pose>
+</waypoint>
+<waypoint>
+    <time>5.999999999999998</time>
+    <pose>9.484601876641374 4.774511207220369 0.0 0.0 0.0 4.410923018676578</pose>
+</waypoint>
+<waypoint>
+    <time>6.299999999999998</time>
+    <pose>9.178794677547137 4.859057841617708 0.0 0.0 0.0 4.474389536930918</pose>
+</waypoint>
+<waypoint>
+    <time>6.599999999999998</time>
+    <pose>8.868240888334652 4.92403876506104 0.0 0.0 0.0 4.537856055185257</pose>
+</waypoint>
+<waypoint>
+    <time>6.899999999999998</time>
+    <pose>8.554190999505055 4.96919232230627 0.0 0.0 0.0 4.601322573439596</pose>
+</waypoint>
+<waypoint>
+    <time>7.1999999999999975</time>
+    <pose>8.23790957911871 4.99433669591504 0.0 0.0 0.0 4.664789091693935</pose>
+</waypoint>
+<waypoint>
+    <time>7.499999999999997</time>
+    <pose>7.92067018082596 4.999370638369375 0.0 0.0 0.0 4.728255609948275</pose>
+</waypoint>
+<waypoint>
+    <time>7.799999999999997</time>
+    <pose>7.603750215716057 4.984273879759712 0.0 0.0 0.0 4.791722128202614</pose>
+</waypoint>
+<waypoint>
+    <time>8.099999999999998</time>
+    <pose>7.288425808633574 4.949107209404663 0.0 0.0 0.0 4.855188646456953</pose>
+</waypoint>
+<waypoint>
+    <time>8.399999999999999</time>
+    <pose>6.975966659674047 4.894012231073893 0.0 0.0 0.0 4.918655164711293</pose>
+</waypoint>
+<waypoint>
+    <time>8.7</time>
+    <pose>6.667630931549825 4.81921079279971 0.0 0.0 0.0 4.982121682965632</pose>
+</waypoint>
+<waypoint>
+    <time>9.0</time>
+    <pose>6.364660183412892 4.725004093573342 0.0 0.0 0.0 5.045588201219971</pose>
+</waypoint>
+<waypoint>
+    <time>9.3</time>
+    <pose>6.068274371534357 4.611771470522907 0.0 0.0 0.0 5.10905471947431</pose>
+</waypoint>
+<waypoint>
+    <time>9.600000000000001</time>
+    <pose>5.779666936971129 4.47996887145668 0.0 0.0 0.0 5.172521237728649</pose>
+</waypoint>
+<waypoint>
+    <time>9.900000000000002</time>
+    <pose>5.499999999999999 4.330127018922193 0.0 0.0 0.0 5.235987755982989</pose>
+</waypoint>
+<waypoint>
+    <time>10.200000000000003</time>
+    <pose>5.230399680669448 4.162849273173857 0.0 0.0 0.0 5.299454274237328</pose>
+</waypoint>
+<waypoint>
+    <time>10.500000000000004</time>
+    <pose>4.971951564311666 3.97880920265416 0.0 0.0 0.0 5.362920792491668</pose>
+</waypoint>
+<waypoint>
+    <time>10.800000000000004</time>
+    <pose>4.725696330273575 3.7787478717712912 0.0 0.0 0.0 5.426387310746007</pose>
+</waypoint>
+<waypoint>
+    <time>11.100000000000005</time>
+    <pose>4.492625561468393 3.5634708568943134 0.0 0.0 0.0 5.489853829000346</pose>
+</waypoint>
+<waypoint>
+    <time>11.400000000000006</time>
+    <pose>4.273677751621227 3.3338450025814588 0.0 0.0 0.0 5.553320347254685</pose>
+</waypoint>
+<waypoint>
+    <time>11.700000000000006</time>
+    <pose>4.069734526286062 3.090794931103025 0.0 0.0 0.0 5.616786865509024</pose>
+</waypoint>
+<waypoint>
+    <time>12.000000000000007</time>
+    <pose>3.8816170928508367 2.8352993193138545 0.0 0.0 0.0 5.680253383763363</pose>
+</waypoint>
+<waypoint>
+    <time>12.300000000000008</time>
+    <pose>3.710082933825115 2.5683869578670313 0.0 0.0 0.0 5.743719902017703</pose>
+</waypoint>
+<waypoint>
+    <time>12.600000000000009</time>
+    <pose>3.555822756725383 2.2911326086370525 0.0 0.0 0.0 5.807186420272042</pose>
+</waypoint>
+<waypoint>
+    <time>12.90000000000001</time>
+    <pose>3.4194577128396517 2.004652677033068 0.0 0.0 0.0 5.870652938526382</pose>
+</waypoint>
+<waypoint>
+    <time>13.20000000000001</time>
+    <pose>3.3015368960704583 1.7101007166283444 0.0 0.0 0.0 5.934119456780721</pose>
+</waypoint>
+<waypoint>
+    <time>13.50000000000001</time>
+    <pose>3.2025351319275135 1.4086627842071484 0.0 0.0 0.0 5.99758597503506</pose>
+</waypoint>
+<waypoint>
+    <time>13.800000000000011</time>
+    <pose>3.1228510655729647 1.101552663932704 0.0 0.0 0.0 6.061052493289399</pose>
+</waypoint>
+<waypoint>
+    <time>14.100000000000012</time>
+    <pose>3.062805556618029 0.7900069798667495 0.0 0.0 0.0 6.124519011543738</pose>
+</waypoint>
+<waypoint>
+    <time>14.400000000000013</time>
+    <pose>3.022640387134577 0.4752802165209122 0.0 0.0 0.0 6.187985529798078</pose>
+</waypoint>
+<waypoint>
+    <time>14.700000000000014</time>
+    <pose>3.002517288084075 0.15863966749033828 0.0 0.0 0.0 6.251452048052417</pose>
+</waypoint>
+<waypoint>
+    <time>15.000000000000014</time>
+    <pose>3.002517288084075 -0.15863966749033928 0.0 0.0 0.0 6.314918566306757</pose>
+</waypoint>
+<waypoint>
+    <time>15.300000000000015</time>
+    <pose>3.022640387134577 -0.4752802165209131 0.0 0.0 0.0 6.378385084561096</pose>
+</waypoint>
+<waypoint>
+    <time>15.600000000000016</time>
+    <pose>3.062805556618029 -0.7900069798667504 0.0 0.0 0.0 6.441851602815435</pose>
+</waypoint>
+<waypoint>
+    <time>15.900000000000016</time>
+    <pose>3.1228510655729647 -1.101552663932703 0.0 0.0 0.0 6.505318121069774</pose>
+</waypoint>
+<waypoint>
+    <time>16.200000000000017</time>
+    <pose>3.2025351319275135 -1.408662784207149 0.0 0.0 0.0 6.568784639324113</pose>
+</waypoint>
+<waypoint>
+    <time>16.500000000000018</time>
+    <pose>3.3015368960704574 -1.7101007166283433 0.0 0.0 0.0 6.632251157578452</pose>
+</waypoint>
+<waypoint>
+    <time>16.80000000000002</time>
+    <pose>3.4194577128396517 -2.004652677033069 0.0 0.0 0.0 6.695717675832792</pose>
+</waypoint>
+<waypoint>
+    <time>17.10000000000002</time>
+    <pose>3.555822756725383 -2.2911326086370516 0.0 0.0 0.0 6.759184194087131</pose>
+</waypoint>
+<waypoint>
+    <time>17.40000000000002</time>
+    <pose>3.710082933825115 -2.568386957867032 0.0 0.0 0.0 6.822650712341471</pose>
+</waypoint>
+<waypoint>
+    <time>17.70000000000002</time>
+    <pose>3.881617092850836 -2.835299319313853 0.0 0.0 0.0 6.88611723059581</pose>
+</waypoint>
+<waypoint>
+    <time>18.00000000000002</time>
+    <pose>4.069734526286063 -3.0907949311030265 0.0 0.0 0.0 6.949583748850149</pose>
+</waypoint>
+<waypoint>
+    <time>18.300000000000022</time>
+    <pose>4.273677751621226 -3.3338450025814574 0.0 0.0 0.0 7.013050267104488</pose>
+</waypoint>
+<waypoint>
+    <time>18.600000000000023</time>
+    <pose>4.492625561468394 -3.5634708568943148 0.0 0.0 0.0 7.076516785358827</pose>
+</waypoint>
+<waypoint>
+    <time>18.900000000000023</time>
+    <pose>4.725696330273574 -3.778747871771291 0.0 0.0 0.0 7.139983303613166</pose>
+</waypoint>
+<waypoint>
+    <time>19.200000000000024</time>
+    <pose>4.9719515643116665 -3.9788092026541606 0.0 0.0 0.0 7.203449821867506</pose>
+</waypoint>
+<waypoint>
+    <time>19.500000000000025</time>
+    <pose>5.230399680669448 -4.1628492731738564 0.0 0.0 0.0 7.266916340121845</pose>
+</waypoint>
+<waypoint>
+    <time>19.800000000000026</time>
+    <pose>5.500000000000002 -4.3301270189221945 0.0 0.0 0.0 7.3303828583761845</pose>
+</waypoint>
+<waypoint>
+    <time>20.100000000000026</time>
+    <pose>5.779666936971131 -4.47996887145668 0.0 0.0 0.0 7.3938493766305236</pose>
+</waypoint>
+<waypoint>
+    <time>20.400000000000027</time>
+    <pose>6.068274371534357 -4.611771470522907 0.0 0.0 0.0 7.457315894884863</pose>
+</waypoint>
+<waypoint>
+    <time>20.700000000000028</time>
+    <pose>6.364660183412891 -4.725004093573341 0.0 0.0 0.0 7.520782413139202</pose>
+</waypoint>
+<waypoint>
+    <time>21.00000000000003</time>
+    <pose>6.667630931549827 -4.81921079279971 0.0 0.0 0.0 7.5842489313935415</pose>
+</waypoint>
+<waypoint>
+    <time>21.30000000000003</time>
+    <pose>6.9759666596740475 -4.894012231073893 0.0 0.0 0.0 7.6477154496478805</pose>
+</waypoint>
+<waypoint>
+    <time>21.60000000000003</time>
+    <pose>7.288425808633574 -4.949107209404663 0.0 0.0 0.0 7.7111819679022195</pose>
+</waypoint>
+<waypoint>
+    <time>21.90000000000003</time>
+    <pose>7.603750215716056 -4.984273879759711 0.0 0.0 0.0 7.774648486156559</pose>
+</waypoint>
+<waypoint>
+    <time>22.20000000000003</time>
+    <pose>7.920670180825962 -4.999370638369375 0.0 0.0 0.0 7.8381150044108985</pose>
+</waypoint>
+<waypoint>
+    <time>22.500000000000032</time>
+    <pose>8.237909579118712 -4.99433669591504 0.0 0.0 0.0 7.9015815226652375</pose>
+</waypoint>
+<waypoint>
+    <time>22.800000000000033</time>
+    <pose>8.554190999505055 -4.96919232230627 0.0 0.0 0.0 7.9650480409195765</pose>
+</waypoint>
+<waypoint>
+    <time>23.100000000000033</time>
+    <pose>8.86824088833465 -4.924038765061041 0.0 0.0 0.0 8.028514559173916</pose>
+</waypoint>
+<waypoint>
+    <time>23.400000000000034</time>
+    <pose>9.178794677547138 -4.859057841617708 0.0 0.0 0.0 8.091981077428255</pose>
+</waypoint>
+<waypoint>
+    <time>23.700000000000035</time>
+    <pose>9.484601876641374 -4.774511207220369 0.0 0.0 0.0 8.155447595682595</pose>
+</waypoint>
+<waypoint>
+    <time>24.000000000000036</time>
+    <pose>9.784431107959358 -4.670739301325534 0.0 0.0 0.0 8.218914113936933</pose>
+</waypoint>
+<waypoint>
+    <time>24.300000000000036</time>
+    <pose>10.077075065009435 -4.548159976772591 0.0 0.0 0.0 8.282380632191273</pose>
+</waypoint>
+<waypoint>
+    <time>24.600000000000037</time>
+    <pose>10.361355373863415 -4.40726681723791 0.0 0.0 0.0 8.345847150445612</pose>
+</waypoint>
+<waypoint>
+    <time>24.900000000000038</time>
+    <pose>10.636127338052512 -4.248627149747572 0.0 0.0 0.0 8.409313668699951</pose>
+</waypoint>
+<waypoint>
+    <time>25.20000000000004</time>
+    <pose>10.900284547855989 -4.072879760251679 0.0 0.0 0.0 8.47278018695429</pose>
+</waypoint>
+<waypoint>
+    <time>25.50000000000004</time>
+    <pose>11.152763335422614 -3.880732321458783 0.0 0.0 0.0 8.53624670520863</pose>
+</waypoint>
+<waypoint>
+    <time>25.80000000000004</time>
+    <pose>11.392547057785661 -3.672958543287666 0.0 0.0 0.0 8.59971322346297</pose>
+</waypoint>
+<waypoint>
+    <time>26.10000000000004</time>
+    <pose>11.61867019052535 -3.45039505741056 0.0 0.0 0.0 8.663179741717308</pose>
+</waypoint>
+<waypoint>
+    <time>26.40000000000004</time>
+    <pose>11.830222215594889 -3.213938048432698 0.0 0.0 0.0 8.726646259971648</pose>
+</waypoint>
+<waypoint>
+    <time>26.700000000000042</time>
+    <pose>12.026351287655293 -2.964539645273201 0.0 0.0 0.0 8.790112778225987</pose>
+</waypoint>
+<waypoint>
+    <time>27.000000000000043</time>
+    <pose>12.206267664155906 -2.703204087277987 0.0 0.0 0.0 8.853579296480326</pose>
+</waypoint>
+<waypoint>
+    <time>27.300000000000043</time>
+    <pose>12.369246885348925 -2.430983680502344 0.0 0.0 0.0 8.917045814734665</pose>
+</waypoint>
+<waypoint>
+    <time>27.600000000000044</time>
+    <pose>12.514632691433105 -2.1489745604458594 0.0 0.0 0.0 8.980512332989004</pose>
+</waypoint>
+<waypoint>
+    <time>27.900000000000045</time>
+    <pose>12.641839665080363 -1.8583122783016361 0.0 0.0 0.0 9.043978851243345</pose>
+</waypoint>
+<waypoint>
+    <time>28.200000000000045</time>
+    <pose>12.750355588704728 -1.5601672284924353 0.0 0.0 0.0 9.107445369497682</pose>
+</waypoint>
+<waypoint>
+    <time>28.500000000000046</time>
+    <pose>12.839743506981781 -1.255739935905397 0.0 0.0 0.0 9.170911887752023</pose>
+</waypoint>
+<waypoint>
+    <time>28.800000000000047</time>
+    <pose>12.909643486313534 -0.9462562218020487 0.0 0.0 0.0 9.234378406006362</pose>
+</waypoint>
+<waypoint>
+    <time>29.100000000000048</time>
+    <pose>12.959774064153976 -0.6329622678687452 0.0 0.0 0.0 9.297844924260701</pose>
+</waypoint>
+<waypoint>
+    <time>29.40000000000005</time>
+    <pose>12.989933382359421 -0.3171195982828226 0.0 0.0 0.0 9.36131144251504</pose>
+</waypoint>
+<waypoint>
+    <time>29.70000000000005</time>
+    <pose>13.0 -1.2246467991473533e-15 0.0 0.0 0.0 9.42477796076938</pose>
+</waypoint>
+
+
+        </trajectory>
+      </script>
+
+    </actor>
+
+
+  </world>
+</sdf>

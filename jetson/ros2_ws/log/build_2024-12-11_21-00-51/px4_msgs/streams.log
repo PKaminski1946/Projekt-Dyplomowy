@@ -1,0 +1,215 @@
+[1.863s] Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+[2.041s] -- Found ament_cmake: 0.7.6 (/home/patryk/ros2_dashing/ros2-linux/share/ament_cmake/cmake)
+[2.342s] -- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found suitable version "3.6.9", minimum required is "3") 
+[2.343s] -- Using PYTHON_EXECUTABLE: /home/patryk/.pyenv/shims/python3
+[3.852s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.964s] -- Found rosidl_default_generators: 0.7.0 (/home/patryk/ros2_dashing/ros2-linux/share/rosidl_default_generators/cmake)
+[4.916s] -- Found rosidl_adapter: 0.7.10 (/home/patryk/ros2_dashing/ros2-linux/share/rosidl_adapter/cmake)
+[5.789s] -- Found PrismTech OpenSplice: /usr/share/opensplice/cmake
+[6.656s] -- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found version "3.6.9") 
+[7.754s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_opensplice_c
+[7.845s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp;rosidl_typesupport_opensplice_cpp
+[9.161s] -- Found rmw_implementation_cmake: 0.7.2 (/home/patryk/ros2_dashing/ros2-linux/share/rmw_implementation_cmake/cmake)
+[9.449s] -- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+[9.454s] -- Found python_cmake_module: 0.7.11 (/home/patryk/ros2_dashing/ros2-linux/share/python_cmake_module/cmake)
+[9.765s] -- Using PYTHON_EXECUTABLE: /home/patryk/.pyenv/shims/python3
+[9.765s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m
+[9.766s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.6m.so
+[11.596s] -- Found ament_lint_auto: 0.7.12 (/home/patryk/ros2_dashing/ros2-linux/share/ament_lint_auto/cmake)
+[11.772s] -- Added test 'lint_cmake' to check CMake code style
+[11.782s] -- Added test 'xmllint' to check XML markup files
+[11.842s] -- Configuring done
+[13.450s] -- Generating done
+[13.481s] -- Build files have been written to: /home/patryk/ros2_ws/build/px4_msgs
+[13.536s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[13.538s] [35m[1mScanning dependencies of target px4_msgs__dds_opensplice_idl[0m
+[13.539s] [35m[1mScanning dependencies of target px4_msgs__cpp[0m
+[13.615s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[13.615s] [  4%] [34m[1mGenerating DDS interfaces[0m
+[20.971s] [  4%] Built target px4_msgs__dds_opensplice_idl
+[21.457s] [  4%] Built target px4_msgs__cpp
+[21.477s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[21.477s] [  8%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[21.478s] [  8%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[22.214s] [35m[1mScanning dependencies of target px4_msgs__rosidl_generator_c[0m
+[22.385s] [ 10%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/manual_control_setpoint__functions.c.o[0m
+[23.232s] [ 11%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/vehicle_local_position__functions.c.o[0m
+[23.470s] [ 13%] [32m[1mLinking C shared library libpx4_msgs__rosidl_generator_c.so[0m
+[27.634s] [ 13%] Built target px4_msgs__rosidl_generator_c
+[27.669s] [ 14%] [34m[1mGenerating C++ type support for PrismTech OpenSplice[0m
+[28.895s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_cpp[0m
+[28.943s] [ 15%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o[0m
+[29.257s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_cpp[0m
+[29.297s] [ 17%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o[0m
+[30.009s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[30.061s] [ 18%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/dds_fastrtps/manual_control_setpoint__type_support.cpp.o[0m
+[30.270s] [ 20%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/vehicle_local_position__type_support.cpp.o[0m
+[30.300s] [ 21%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/vehicle_local_position__type_support.cpp.o[0m
+[31.215s] [ 23%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_cpp.so[0m
+[31.331s] [ 23%] Built target px4_msgs__rosidl_typesupport_cpp
+[31.349s] [ 24%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[31.351s] [ 26%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[31.447s] [ 26%] Built target px4_msgs__rosidl_typesupport_introspection_cpp
+[31.466s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[31.653s] [ 28%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/dds_fastrtps/vehicle_local_position__type_support.cpp.o[0m
+[33.214s] [ 30%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[33.486s] [ 30%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp
+[33.506s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[36.126s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_cpp[0m
+[36.426s] [ 33%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/manual_control_setpoint__type_support.cpp.o[0m
+[38.723s] [ 34%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/vehicle_local_position__type_support.cpp.o[0m
+[38.850s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_c[0m
+[38.880s] [ 36%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o[0m
+[38.973s] [ 37%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/vehicle_local_position__type_support.cpp.o[0m
+[39.059s] [ 39%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_c.so[0m
+[39.151s] [ 39%] Built target px4_msgs__rosidl_typesupport_c
+[39.166s] [ 40%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.cpp.o[0m
+[39.377s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_c[0m
+[39.409s] [ 42%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/manual_control_setpoint__type_support.c.o[0m
+[39.498s] [ 43%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/vehicle_local_position__type_support.c.o[0m
+[39.581s] [ 44%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.cpp.o[0m
+[39.592s] [ 46%] [32m[1mLinking C shared library libpx4_msgs__rosidl_typesupport_introspection_c.so[0m
+[39.654s] [ 46%] Built target px4_msgs__rosidl_typesupport_introspection_c
+[39.668s] [ 47%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.cpp.o[0m
+[40.204s] [ 49%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.cpp.o[0m
+[40.927s] [ 50%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.cpp.o[0m
+[41.031s] [ 52%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.cpp.o[0m
+[41.111s] [ 53%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.cpp.o[0m
+[41.362s] [ 55%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.cpp.o[0m
+[41.761s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_c[0m
+[41.803s] [ 56%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/manual_control_setpoint__type_support_c.cpp.o[0m
+[41.814s] [ 57%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/vehicle_local_position__type_support_c.cpp.o[0m
+[42.362s] [ 59%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_opensplice_cpp.so[0m
+[42.789s] [ 60%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp
+[42.830s] [ 62%] [34m[1mGenerating C type support for PrismTech OpenSplice[0m
+[43.184s] [ 63%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[43.443s] [ 63%] Built target px4_msgs__rosidl_typesupport_fastrtps_c
+[50.231s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_c[0m
+[50.532s] [ 66%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_c/px4_msgs/msg/dds_opensplice_c/vehicle_local_position__type_support_c.cpp.o[0m
+[50.533s] [ 66%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_c/px4_msgs/msg/dds_opensplice_c/manual_control_setpoint__type_support_c.cpp.o[0m
+[50.534s] [ 68%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.cpp.o[0m
+[50.535s] [ 69%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.cpp.o[0m
+[50.930s] [ 71%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.cpp.o[0m
+[51.183s] [ 72%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.cpp.o[0m
+[51.977s] [ 73%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.cpp.o[0m
+[52.221s] [ 75%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.cpp.o[0m
+[52.414s] [ 76%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.cpp.o[0m
+[52.503s] [ 78%] [32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.cpp.o[0m
+[53.560s] [ 79%] [32m[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_opensplice_c.so[0m
+[53.903s] [ 82%] Built target px4_msgs__rosidl_typesupport_opensplice_c
+[53.940s] [ 82%] Built target px4_msgs
+[53.960s] [35m[1mScanning dependencies of target px4_msgs__py[0m
+[53.982s] [ 84%] [34m[1mGenerating Python code for ROS interfaces[0m
+[68.960s] [ 84%] Built target px4_msgs__py
+[68.981s] [35m[1mScanning dependencies of target px4_msgs__python[0m
+[69.047s] [ 86%] [32mBuilding C object CMakeFiles/px4_msgs__python.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o[0m
+[69.048s] [ 86%] [32mBuilding C object CMakeFiles/px4_msgs__python.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o[0m
+[69.702s] [ 88%] [32m[1mLinking C shared library rosidl_generator_py/px4_msgs/libpx4_msgs__python.so[0m
+[69.794s] [ 88%] Built target px4_msgs__python
+[69.818s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[69.819s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[69.819s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_c__pyext[0m
+[69.820s] [35m[1mScanning dependencies of target px4_msgs__rosidl_typesupport_c__pyext[0m
+[69.873s] [ 89%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[69.885s] [ 91%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[69.895s] [ 92%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[69.911s] [ 94%] [32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_opensplice_c.c.o[0m
+[70.192s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so[0m
+[70.194s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so[0m
+[70.205s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so[0m
+[70.213s] [100%] [32m[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so[0m
+[70.280s] [100%] Built target px4_msgs__rosidl_typesupport_c__pyext
+[70.325s] [100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext
+[70.338s] [100%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext
+[70.359s] [100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext
+[70.380s] Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+[70.786s] Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/local/bin/cmake --install /home/patryk/ros2_ws/build/px4_msgs
+[70.798s] -- Install configuration: ""
+[70.805s] -- Execute custom install script
+[70.808s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/rosidl_interfaces/px4_msgs
+[70.812s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so
+[70.815s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/library_path.sh
+[70.820s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_cpp.so
+[70.826s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_c.h
+[70.828s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[70.830s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_fastrtps_c.h
+[70.835s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_c.so
+[70.841s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.h
+[70.843s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.h
+[70.845s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.h
+[70.847s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.h
+[70.848s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_generator_c__visibility_control.h
+[70.850s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position.h
+[70.852s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__functions.h
+[70.854s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__struct.h
+[70.855s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__type_support.h
+[70.860s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so
+[70.867s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_cpp.hpp
+[70.868s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[70.870s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_fastrtps_cpp.hpp
+[70.874s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so
+[70.880s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.hpp
+[70.882s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.hpp
+[70.883s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__traits.hpp
+[70.885s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position.hpp
+[70.887s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__struct.hpp
+[70.889s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__traits.hpp
+[70.894s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_c.h
+[70.896s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[70.898s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_introspection_c.h
+[70.902s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so
+[70.909s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h
+[70.910s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_c__visibility_control.h
+[70.912s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_opensplice_c.h
+[70.916s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_c.so
+[70.922s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.idl
+[70.923s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.idl
+[70.935s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.h
+[70.937s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h
+[70.942s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.h
+[70.943s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.h
+[70.943s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.h
+[70.944s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.h
+[70.946s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.h
+[70.948s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.h
+[70.950s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_ManualControlSetpoint_.h
+[70.951s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_VehicleLocalPosition_.h
+[70.953s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_cpp.hpp
+[70.955s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_cpp__visibility_control.h
+[70.957s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_opensplice_cpp.hpp
+[70.961s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_cpp.so
+[70.966s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_cpp.hpp
+[70.968s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_introspection_cpp.hpp
+[70.972s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so
+[70.975s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/pythonpath.sh
+[70.978s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py
+[70.984s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/__init__.py
+[70.986s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint.py
+[70.987s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_vehicle_local_position.py
+[70.992s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+[70.996s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so
+[71.000s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+[71.004s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so
+[71.008s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__python.so
+[71.011s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.idl
+[71.014s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/VehicleLocalPosition.idl
+[71.017s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.msg
+[71.020s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/VehicleLocalPosition.msg
+[71.023s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/package_run_dependencies/px4_msgs
+[71.026s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/parent_prefix_path/px4_msgs
+[71.029s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/ament_prefix_path.sh
+[71.033s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/path.sh
+[71.036s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.bash
+[71.039s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.sh
+[71.042s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.zsh
+[71.045s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/packages/px4_msgs
+[71.048s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake-extras.cmake
+[71.051s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[71.054s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[71.057s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[71.060s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[71.063s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig.cmake
+[71.065s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig-version.cmake
+[71.068s] -- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/package.xml
+[71.368s] Compiling '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py'...
+[71.400s] Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/patryk/ros2_ws/install/controller /usr/local/bin/cmake --install /home/patryk/ros2_ws/build/px4_msgs

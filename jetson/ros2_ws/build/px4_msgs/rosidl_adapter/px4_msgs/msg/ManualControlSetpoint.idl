@@ -1,0 +1,54 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/ManualControlSetpoint.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module ManualControlSetpoint_Constants {
+      const uint8 SOURCE_UNKNOWN = 0;
+      const uint8 SOURCE_RC = 1;
+      const uint8 SOURCE_MAVLINK_0 = 2;
+      const uint8 SOURCE_MAVLINK_1 = 3;
+      const uint8 SOURCE_MAVLINK_2 = 4;
+      const uint8 SOURCE_MAVLINK_3 = 5;
+      const uint8 SOURCE_MAVLINK_4 = 6;
+      const uint8 SOURCE_MAVLINK_5 = 7;
+    };
+    struct ManualControlSetpoint {
+      uint64 timestamp;
+
+      uint64 timestamp_sample;
+
+      boolean valid;
+
+      uint8 data_source;
+
+      float roll;
+
+      float pitch;
+
+      float yaw;
+
+      float throttle;
+
+      float flaps;
+
+      float aux1;
+
+      float aux2;
+
+      float aux3;
+
+      float aux4;
+
+      float aux5;
+
+      float aux6;
+
+      boolean sticks_moving;
+
+      uint16 buttons;
+    };
+  };
+};

@@ -1,0 +1,4289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <world name="tracking_eight">
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <plugin name="gz::sim::systems::Physics" filename="gz-sim-physics-system"/>
+    <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system"/>
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system"/>
+    <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system"/>
+    <plugin name="gz::sim::systems::Imu" filename="gz-sim-imu-system"/>
+    <plugin name="gz::sim::systems::AirPressure" filename="gz-sim-air-pressure-system"/>
+    <plugin name="gz::sim::systems::ApplyLinkWrench" filename="gz-sim-apply-link-wrench-system"/>
+    <plugin name="gz::sim::systems::NavSat" filename="gz-sim-navsat-system"/>
+    <plugin name="gz::sim::systems::Sensors" filename="gz-sim-sensors-system">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <gui fullscreen="false">
+      <!-- 3D scene -->
+      <plugin filename="MinimalScene" name="3D View">
+        <gz-gui>
+          <title>3D View</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="string" key="state">docked</property>
+        </gz-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.8 0.8 0.8</background_color>
+        <camera_pose>-6 0 6 0 0.5 0</camera_pose>
+        <camera_clip>
+          <near>0.25</near>
+          <far>25000</far>
+        </camera_clip>
+      </plugin>
+      <!-- Plugins that add functionality to the scene -->
+      <plugin filename="EntityContextMenuPlugin" name="Entity context menu">
+        <gz-gui>
+          <property key="state" type="string">floating</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="GzSceneManager" name="Scene Manager">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="InteractiveViewControl" name="Interactive view control">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="CameraTracking" name="Camera Tracking">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="MarkerManager" name="Marker manager">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="SelectEntities" name="Select Entities">
+        <gz-gui>
+          <anchors target="Select entities">
+            <line own="right" target="right"/>
+            <line own="top" target="top"/>
+          </anchors>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="VisualizationCapabilities" name="Visualization Capabilities">
+        <gz-gui>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin filename="Spawn" name="Spawn Entities">
+        <gz-gui>
+          <anchors target="Select entities">
+            <line own="right" target="right"/>
+            <line own="top" target="top"/>
+          </anchors>
+          <property key="resizable" type="bool">false</property>
+          <property key="width" type="double">5</property>
+          <property key="height" type="double">5</property>
+          <property key="state" type="string">floating</property>
+          <property key="showTitleBar" type="bool">false</property>
+        </gz-gui>
+      </plugin>
+      <plugin name="World control" filename="WorldControl">
+        <gz-gui>
+          <title>World control</title>
+          <property type="bool" key="showTitleBar">0</property>
+          <property type="bool" key="resizable">0</property>
+          <property type="double" key="height">72</property>
+          <property type="double" key="width">121</property>
+          <property type="double" key="z">1</property>
+          <property type="string" key="state">floating</property>
+          <anchors target="3D View">
+            <line own="left" target="left"/>
+            <line own="bottom" target="bottom"/>
+          </anchors>
+        </gz-gui>
+        <play_pause>1</play_pause>
+        <step>1</step>
+        <start_paused>1</start_paused>
+      </plugin>
+      <plugin name="World stats" filename="WorldStats">
+        <gz-gui>
+          <title>World stats</title>
+          <property type="bool" key="showTitleBar">0</property>
+          <property type="bool" key="resizable">0</property>
+          <property type="double" key="height">110</property>
+          <property type="double" key="width">290</property>
+          <property type="double" key="z">1</property>
+          <property type="string" key="state">floating</property>
+          <anchors target="3D View">
+            <line own="right" target="right"/>
+            <line own="bottom" target="bottom"/>
+          </anchors>
+        </gz-gui>
+        <sim_time>1</sim_time>
+        <real_time>1</real_time>
+        <real_time_factor>1</real_time_factor>
+        <iterations>1</iterations>
+      </plugin>
+      <plugin name="Entity tree" filename="EntityTree"/>
+    </gui>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1 1</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg> 8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+
+
+    <!-- <model name="s_sign">
+      <pose>3 0 0  0 0 3.14 </pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>/home/developer/PX4-Autopilot/Tools/simulation/gz/models/model.dae</uri></mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model> -->
+
+
+
+    <actor name="test_actor">
+      <skin>
+        <filename>/home/developer/PX4-Autopilot/Tools/simulation/gz/models/car/meshes/scaled_car.obj</filename>
+        <scale>0.1</scale>
+      </skin>
+
+      <script>
+        <loop>True</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>True</auto_start>
+
+        <!-- <trajectory id="0" type="walk" tension="0.6">
+          <waypoint>
+            <time>0</time>
+            <pose>5 0 0 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>100</time>
+            <pose>5.1 0 0 0 0 3.14</pose>
+          </waypoint>
+        </trajectory> -->
+
+        <trajectory id="0" type="walk" tension="0.6">
+<waypoint>
+    <time>0</time>
+    <pose>1.2858791391047208e-15 21.0 0.0 0.0 0.0 4.717106160332383</pose>
+</waypoint>
+<waypoint>
+    <time>0.06289378894199459</time>
+    <pose>-0.06289308919370326 20.999703319780245 0.0 0.0 0.0 4.717106160332383</pose>
+</waypoint>
+<waypoint>
+    <time>0.12578322497992614</time>
+    <pose>-0.12577622694687685 20.99881329085688 0.0 0.0 0.0 4.726541733093731</pose>
+</waypoint>
+<waypoint>
+    <time>0.1886639597187066</time>
+    <pose>-0.18863946339358295 20.9973299484371 0.0 0.0 0.0 4.735980944359923</pose>
+</waypoint>
+<waypoint>
+    <time>0.25153165378203113</time>
+    <pose>-0.25147285181682766 20.99525335119801 0.0 0.0 0.0 4.745426219489088</pose>
+</waypoint>
+<waypoint>
+    <time>0.3143819813238438</time>
+    <pose>-0.3142664502224105 20.992583581284322 0.0 0.0 0.0 4.754879983361605</pose>
+</waypoint>
+<waypoint>
+    <time>0.3772106345422719</time>
+    <pose>-0.3770103229120056 20.9893207443051 0.0 0.0 0.0 4.764344660170949</pose>
+</waypoint>
+<waypoint>
+    <time>0.4400133281968198</time>
+    <pose>-0.4396945420553059 20.985464969329566 0.0 0.0 0.0 4.773822673196023</pose>
+</waypoint>
+<waypoint>
+    <time>0.5027858041295803</time>
+    <pose>-0.5023091892608385 20.98101640888201 0.0 0.0 0.0 4.783316444548543</pose>
+</waypoint>
+<waypoint>
+    <time>0.5655238357911869</time>
+    <pose>-0.5648443571453633 20.975975238935746 0.0 0.0 0.0 4.792828394892149</pose>
+</waypoint>
+<waypoint>
+    <time>0.6282232327721872</time>
+    <pose>-0.6272901509014792 20.97034165890616 0.0 0.0 0.0 4.802360943125967</pose>
+</waypoint>
+<waypoint>
+    <time>0.6908798453404612</time>
+    <pose>-0.6896366898632652 20.96411589164284 0.0 0.0 0.0 4.811916506028206</pose>
+</waypoint>
+<waypoint>
+    <time>0.7534895689852545</time>
+    <pose>-0.7518741090696834 20.957298183420697 0.0 0.0 0.0 4.821497497854091</pose>
+</waypoint>
+<waypoint>
+    <time>0.8160483489683152</time>
+    <pose>-0.8139925608254711 20.949888803930293 0.0 0.0 0.0 4.831106329880838</pose>
+</waypoint>
+<waypoint>
+    <time>0.8785521848825594</time>
+    <pose>-0.8759822162593415 20.94188804626715 0.0 0.0 0.0 4.84074540989681</pose>
+</waypoint>
+<waypoint>
+    <time>0.9409971352185955</time>
+    <pose>-0.9378332668791856 20.93329622692012 0.0 0.0 0.0 4.850417141626757</pose>
+</waypoint>
+<waypoint>
+    <time>1.0033793219393365</time>
+    <pose>-0.9995359261240222 20.92411368575893 0.0 0.0 0.0 4.8601239240871585</pose>
+</waypoint>
+<waypoint>
+    <time>1.0656949350628337</time>
+    <pose>-1.0610804309125392 20.914340786020695 0.0 0.0 0.0 4.869868150867299</pose>
+</waypoint>
+<waypoint>
+    <time>1.1279402372533387</time>
+    <pose>-1.1224570431878633 20.903977914295545 0.0 0.0 0.0 4.879652209328468</pose>
+</waypoint>
+<waypoint>
+    <time>1.1901115684204786</time>
+    <pose>-1.1836560514583994 20.893025480511355 0.0 0.0 0.0 4.889478479715388</pose>
+</waypoint>
+<waypoint>
+    <time>1.2522053503262816</time>
+    <pose>-1.2446677723344564 20.881483917917528 0.0 0.0 0.0 4.899349334173552</pose>
+</waypoint>
+<waypoint>
+    <time>1.3142180911996593</time>
+    <pose>-1.3054825520604396 20.86935368306783 0.0 0.0 0.0 4.909267135667196</pose>
+</waypoint>
+<waypoint>
+    <time>1.3761463903577507</time>
+    <pose>-1.366090768042326 20.856635255802367 0.0 0.0 0.0 4.919234236788264</pose>
+</waypoint>
+<waypoint>
+    <time>1.4379869428334078</time>
+    <pose>-1.4264828303702473 20.84332913922858 0.0 0.0 0.0 4.929252978454711</pose>
+</waypoint>
+<waypoint>
+    <time>1.4997365440078663</time>
+    <pose>-1.4866491833358617 20.829435859701338 0.0 0.0 0.0 4.939325688486562</pose>
+</waypoint>
+<waypoint>
+    <time>1.5613920942474622</time>
+    <pose>-1.5465803069443411 20.814955966802145 0.0 0.0 0.0 4.949454680056424</pose>
+</waypoint>
+<waypoint>
+    <time>1.6229506035430457</time>
+    <pose>-1.6062667184207147 20.799890033317386 0.0 0.0 0.0 4.959642250006744</pose>
+</waypoint>
+<waypoint>
+    <time>1.6844091961504968</time>
+    <pose>-1.6656989737102883 20.784238655215628 0.0 0.0 0.0 4.969890677027632</pose>
+</waypoint>
+<waypoint>
+    <time>1.74576511523049</time>
+    <pose>-1.7248676689729496 20.768002451624128 0.0 0.0 0.0 4.980202219687451</pose>
+</waypoint>
+<waypoint>
+    <time>1.8070157274854275</time>
+    <pose>-1.783763442071158 20.75118206480428 0.0 0.0 0.0 4.990579114311968</pose>
+</waypoint>
+<waypoint>
+    <time>1.868158527791139</time>
+    <pose>-1.8423769740512483 20.73377816012622 0.0 0.0 0.0 5.001023572704188</pose>
+</waypoint>
+<waypoint>
+    <time>1.9291911438206695</time>
+    <pose>-1.9006989906179803 20.71579142604252 0.0 0.0 0.0 5.011537779698838</pose>
+</waypoint>
+<waypoint>
+    <time>1.9901113406571707</time>
+    <pose>-1.9587202636019847 20.69722257406094 0.0 0.0 0.0 5.022123890546794</pose>
+</waypoint>
+<waypoint>
+    <time>2.050917025392555</time>
+    <pose>-2.0164316124199035 20.678072338716294 0.0 0.0 0.0 5.032784028122612</pose>
+</waypoint>
+<waypoint>
+    <time>2.111606251708254</time>
+    <pose>-2.073823905527034 20.658341477541388 0.0 0.0 0.0 5.043520279951327</pose>
+</waypoint>
+<waypoint>
+    <time>2.1721772244340327</time>
+    <pose>-2.1308880618621773 20.63803077103704 0.0 0.0 0.0 5.054334695048491</pose>
+</waypoint>
+<waypoint>
+    <time>2.23262830408044</time>
+    <pose>-2.1876150522845204 20.61714102264125 0.0 0.0 0.0 5.0652292805703665</pose>
+</waypoint>
+<waypoint>
+    <time>2.292958011340085</time>
+    <pose>-2.2439959010023105 20.595673058697358 0.0 0.0 0.0 5.0762059982702885</pose>
+</waypoint>
+<waypoint>
+    <time>2.353165031552487</time>
+    <pose>-2.3000216869930528 20.573627728421403 0.0 0.0 0.0 5.08726676075804</pose>
+</waypoint>
+<waypoint>
+    <time>2.4132482191268516</time>
+    <pose>-2.3556835454150895 20.551005903868514 0.0 0.0 0.0 5.098413427560946</pose>
+</waypoint>
+<waypoint>
+    <time>2.473206601916659</time>
+    <pose>-2.410972669010238 20.527808479898397 0.0 0.0 0.0 5.1096478009852095</pose>
+</waypoint>
+<waypoint>
+    <time>2.533039385539468</time>
+    <pose>-2.4658803094973694 20.504036374139975 0.0 0.0 0.0 5.120971621776269</pose>
+</waypoint>
+<waypoint>
+    <time>2.5927459576349423</time>
+    <pose>-2.520397778956623 20.479690526955046 0.0 0.0 0.0 5.132386564582348</pose>
+</waypoint>
+<waypoint>
+    <time>2.6523258920535224</time>
+    <pose>-2.5745164512040604 20.454771901401134 0.0 0.0 0.0 5.143894233219127</pose>
+</waypoint>
+<waypoint>
+    <time>2.711778952967761</time>
+    <pose>-2.628227763156602 20.429281483193325 0.0 0.0 0.0 5.155496155743499</pose>
+</waypoint>
+<waypoint>
+    <time>2.7711050988977814</time>
+    <pose>-2.681523216186911 20.403220280665344 0.0 0.0 0.0 5.167193779338467</pose>
+</waypoint>
+<waypoint>
+    <time>2.830304486641873</time>
+    <pose>-2.734394377468134 20.37658932472963 0.0 0.0 0.0 5.178988465018515</pose>
+</waypoint>
+<waypoint>
+    <time>2.889377475102645</time>
+    <pose>-2.7868328813082113 20.349389668836565 0.0 0.0 0.0 5.190881482161617</pose>
+</waypoint>
+<waypoint>
+    <time>2.9483246289987806</time>
+    <pose>-2.838830430473537 20.321622388932802 0.0 0.0 0.0 5.202874002881785</pose>
+</waypoint>
+<waypoint>
+    <time>3.0071467224518083</time>
+    <pose>-2.8903787975018536 20.2932885834187 0.0 0.0 0.0 5.2149670962514465</pose>
+</waypoint>
+<waypoint>
+    <time>3.065844742436916</time>
+    <pose>-2.9414698260040217 20.26438937310488 0.0 0.0 0.0 5.227161722391057</pose>
+</waypoint>
+<waypoint>
+    <time>3.1244198920863084</time>
+    <pose>-2.992095431954632 20.234925901167884 0.0 0.0 0.0 5.239458726442016</pose>
+</waypoint>
+<waypoint>
+    <time>3.182873593833161</time>
+    <pose>-3.0422476049710814 20.204899333104947 0.0 0.0 0.0 5.251858832442682</pose>
+</waypoint>
+<waypoint>
+    <time>3.2412074923838214</time>
+    <pose>-3.0919184095810732 20.174310856687924 0.0 0.0 0.0 5.264362637129812</pose>
+</waypoint>
+<waypoint>
+    <time>3.2994234575054646</time>
+    <pose>-3.141099986478212 20.14316168191626 0.0 0.0 0.0 5.276970603690005</pose>
+</waypoint>
+<waypoint>
+    <time>3.357523586616062</time>
+    <pose>-3.1897845537655605 20.111453040969167 0.0 0.0 0.0 5.289683055488018</pose>
+</waypoint>
+<waypoint>
+    <time>3.415510207163226</time>
+    <pose>-3.237964408186969 20.079186188156843 0.0 0.0 0.0 5.302500169803342</pose>
+</waypoint>
+<waypoint>
+    <time>3.473385878778137</time>
+    <pose>-3.285631926345941 20.046362399870887 0.0 0.0 0.0 5.315421971605289</pose>
+</waypoint>
+<waypoint>
+    <time>3.5311533951906666</time>
+    <pose>-3.33277956591186 20.0129829745338 0.0 0.0 0.0 5.328448327405165</pose>
+</waypoint>
+<waypoint>
+    <time>3.5888157858914944</time>
+    <pose>-3.3793998668133933 19.97904923254761 0.0 0.0 0.0 5.341578939219847</pose>
+</waypoint>
+<waypoint>
+    <time>3.6463763175270687</time>
+    <pose>-3.425485452418903 19.944562516241657 0.0 0.0 0.0 5.354813338690122</pose>
+</waypoint>
+<waypoint>
+    <time>3.70383849501315</time>
+    <pose>-3.4710290307036127 19.909524189819486 0.0 0.0 0.0 5.368150881394656</pose>
+</waypoint>
+<waypoint>
+    <time>3.7612060623528083</time>
+    <pose>-3.5160233954034164 19.87393563930488 0.0 0.0 0.0 5.381590741405204</pose>
+</waypoint>
+<waypoint>
+    <time>3.8184830031448342</time>
+    <pose>-3.560461427155125 19.83779827248703 0.0 0.0 0.0 5.395131906129229</pose>
+</waypoint>
+<waypoint>
+    <time>3.87567354076889</time>
+    <pose>-3.6043360946229237 19.80111351886487 0.0 0.0 0.0 5.408773171489547</pose>
+</waypoint>
+<waypoint>
+    <time>3.9327821382339403</time>
+    <pose>-3.647640455610942 19.7638828295905 0.0 0.0 0.0 5.422513137488302</pose>
+</waypoint>
+<waypoint>
+    <time>3.9898134976771256</time>
+    <pose>-3.690367658161696 19.72610767741179 0.0 0.0 0.0 5.436350204208843</pose>
+</waypoint>
+<waypoint>
+    <time>4.046772559500665</time>
+    <pose>-3.7325109416402595 19.687789556614145 0.0 0.0 0.0 5.450282568303237</pose>
+</waypoint>
+<waypoint>
+    <time>4.103664501135243</time>
+    <pose>-3.774063637803993 19.648929982961352 0.0 0.0 0.0 5.464308220019516</pose>
+</waypoint>
+<waypoint>
+    <time>4.1604947354189745</time>
+    <pose>-3.815019171857633 19.609530493635667 0.0 0.0 0.0 5.478424940816021</pose>
+</waypoint>
+<waypoint>
+    <time>4.217268908582137</time>
+    <pose>-3.8553710634936196 19.56959264717697 0.0 0.0 0.0 5.492630301614337</pose>
+</waypoint>
+<waypoint>
+    <time>4.273992897828824</time>
+    <pose>-3.8951129279174537 19.52911802342114 0.0 0.0 0.0 5.50692166173693</pose>
+</waypoint>
+<waypoint>
+    <time>4.33067280850791</time>
+    <pose>-3.934238476857948 19.48810822343755 0.0 0.0 0.0 5.521296168574883</pose>
+</waypoint>
+<waypoint>
+    <time>4.387314970867014</time>
+    <pose>-3.9727415195622164 19.446564869465725 0.0 0.0 0.0 5.535750758027916</pose>
+</waypoint>
+<waypoint>
+    <time>4.443925936384546</time>
+    <pose>-4.010615963775217 19.404489604851186 0.0 0.0 0.0 5.550282155753929</pose>
+</waypoint>
+<waypoint>
+    <time>4.500512473676511</time>
+    <pose>-4.04785581670372 19.361884093980425 0.0 0.0 0.0 5.564886879262865</pose>
+</waypoint>
+<waypoint>
+    <time>4.557081563976299</time>
+    <pose>-4.084455185964525 19.3187500222151 0.0 0.0 0.0 5.579561240882283</pose>
+</waypoint>
+<waypoint>
+    <time>4.613640396187549</time>
+    <pose>-4.120408280516821 19.275089095825308 0.0 0.0 0.0 5.594301351618938</pose>
+</waypoint>
+<waypoint>
+    <time>4.670196361511842</time>
+    <pose>-4.155709411578466 19.230903041922172 0.0 0.0 0.0 5.609103125931037</pose>
+</waypoint>
+<waypoint>
+    <time>4.726757047654982</time>
+    <pose>-4.190352993526129 19.186193608389434 0.0 0.0 0.0 5.623962287422031</pose>
+</waypoint>
+<waypoint>
+    <time>4.783330232617525</time>
+    <pose>-4.224333544779087 19.140962563814373 0.0 0.0 0.0 5.638874375457519</pose>
+</waypoint>
+<waypoint>
+    <time>4.839923878077189</time>
+    <pose>-4.257645688666557 19.095211697417824 0.0 0.0 0.0 5.653834752699547</pose>
+</waypoint>
+<waypoint>
+    <time>4.896546122372854</time>
+    <pose>-4.290284154278437 19.0489428189834 0.0 0.0 0.0 5.668838613544452</pose>
+</waypoint>
+<waypoint>
+    <time>4.953205273101763</time>
+    <pose>-4.322243777299323 19.00215775878589 0.0 0.0 0.0 5.683880993442111</pose>
+</waypoint>
+<waypoint>
+    <time>5.00990979934369</time>
+    <pose>-4.3535195008256355 18.95485836751891 0.0 0.0 0.0 5.698956779065758</pose>
+</waypoint>
+<waypoint>
+    <time>5.066668323527703</time>
+    <pose>-4.384106376165765 18.907046516221616 0.0 0.0 0.0 5.714060719293629</pose>
+</waypoint>
+<waypoint>
+    <time>5.123489612959088</time>
+    <pose>-4.413999563623098 18.858724096204753 0.0 0.0 0.0 5.729187436954236</pose>
+</waypoint>
+<waypoint>
+    <time>5.180382571025921</time>
+    <pose>-4.44319433326178 18.809893018975814 0.0 0.0 0.0 5.744331441280688</pose>
+</waypoint>
+<waypoint>
+    <time>5.237356228106445</time>
+    <pose>-4.471686065655136 18.76055521616342 0.0 0.0 0.0 5.759487141010647</pose>
+</waypoint>
+<waypoint>
+    <time>5.2944197322000885</time>
+    <pose>-4.499470252616588 18.710712639440942 0.0 0.0 0.0 5.774648858061345</pose>
+</waypoint>
+<waypoint>
+    <time>5.351582339306522</time>
+    <pose>-4.52654249791298 18.660367260449252 0.0 0.0 0.0 5.789810841704206</pose>
+</waypoint>
+<waypoint>
+    <time>5.408853403578424</time>
+    <pose>-4.552898517960176 18.609521070718777 0.0 0.0 0.0 5.804967283155522</pose>
+</waypoint>
+<waypoint>
+    <time>5.466242367274908</time>
+    <pose>-4.578534142500844 18.55817608159066 0.0 0.0 0.0 5.820112330497308</pose>
+</waypoint>
+<waypoint>
+    <time>5.523758750543564</time>
+    <pose>-4.603445315264312 18.506334324137274 0.0 0.0 0.0 5.835240103836709</pose>
+</waypoint>
+<waypoint>
+    <time>5.581412141059952</time>
+    <pose>-4.627628094608388 18.453997849081812 0.0 0.0 0.0 5.850344710611056</pose>
+</waypoint>
+<waypoint>
+    <time>5.639212183553907</time>
+    <pose>-4.651078654143018 18.401168726717195 0.0 0.0 0.0 5.865420260942552</pose>
+</waypoint>
+<waypoint>
+    <time>5.697168569252611</time>
+    <pose>-4.673793283335755 18.34784904682418 0.0 0.0 0.0 5.880460882946958</pose>
+</waypoint>
+<waypoint>
+    <time>5.755291025270549</time>
+    <pose>-4.695768388098838 18.294040918588678 0.0 0.0 0.0 5.895460737901162</pose>
+</waypoint>
+<waypoint>
+    <time>5.813589303976427</time>
+    <pose>-4.717000491357906 18.239746470518323 0.0 0.0 0.0 5.91041403517497</pose>
+</waypoint>
+<waypoint>
+    <time>5.872073172367071</time>
+    <pose>-4.73748623360215 18.18496785035829 0.0 0.0 0.0 5.92531504683698</pose>
+</waypoint>
+<waypoint>
+    <time>5.930752401477867</time>
+    <pose>-4.75722237341588 18.129707225006328 0.0 0.0 0.0 5.940158121846714</pose>
+</waypoint>
+<waypoint>
+    <time>5.989636755858688</time>
+    <pose>-4.776205787991434 18.07396678042702 0.0 0.0 0.0 5.954937699750193</pose>
+</waypoint>
+<waypoint>
+    <time>6.048735983143529</time>
+    <pose>-4.794433473623248 18.01774872156536 0.0 0.0 0.0 5.969648323802469</pose>
+</waypoint>
+<waypoint>
+    <time>6.108059803741174</time>
+    <pose>-4.811902546183164 17.96105527225949 0.0 0.0 0.0 5.984284653445947</pose>
+</waypoint>
+<waypoint>
+    <time>6.167617900672932</time>
+    <pose>-4.82861024157677 17.90388867515272 0.0 0.0 0.0 5.9988414760811475</pose>
+</waypoint>
+<waypoint>
+    <time>6.227419909582363</time>
+    <pose>-4.844553916180747 17.846251191604896 0.0 0.0 0.0 6.013313718073532</pose>
+</waypoint>
+<waypoint>
+    <time>6.287475408940548</time>
+    <pose>-4.859731047261167 17.78814510160282 0.0 0.0 0.0 6.027696454948875</pose>
+</waypoint>
+<waypoint>
+    <time>6.347793910468699</time>
+    <pose>-4.874139233372669 17.729572703670197 0.0 0.0 0.0 6.041984920736409</pose>
+</waypoint>
+<waypoint>
+    <time>6.40838484979867</time>
+    <pose>-4.887776194738431 17.67053631477659 0.0 0.0 0.0 6.05617451642982</pose>
+</waypoint>
+<waypoint>
+    <time>6.469257577389839</time>
+    <pose>-4.900639773610879 17.61103827024586 0.0 0.0 0.0 6.070260817541292</pose>
+</waypoint>
+<waypoint>
+    <time>6.530421349719441</time>
+    <pose>-4.912727934613137 17.551080923663722 0.0 0.0 0.0 6.084239580736246</pose>
+</waypoint>
+<waypoint>
+    <time>6.591885320761344</time>
+    <pose>-4.92403876506104 17.490666646784668 0.0 0.0 0.0 6.09810674954016</pose>
+</waypoint>
+<waypoint>
+    <time>6.653658533766636</time>
+    <pose>-4.934570475265798 17.42979782943818 0.0 0.0 0.0 6.111858459120839</pose>
+</waypoint>
+<waypoint>
+    <time>6.7157499133575715</time>
+    <pose>-4.944321398817179 17.368476879434116 0.0 0.0 0.0 6.125491040154051</pose>
+</waypoint>
+<waypoint>
+    <time>6.7781682579443725</time>
+    <pose>-4.953289992847158 17.306706222467543 0.0 0.0 0.0 6.1390010217881965</pose>
+</waypoint>
+<waypoint>
+    <time>6.840922232472991</time>
+    <pose>-4.961474838274067 17.244488302022738 0.0 0.0 0.0 6.152385133731425</pose>
+</waypoint>
+<waypoint>
+    <time>6.9040203615098426</time>
+    <pose>-4.968874640027121 17.18182557927654 0.0 0.0 0.0 6.16564030748802</pose>
+</waypoint>
+<waypoint>
+    <time>6.967471022668022</time>
+    <pose>-4.975488227251329 17.118720533001003 0.0 0.0 0.0 6.17876367677836</pose>
+</waypoint>
+<waypoint>
+    <time>7.031282440377846</time>
+    <pose>-4.981314553492771 17.055175659465316 0.0 0.0 0.0 6.191752577179464</pose>
+</waypoint>
+<waypoint>
+    <time>7.095462680002995</time>
+    <pose>-4.986352696864162 16.9911934723371 0.0 0.0 0.0 6.204604545028181</pose>
+</waypoint>
+<waypoint>
+    <time>7.160019642302094</time>
+    <pose>-4.99060186019073 16.926776502582914 0.0 0.0 0.0 6.217317315631722</pose>
+</waypoint>
+<waypoint>
+    <time>7.224961058234182</time>
+    <pose>-4.994061371136342 16.8619272983682 0.0 0.0 0.0 6.229888820832498</pose>
+</waypoint>
+<waypoint>
+    <time>7.290294484105236</time>
+    <pose>-4.996730682309902 16.796648424956455 0.0 0.0 0.0 6.2423171859765585</pose>
+</waypoint>
+<waypoint>
+    <time>7.356027297051774</time>
+    <pose>-4.998609371351943 16.73094246460773 0.0 0.0 0.0 6.254600726335802</pose>
+</waypoint>
+<waypoint>
+    <time>7.422166690856397</time>
+    <pose>-4.999697141001468 16.664812016476535 0.0 0.0 0.0 6.266737943034856</pose>
+</waypoint>
+<waypoint>
+    <time>7.488719672089267</time>
+    <pose>-4.999993819142987 16.598259696508986 0.0 0.0 0.0 6.278727518533353</pose>
+</waypoint>
+<waypoint>
+    <time>7.5556930565685585</time>
+    <pose>-4.999499358833742 16.531288137339338 0.0 0.0 0.0 6.290568311714676</pose>
+</waypoint>
+<waypoint>
+    <time>7.623093466132207</time>
+    <pose>-4.998213838311147 16.463899988185847 0.0 0.0 0.0 6.302259352630289</pose>
+</waypoint>
+<waypoint>
+    <time>7.690927325712562</time>
+    <pose>-4.996137460980394 16.39609791474596 0.0 0.0 0.0 6.31379983694858</pose>
+</waypoint>
+<waypoint>
+    <time>7.759200860705028</time>
+    <pose>-4.993270555382282 16.327884599090883 0.0 0.0 0.0 6.325189120154587</pose>
+</waypoint>
+<waypoint>
+    <time>7.827920094621235</time>
+    <pose>-4.989613575141216 16.259262739559485 0.0 0.0 0.0 6.336426711546261</pose>
+</waypoint>
+<waypoint>
+    <time>7.897090847016976</time>
+    <pose>-4.9851670988934496 16.19023505065155 0.0 0.0 0.0 6.347512268069373</pose>
+</waypoint>
+<waypoint>
+    <time>7.966718731684751</time>
+    <pose>-4.97993183019552 16.12080426292039 0.0 0.0 0.0 6.358445588032114</pose>
+</waypoint>
+<waypoint>
+    <time>8.036809155100563</time>
+    <pose>-4.973908597412925 16.05097312286486 0.0 0.0 0.0 6.369226604737351</pose>
+</waypoint>
+<waypoint>
+    <time>8.107367315114537</time>
+    <pose>-4.967098353589052 15.98074439282069 0.0 0.0 0.0 6.379855380068003</pose>
+</waypoint>
+<waypoint>
+    <time>8.178398199874657</time>
+    <pose>-4.959502176294383 15.910120850851223 0.0 0.0 0.0 6.39033209805827</pose>
+</waypoint>
+<waypoint>
+    <time>8.249906586973122</time>
+    <pose>-4.951121267455995 15.839105290637518 0.0 0.0 0.0 6.4006570584814675</pose>
+</waypoint>
+<waypoint>
+    <time>8.32189704280469</time>
+    <pose>-4.941956953167363 15.76770052136784 0.0 0.0 0.0 6.410830670481142</pose>
+</waypoint>
+<waypoint>
+    <time>8.394373922126503</time>
+    <pose>-4.932010683478572 15.69590936762654 0.0 0.0 0.0 6.420853446271338</pose>
+</waypoint>
+<waypoint>
+    <time>8.467341367809093</time>
+    <pose>-4.921284032166843 15.623734669282326 0.0 0.0 0.0 6.43072599492774</pose>
+</waypoint>
+<waypoint>
+    <time>8.540803310768316</time>
+    <pose>-4.909778696487533 15.55117928137591 0.0 0.0 0.0 6.440449016289568</pose>
+</waypoint>
+<waypoint>
+    <time>8.614763470068272</time>
+    <pose>-4.897496496905581 15.478246074007085 0.0 0.0 0.0 6.450023294990145</pose>
+</waypoint>
+<waypoint>
+    <time>8.689225353185469</time>
+    <pose>-4.884439376807464 15.404937932221179 0.0 0.0 0.0 6.459449694630449</pose>
+</waypoint>
+<waypoint>
+    <time>8.764192256424721</time>
+    <pose>-4.87060940219368 15.33125775589494 0.0 0.0 0.0 6.468729152109599</pose>
+</waypoint>
+<waypoint>
+    <time>8.839667265477614</time>
+    <pose>-4.856008761351882 15.25720845962183 0.0 0.0 0.0 6.477862672122015</pose>
+</waypoint>
+<waypoint>
+    <time>8.915653256114663</time>
+    <pose>-4.840639764510594 15.182792972596706 0.0 0.0 0.0 6.486851321831228</pose>
+</waypoint>
+<waypoint>
+    <time>8.992152895002546</time>
+    <pose>-4.824504843473695 15.108014238499976 0.0 0.0 0.0 6.495696225726771</pose>
+</waypoint>
+<waypoint>
+    <time>9.0691686406382</time>
+    <pose>-4.807606551235627 15.032875215381143 0.0 0.0 0.0 6.504398560670003</pose>
+</waypoint>
+<waypoint>
+    <time>9.14670274439188</time>
+    <pose>-4.789947561577444 14.957378875541794 0.0 0.0 0.0 6.512959551132545</pose>
+</waypoint>
+<waypoint>
+    <time>9.224757251651596</time>
+    <pose>-4.771530668643744 14.88152820541802 0.0 0.0 0.0 6.5213804646301785</pose>
+</waypoint>
+<waypoint>
+    <time>9.303334003061709</time>
+    <pose>-4.752358786500559 14.805326205462281 0.0 0.0 0.0 6.529662607353213</pose>
+</waypoint>
+<waypoint>
+    <time>9.382434635848792</time>
+    <pose>-4.732434948674261 14.728775890024728 0.0 0.0 0.0 6.537807319993684</pose>
+</waypoint>
+<waypoint>
+    <time>9.462060585228269</time>
+    <pose>-4.711762307671594 14.651880287233947 0.0 0.0 0.0 6.54581597376822</pose>
+</waypoint>
+<waypoint>
+    <time>9.54221308588553</time>
+    <pose>-4.69034413448083 14.57464243887718 0.0 0.0 0.0 6.5536899666351625</pose>
+</waypoint>
+<waypoint>
+    <time>9.622893173525753</time>
+    <pose>-4.668183818054231 14.49706540028001 0.0 0.0 0.0 6.56143071970318</pose>
+</waypoint>
+<waypoint>
+    <time>9.70410168648681</time>
+    <pose>-4.645284864771813 14.41915224018548 0.0 0.0 0.0 6.569039673827856</pose>
+</waypoint>
+<waypoint>
+    <time>9.785839267410063</time>
+    <pose>-4.621650897886542 14.340906040632714 0.0 0.0 0.0 6.576518286392892</pose>
+</waypoint>
+<waypoint>
+    <time>9.868106364964085</time>
+    <pose>-4.597285656951028 14.262329896835013 0.0 0.0 0.0 6.583868028271247</pose>
+</waypoint>
+<waypoint>
+    <time>9.950903235616748</time>
+    <pose>-4.572192997225829 14.18342691705738 0.0 0.0 0.0 6.5910903809611305</pose>
+</waypoint>
+<waypoint>
+    <time>10.034229945451255</time>
+    <pose>-4.54637688906944 14.104200222493604 0.0 0.0 0.0 6.598186833892573</pose>
+</waypoint>
+<waypoint>
+    <time>10.118086372022105</time>
+    <pose>-4.51984141731008 14.024652947142776 0.0 0.0 0.0 6.605158881897966</pose>
+</waypoint>
+<waypoint>
+    <time>10.20247220624721</time>
+    <pose>-4.492590780599334 13.944788237685309 0.0 0.0 0.0 6.6120080228419695</pose>
+</waypoint>
+<waypoint>
+    <time>10.287386954332554</time>
+    <pose>-4.464629290747841 13.864609253358477 0.0 0.0 0.0 6.6187357554042885</pose>
+</waypoint>
+<waypoint>
+    <time>10.372829939726186</time>
+    <pose>-4.435961372043019 13.78411916583144 0.0 0.0 0.0 6.625343577009744</pose>
+</waypoint>
+<waypoint>
+    <time>10.458800305098414</time>
+    <pose>-4.406591560549035 13.703321159079774 0.0 0.0 0.0 6.6318329818995005</pose>
+</waypoint>
+<waypoint>
+    <time>10.545297014345383</time>
+    <pose>-4.3765245033890645 13.62221842925954 0.0 0.0 0.0 6.638205459337493</pose>
+</waypoint>
+<waypoint>
+    <time>10.632318854613438</time>
+    <pose>-4.345764958009994 13.54081418458083 0.0 0.0 0.0 6.644462491945976</pose>
+</waypoint>
+<waypoint>
+    <time>10.719864438341768</time>
+    <pose>-4.314317791429655 13.459111645180865 0.0 0.0 0.0 6.650605554164516</pose>
+</waypoint>
+<waypoint>
+    <time>10.807932205321165</time>
+    <pose>-4.28218797946673 13.377114042996626 0.0 0.0 0.0 6.656636110825982</pose>
+</waypoint>
+<waypoint>
+    <time>10.89652042476677</time>
+    <pose>-4.249380605953432 13.294824621637003 0.0 0.0 0.0 6.662555615844533</pose>
+</waypoint>
+<waypoint>
+    <time>10.98562719740296</time>
+    <pose>-4.21590086193111 13.212246636254472 0.0 0.0 0.0 6.668365511009069</pose>
+</waypoint>
+<waypoint>
+    <time>11.075250457558592</time>
+    <pose>-4.181754044828879 13.12938335341635 0.0 0.0 0.0 6.674067224877353</pose>
+</waypoint>
+<waypoint>
+    <time>11.165387975271049</time>
+    <pose>-4.146945557625416 13.046238050975564 0.0 0.0 0.0 6.679662171764888</pose>
+</waypoint>
+<waypoint>
+    <time>11.256037358397625</time>
+    <pose>-4.111480907994049 12.962814017940993 0.0 0.0 0.0 6.685151750823669</pose>
+</waypoint>
+<waypoint>
+    <time>11.347196054732905</time>
+    <pose>-4.0753657074313105 12.879114554347364 0.0 0.0 0.0 6.690537345205357</pose>
+</waypoint>
+<waypoint>
+    <time>11.438861354130978</time>
+    <pose>-4.038605670369035 12.795142971124715 0.0 0.0 0.0 6.695820321304395</pose>
+</waypoint>
+<waypoint>
+    <time>11.531030390631388</time>
+    <pose>-4.001206613270159 12.710902589967406 0.0 0.0 0.0 6.701002028075973</pose>
+</waypoint>
+<waypoint>
+    <time>11.623700144587795</time>
+    <pose>-3.963174453708424 12.626396743202749 0.0 0.0 0.0 6.706083796424521</pose>
+</waypoint>
+<waypoint>
+    <time>11.716867444798567</time>
+    <pose>-3.924515209432022 12.541628773659166 0.0 0.0 0.0 6.711066938658361</pose>
+</waypoint>
+<waypoint>
+    <time>11.810528970638398</time>
+    <pose>-3.8852349974114424 12.456602034533972 0.0 0.0 0.0 6.715952748006034</pose>
+</waypoint>
+<waypoint>
+    <time>11.904681254190338</time>
+    <pose>-3.8453400328715843 12.371319889260718 0.0 0.0 0.0 6.720742498190797</pose>
+</waypoint>
+<waypoint>
+    <time>11.999320682377551</time>
+    <pose>-3.8048366283083386 12.285785711376151 0.0 0.0 0.0 6.7254374430590715</pose>
+</waypoint>
+<waypoint>
+    <time>12.094443499094286</time>
+    <pose>-3.763731192489774 12.200002884386763 0.0 0.0 0.0 6.7300388162593014</pose>
+</waypoint>
+<waypoint>
+    <time>12.19004580733555</time>
+    <pose>-3.722030229442095 12.113974801634946 0.0 0.0 0.0 6.734547830967875</pose>
+</waypoint>
+<waypoint>
+    <time>12.286123571325065</time>
+    <pose>-3.679740337420516 12.027704866164768 0.0 0.0 0.0 6.7389656796586515</pose>
+</waypoint>
+<waypoint>
+    <time>12.382672618641168</time>
+    <pose>-3.636868207865244 11.941196490587355 0.0 0.0 0.0 6.743293533912997</pose>
+</waypoint>
+<waypoint>
+    <time>12.479688642340287</time>
+    <pose>-3.593420624342691 11.854453096945884 0.0 0.0 0.0 6.747532544267483</pose>
+</waypoint>
+<waypoint>
+    <time>12.57716720307777</time>
+    <pose>-3.5494044614721436 11.76747811658024 0.0 0.0 0.0 6.75168384009617</pose>
+</waypoint>
+<waypoint>
+    <time>12.675103731225825</time>
+    <pose>-3.5048266838379867 11.680274989991254 0.0 0.0 0.0 6.7557485295251505</pose>
+</waypoint>
+<waypoint>
+    <time>12.77349352898839</time>
+    <pose>-3.45969434488773 11.59284716670463 0.0 0.0 0.0 6.759727699376485</pose>
+</waypoint>
+<waypoint>
+    <time>12.872331772512768</time>
+    <pose>-3.414014585815945 11.50519810513448 0.0 0.0 0.0 6.763622415139441</pose>
+</waypoint>
+<waypoint>
+    <time>12.971613513997964</time>
+    <pose>-3.36779463443433 11.417331272446518 0.0 0.0 0.0 6.767433720966595</pose>
+</waypoint>
+<waypoint>
+    <time>13.071333683799566</time>
+    <pose>-3.321041804028072 11.329250144420909 0.0 0.0 0.0 6.771162639692804</pose>
+</waypoint>
+<waypoint>
+    <time>13.171487092531171</time>
+    <pose>-3.273763492198676 11.240958205314765 0.0 0.0 0.0 6.774810172874908</pose>
+</waypoint>
+<waypoint>
+    <time>13.272068433162273</time>
+    <pose>-3.2259671796934675 11.152458947724353 0.0 0.0 0.0 6.778377300850634</pose>
+</waypoint>
+<waypoint>
+    <time>13.373072283112657</time>
+    <pose>-3.1776604292219224 11.063755872446887 0.0 0.0 0.0 6.781864982814319</pose>
+</waypoint>
+<waypoint>
+    <time>13.474493106343246</time>
+    <pose>-3.1288508842590295 10.974852488342087 0.0 0.0 0.0 6.785274156908601</pose>
+</waypoint>
+<waypoint>
+    <time>13.57632525544345</time>
+    <pose>-3.0795462678358976 10.88575231219336 0.0 0.0 0.0 6.78860574032971</pose>
+</waypoint>
+<waypoint>
+    <time>13.678562973715087</time>
+    <pose>-3.029754381317742 10.796458868568681 0.0 0.0 0.0 6.791860629445717</pose>
+</waypoint>
+<waypoint>
+    <time>13.781200397252855</time>
+    <pose>-2.9794831031694895 10.706975689681181 0.0 0.0 0.0 6.795039699925545</pose>
+</waypoint>
+<waypoint>
+    <time>13.88423155702148</time>
+    <pose>-2.928740387709197 10.617306315249419 0.0 0.0 0.0 6.798143806878235</pose>
+</waypoint>
+<waypoint>
+    <time>13.987650380929585</time>
+    <pose>-2.877534263849452 10.527454292357355 0.0 0.0 0.0 6.8011737850007705</pose>
+</waypoint>
+<waypoint>
+    <time>14.091450695900377</time>
+    <pose>-2.825872833826964 10.437423175314038 0.0 0.0 0.0 6.804130448733481</pose>
+</waypoint>
+<waypoint>
+    <time>14.195626229939203</time>
+    <pose>-2.773764271920587 10.34721652551302 0.0 0.0 0.0 6.80701459242223</pose>
+</waypoint>
+<waypoint>
+    <time>14.30017061419813</time>
+    <pose>-2.721216823157894 10.256837911291454 0.0 0.0 0.0 6.809826990485927</pose>
+</waypoint>
+<waypoint>
+    <time>14.405077385037588</time>
+    <pose>-2.6682388020106114 10.16629090778896 0.0 0.0 0.0 6.812568397588969</pose>
+</waypoint>
+<waypoint>
+    <time>14.51033998608522</time>
+    <pose>-2.6148385910790126 10.075579096806191 0.0 0.0 0.0 6.815239548817463</pose>
+</waypoint>
+<waypoint>
+    <time>14.615951770292021</time>
+    <pose>-2.561024639765573 9.984706066663145 0.0 0.0 0.0 6.817841159858496</pose>
+</waypoint>
+<waypoint>
+    <time>14.721906001985882</time>
+    <pose>-2.506805462938031 9.89367541205724 0.0 0.0 0.0 6.820373927181897</pose>
+</waypoint>
+<waypoint>
+    <time>14.828195858922667</time>
+    <pose>-2.452189639582102 9.802490733921074 0.0 0.0 0.0 6.8228385282234765</pose>
+</waypoint>
+<waypoint>
+    <time>14.934814434334868</time>
+    <pose>-2.3971858114440496 9.711155639280038 0.0 0.0 0.0 6.82523562156962</pose>
+</waypoint>
+<waypoint>
+    <time>15.041754738978062</time>
+    <pose>-2.3418026816633044 9.61967374110959 0.0 0.0 0.0 6.827565847142002</pose>
+</waypoint>
+<waypoint>
+    <time>15.14900970317515</time>
+    <pose>-2.2860490133953957 9.528048658192354 0.0 0.0 0.0 6.829829826382612</pose>
+</waypoint>
+<waypoint>
+    <time>15.256572178858585</time>
+    <pose>-2.229933628425381 9.436284014974952 0.0 0.0 0.0 6.832028162437874</pose>
+</waypoint>
+<waypoint>
+    <time>15.364434941610641</time>
+    <pose>-2.17346540577198 9.344383441424661 0.0 0.0 0.0 6.834161440342088</pose>
+</waypoint>
+<waypoint>
+    <time>15.472590692701862</time>
+    <pose>-2.1166532802826725 9.252350572885788 0.0 0.0 0.0 6.836230227199129</pose>
+</waypoint>
+<waypoint>
+    <time>15.581032061127745</time>
+    <pose>-2.059506241219963 9.160189049935898 0.0 0.0 0.0 6.838235072362514</pose>
+</waypoint>
+<waypoint>
+    <time>15.689751605643842</time>
+    <pose>-2.00203333083902 9.067902518241766 0.0 0.0 0.0 6.840176507613229</pose>
+</waypoint>
+<waypoint>
+    <time>15.798741816799286</time>
+    <pose>-1.9442436429569387 8.975494628415195 0.0 0.0 0.0 6.842055047334896</pose>
+</waypoint>
+<waypoint>
+    <time>15.90799511896888</time>
+    <pose>-1.8861463215138503 8.882969035868596 0.0 0.0 0.0 6.843871188686397</pose>
+</waypoint>
+<waypoint>
+    <time>16.01750387238387</time>
+    <pose>-1.827750559126097 8.790329400670384 0.0 0.0 0.0 6.845625411770949</pose>
+</waypoint>
+<waypoint>
+    <time>16.127260375161423</time>
+    <pose>-1.7690655956316936 8.697579387400198 0.0 0.0 0.0 6.847318179802265</pose>
+</waypoint>
+<waypoint>
+    <time>16.237256865332938</time>
+    <pose>-1.7101007166283442 8.604722665003957 0.0 0.0 0.0 6.848949939266738</pose>
+</waypoint>
+<waypoint>
+    <time>16.347485522871295</time>
+    <pose>-1.6508652520041838 8.511762906648693 0.0 0.0 0.0 6.850521120081974</pose>
+</waypoint>
+<waypoint>
+    <time>16.45793847171705</time>
+    <pose>-1.5913685744615438 8.418703789577286 0.0 0.0 0.0 6.852032135751253</pose>
+</waypoint>
+<waypoint>
+    <time>16.568607781803713</time>
+    <pose>-1.5316200980339185 8.32554899496297 0.0 0.0 0.0 6.85348338351371</pose>
+</waypoint>
+<waypoint>
+    <time>16.679485471082153</time>
+    <pose>-1.4716292765964096 8.232302207763738 0.0 0.0 0.0 6.854875244490221</pose>
+</waypoint>
+<waypoint>
+    <time>16.790563507544196</time>
+    <pose>-1.4114056023698598 8.138967116576566 0.0 0.0 0.0 6.856208083824721</pose>
+</waypoint>
+<waypoint>
+    <time>16.901833811245517</time>
+    <pose>-1.3509586044189101 8.045547413491498 0.0 0.0 0.0 6.857482250820759</pose>
+</waypoint>
+<waypoint>
+    <time>17.013288256327797</time>
+    <pose>-1.2902978471442512 7.952046793945616 0.0 0.0 0.0 6.85869807907341</pose>
+</waypoint>
+<waypoint>
+    <time>17.124918673040334</time>
+    <pose>-1.2294329287692527 7.858468956576829 0.0 0.0 0.0 6.859855886596136</pose>
+</waypoint>
+<waypoint>
+    <time>17.236716849761034</time>
+    <pose>-1.168373479821263 7.764817603077582 0.0 0.0 0.0 6.860955975942655</pose>
+</waypoint>
+<waypoint>
+    <time>17.34867453501691</time>
+    <pose>-1.1071291616077972 7.671096438048427 0.0 0.0 0.0 6.861998634323757</pose>
+</waypoint>
+<waypoint>
+    <time>17.46078343950412</time>
+    <pose>-1.0457096646878394 7.577309168851479 0.0 0.0 0.0 6.8629841337188315</pose>
+</waypoint>
+<waypoint>
+    <time>17.573035238107558</time>
+    <pose>-0.9841247073385279 7.483459505463748 0.0 0.0 0.0 6.863912730982143</pose>
+</waypoint>
+<waypoint>
+    <time>17.685421571920084</time>
+    <pose>-0.9223840340174617 7.389551160330411 0.0 0.0 0.0 6.864784667943814</pose>
+</waypoint>
+<waypoint>
+    <time>17.797934050261414</time>
+    <pose>-0.8604974138208464 7.295587848217928 0.0 0.0 0.0 6.865600171505308</pose>
+</waypoint>
+<waypoint>
+    <time>17.910564252696684</time>
+    <pose>-0.7984746389377481 7.2015732860671084 0.0 0.0 0.0 6.866359453729487</pose>
+</waypoint>
+<waypoint>
+    <time>18.023303731054742</time>
+    <pose>-0.7363255231007072 7.107511192846083 0.0 0.0 0.0 6.867062711925199</pose>
+</waypoint>
+<waypoint>
+    <time>18.136144011446206</time>
+    <pose>-0.6740599000329227 7.013405289403179 0.0 0.0 0.0 6.867710128726181</pose>
+</waypoint>
+<waypoint>
+    <time>18.249076596281295</time>
+    <pose>-0.6116876218922863 6.919259298319746 0.0 0.0 0.0 6.868301872164501</pose>
+</waypoint>
+<waypoint>
+    <time>18.36209296628746</time>
+    <pose>-0.5492185577124998 6.825076943762897 0.0 0.0 0.0 6.868838095738249</pose>
+</waypoint>
+<waypoint>
+    <time>18.475184582526865</time>
+    <pose>-0.4866625918415141 6.730861951338184 0.0 0.0 0.0 6.8693189384736435</pose>
+</waypoint>
+<waypoint>
+    <time>18.58834288841371</time>
+    <pose>-0.4240296223775476 6.6366180479422265 0.0 0.0 0.0 6.869744524981359</pose>
+</waypoint>
+<waypoint>
+    <time>18.701559311731422</time>
+    <pose>-0.36132955960293683 6.5423489616152875 0.0 0.0 0.0 6.870114965507218</pose>
+</waypoint>
+<waypoint>
+    <time>18.814825266649756</time>
+    <pose>-0.2985723244160509 6.448058421393801 0.0 0.0 0.0 6.870430355977065</pose>
+</waypoint>
+<waypoint>
+    <time>18.92813215574177</time>
+    <pose>-0.2357678467615301 6.353750157162858 0.0 0.0 0.0 6.870690778035945</pose>
+</waypoint>
+<waypoint>
+    <time>19.041471372000778</time>
+    <pose>-0.17292606405908748 6.259427899508662 0.0 0.0 0.0 6.870896299081465</pose>
+</waypoint>
+<waypoint>
+    <time>19.15483430085716</time>
+    <pose>-0.11005691963113902 6.165095379570972 0.0 0.0 0.0 6.871046972291387</pose>
+</waypoint>
+<waypoint>
+    <time>19.268212322195225</time>
+    <pose>-0.04717036112948498 6.0707563288954836 0.0 0.0 0.0 6.871142836645408</pose>
+</waypoint>
+<waypoint>
+    <time>19.381596812369956</time>
+    <pose>0.015723661038679938 5.976414479286235 0.0 0.0 0.0 6.871183916941157</pose>
+</waypoint>
+<waypoint>
+    <time>19.494979146223784</time>
+    <pose>0.07861519528520282 5.88207356265798 0.0 0.0 0.0 6.871170223804381</pose>
+</waypoint>
+<waypoint>
+    <time>19.60835069910332</time>
+    <pose>0.14149429041558859 5.787737310888573 0.0 0.0 0.0 6.871101753693289</pose>
+</waypoint>
+<waypoint>
+    <time>19.721702848876113</time>
+    <pose>0.20435099720355762 5.693409455671328 0.0 0.0 0.0 6.870978488897094</pose>
+</waypoint>
+<waypoint>
+    <time>19.83502697794741</time>
+    <pose>0.267175369965287 5.5990937283674285 0.0 0.0 0.0 6.87080039752877</pose>
+</waypoint>
+<waypoint>
+    <time>19.94831447527696</time>
+    <pose>0.3299574681331009 5.504793859858299 0.0 0.0 0.0 6.870567433511953</pose>
+</waypoint>
+<waypoint>
+    <time>20.06155673839583</time>
+    <pose>0.3926873578283471 5.410513580398033 0.0 0.0 0.0 6.870279536562039</pose>
+</waypoint>
+<waypoint>
+    <time>20.17474517542331</time>
+    <pose>0.4553551134332025 5.316256619465834 0.0 0.0 0.0 6.869936632161518</pose>
+</waypoint>
+<waypoint>
+    <time>20.28787120708386</time>
+    <pose>0.5179508191611945 5.222026705618488 0.0 0.0 0.0 6.8695386315294735</pose>
+</waypoint>
+<waypoint>
+    <time>20.400926268724152</time>
+    <pose>0.580464570626149 5.127827566342867 0.0 0.0 0.0 6.869085431585335</pose>
+</waypoint>
+<waypoint>
+    <time>20.513901812330214</time>
+    <pose>0.6428864764093432 5.0336629279084795 0.0 0.0 0.0 6.8685769149068125</pose>
+</waypoint>
+<waypoint>
+    <time>20.626789308544673</time>
+    <pose>0.7052066596245962 4.939536515220082 0.0 0.0 0.0 6.868012949682157</pose>
+</waypoint>
+<waypoint>
+    <time>20.739580248684174</time>
+    <pose>0.7674152594810798 4.845452051670311 0.0 0.0 0.0 6.867393389656617</pose>
+</waypoint>
+<waypoint>
+    <time>20.852266146756914</time>
+    <pose>0.8295024328435648 4.751413258992411 0.0 0.0 0.0 6.866718074073235</pose>
+</waypoint>
+<waypoint>
+    <time>20.96483854148039</time>
+    <pose>0.8914583557898774 4.657423857113004 0.0 0.0 0.0 6.865986827607916</pose>
+</waypoint>
+<waypoint>
+    <time>21.07728899829932</time>
+    <pose>0.9532732251653206 4.563487564004944 0.0 0.0 0.0 6.865199460298891</pose>
+</waypoint>
+<waypoint>
+    <time>21.18960911140383</time>
+    <pose>1.0149372601338058 4.46960809554024 0.0 0.0 0.0 6.864355767470537</pose>
+</waypoint>
+<waypoint>
+    <time>21.30179050574786</time>
+    <pose>1.0764407037254506 4.3757891653430745 0.0 0.0 0.0 6.863455529651592</pose>
+</waypoint>
+<waypoint>
+    <time>21.413824839067917</time>
+    <pose>1.1377738243804107 4.282034484642889 0.0 0.0 0.0 6.862498512487871</pose>
+</waypoint>
+<waypoint>
+    <time>21.525703803902097</time>
+    <pose>1.198926917488678 4.188347762127585 0.0 0.0 0.0 6.861484466649459</pose>
+</waypoint>
+<waypoint>
+    <time>21.63741912960951</time>
+    <pose>1.2598903069256244 4.094732703796822 0.0 0.0 0.0 6.860413127732475</pose>
+</waypoint>
+<waypoint>
+    <time>21.74896258439008</time>
+    <pose>1.320654346583029 4.001193012815408 0.0 0.0 0.0 6.85928421615546</pose>
+</waypoint>
+<waypoint>
+    <time>21.860325977304814</time>
+    <pose>1.3812094218953692 3.9077323893668203 0.0 0.0 0.0 6.858097437050427</pose>
+</waypoint>
+<waypoint>
+    <time>21.97150116029655</time>
+    <pose>1.4415459513611086 3.8143545305068303 0.0 0.0 0.0 6.856852480148696</pose>
+</waypoint>
+<waypoint>
+    <time>22.082480030211226</time>
+    <pose>1.501654388058751 3.7210631300172685 0.0 0.0 0.0 6.855549019661563</pose>
+</waypoint>
+<waypoint>
+    <time>22.193254530819775</time>
+    <pose>1.5615252211574455 3.6278618782598904 0.0 0.0 0.0 6.85418671415588</pose>
+</waypoint>
+<waypoint>
+    <time>22.30381665484065</time>
+    <pose>1.6211489774218533 3.534754462030411 0.0 0.0 0.0 6.852765206424683</pose>
+</waypoint>
+<waypoint>
+    <time>22.414158445963032</time>
+    <pose>1.6805162227110786 3.4417445644126583 0.0 0.0 0.0 6.851284123352956</pose>
+</waypoint>
+<waypoint>
+    <time>22.52427200087086</time>
+    <pose>1.7396175634714164 3.3488358646328793 0.0 0.0 0.0 6.849743075778625</pose>
+</waypoint>
+<waypoint>
+    <time>22.634149471267627</time>
+    <pose>1.7984436482226775 3.256032037914202 0.0 0.0 0.0 6.8481416583490065</pose>
+</waypoint>
+<waypoint>
+    <time>22.743783065902136</time>
+    <pose>1.8569851690378394 3.163336755331257 0.0 0.0 0.0 6.846479449372694</pose>
+</waypoint>
+<waypoint>
+    <time>22.853165052595205</time>
+    <pose>1.9152328630158373 3.070753683664952 0.0 0.0 0.0 6.844756010667252</pose>
+</waypoint>
+<waypoint>
+    <time>22.962287760267426</time>
+    <pose>1.9731775137472027 2.9782864852574247 0.0 0.0 0.0 6.842970887402693</pose>
+</waypoint>
+<waypoint>
+    <time>23.071143580968062</time>
+    <pose>2.03080995277236 2.8859388178671748 0.0 0.0 0.0 6.841123607941062</pose>
+</waypoint>
+<waypoint>
+    <time>23.179724971905156</time>
+    <pose>2.0881210610323326 2.793714334524369 0.0 0.0 0.0 6.839213683672258</pose>
+</waypoint>
+<waypoint>
+    <time>23.288024457476947</time>
+    <pose>2.1451017703116317 2.701616683386336 0.0 0.0 0.0 6.837240608846431</pose>
+</waypoint>
+<waypoint>
+    <time>23.396034631304673</time>
+    <pose>2.2017430646730958 2.6096495075932657 0.0 0.0 0.0 6.835203860402977</pose>
+</waypoint>
+<waypoint>
+    <time>23.503748158266873</time>
+    <pose>2.258035981884474 2.5178164451240783 0.0 0.0 0.0 6.833102897796744</pose>
+</waypoint>
+<waypoint>
+    <time>23.61115777653526</time>
+    <pose>2.3139716148364937 2.426121128652527 0.0 0.0 0.0 6.830937162821403</pose>
+</waypoint>
+<waypoint>
+    <time>23.718256299612282</time>
+    <pose>2.3695411129522137 2.3345671854034986 0.0 0.0 0.0 6.828706079430484</pose>
+</waypoint>
+<waypoint>
+    <time>23.82503661837046</time>
+    <pose>2.424735683587437 2.2431582370095255 0.0 0.0 0.0 6.826409053556454</pose>
+</waypoint>
+<waypoint>
+    <time>23.931491703093634</time>
+    <pose>2.4795465934219454 2.151897899367528 0.0 0.0 0.0 6.8240454729280895</pose>
+</waypoint>
+<waypoint>
+    <time>24.037614605520176</time>
+    <pose>2.5339651698413617 2.060789782495773 0.0 0.0 0.0 6.821614706886644</pose>
+</waypoint>
+<waypoint>
+    <time>24.143398460888317</time>
+    <pose>2.5879828023093907 1.969837490391083 0.0 0.0 0.0 6.819116106201204</pose>
+</waypoint>
+<waypoint>
+    <time>24.248836489983702</time>
+    <pose>2.641590943730256 1.8790446208862592 0.0 0.0 0.0 6.816549002883786</pose>
+</waypoint>
+<waypoint>
+    <time>24.353922001189243</time>
+    <pose>2.6947811118010803 1.7884147655077631 0.0 0.0 0.0 6.813912710004551</pose>
+</waypoint>
+<waypoint>
+    <time>24.458648392537402</time>
+    <pose>2.747544890354028 1.69795150933365 0.0 0.0 0.0 6.811206521507875</pose>
+</waypoint>
+<waypoint>
+    <time>24.563009153765034</time>
+    <pose>2.799873930687975 1.6076584308517483 0.0 0.0 0.0 6.808429712029737</pose>
+</waypoint>
+<waypoint>
+    <time>24.66699786837086</time>
+    <pose>2.851759952889506 1.5175391018181046 0.0 0.0 0.0 6.805581536717132</pose>
+</waypoint>
+<waypoint>
+    <time>24.770608215675697</time>
+    <pose>2.9031947471430266 1.4275970871157044 0.0 0.0 0.0 6.802661231050209</pose>
+</waypoint>
+<waypoint>
+    <time>24.873833972885567</time>
+    <pose>2.9541701750297893 1.3378359446134347 0.0 0.0 0.0 6.799668010667851</pose>
+</waypoint>
+<waypoint>
+    <time>24.976669017157747</time>
+    <pose>3.004678170815613 1.2482592250253621 0.0 0.0 0.0 6.796601071197605</pose>
+</waypoint>
+<waypoint>
+    <time>25.07910732766988</time>
+    <pose>3.0547107427271127 1.1588704717702638 0.0 0.0 0.0 6.793459588090655</pose>
+</waypoint>
+<waypoint>
+    <time>25.18114298769224</time>
+    <pose>3.1042599742162165 1.069673220831471 0.0 0.0 0.0 6.790242716463002</pose>
+</waypoint>
+<waypoint>
+    <time>25.28277018666324</time>
+    <pose>3.1533180252127853 0.9806710006169795 0.0 0.0 0.0 6.786949590943593</pose>
+</waypoint>
+<waypoint>
+    <time>25.38398322226821</time>
+    <pose>3.2018771333651292 0.8918673318198973 0.0 0.0 0.0 6.783579325530768</pose>
+</waypoint>
+<waypoint>
+    <time>25.484776502521623</time>
+    <pose>3.249929615268232 0.8032657272791489 0.0 0.0 0.0 6.780131013457836</pose>
+</waypoint>
+<waypoint>
+    <time>25.585144547852693</time>
+    <pose>3.297467867679478 0.7148696918405382 0.0 0.0 0.0 6.77660372706938</pose>
+</waypoint>
+<waypoint>
+    <time>25.68508199319448</time>
+    <pose>3.344484368721696 0.626682722218092 0.0 0.0 0.0 6.772996517709249</pose>
+</waypoint>
+<waypoint>
+    <time>25.784583590076515</time>
+    <pose>3.3909716790733295 0.5387083068557476 0.0 0.0 0.0 6.769308415621905</pose>
+</waypoint>
+<waypoint>
+    <time>25.883644208720934</time>
+    <pose>3.436922443145549 0.45094992578935483 0.0 0.0 0.0 6.765538429868547</pose>
+</waypoint>
+<waypoint>
+    <time>25.982258840142133</time>
+    <pose>3.482329390246108 0.36341105050901834 0.0 0.0 0.0 6.761685548259516</pose>
+</waypoint>
+<waypoint>
+    <time>26.080422598249942</time>
+    <pose>3.5271853357297642 0.27609514382177475 0.0 0.0 0.0 6.757748737304789</pose>
+</waypoint>
+<waypoint>
+    <time>26.178130721956233</time>
+    <pose>3.571483182135103 0.18900565971460623 0.0 0.0 0.0 6.753726942184466</pose>
+</waypoint>
+<waypoint>
+    <time>26.275378577284915</time>
+    <pose>3.6152159203075445 0.10214604321781788 0.0 0.0 0.0 6.749619086740877</pose>
+</waypoint>
+<waypoint>
+    <time>26.37216165948521</time>
+    <pose>3.65837663050839 0.01551973026875803 0.0 0.0 0.0 6.7454240734947035</pose>
+</waypoint>
+<waypoint>
+    <time>26.468475595148085</time>
+    <pose>3.700958483509716 -0.07086985242409904 0.0 0.0 0.0 6.741140783687067</pose>
+</waypoint>
+<waypoint>
+    <time>26.564316144325648</time>
+    <pose>3.7429547416749527 -0.1570192875167056 0.0 0.0 0.0 6.736768077350028</pose>
+</waypoint>
+<waypoint>
+    <time>26.659679202653326</time>
+    <pose>3.7843587600249573 -0.2429251671646128 0.0 0.0 0.0 6.732304793407792</pose>
+</waypoint>
+<waypoint>
+    <time>26.754560803474618</time>
+    <pose>3.8251639872894483 -0.32858409315778836 0.0 0.0 0.0 6.7277497498114425</pose>
+</waypoint>
+<waypoint>
+    <time>26.848957119968038</time>
+    <pose>3.8653639669435873 -0.4139926770550349 0.0 0.0 0.0 6.723101743709641</pose>
+</waypoint>
+<waypoint>
+    <time>26.942864467275992</time>
+    <pose>3.904952338229586 -0.4991475403180252 0.0 0.0 0.0 6.7183595516585175</pose>
+</waypoint>
+<waypoint>
+    <time>27.036279304635155</time>
+    <pose>3.943922837163155 -0.5840453144449551 0.0 0.0 0.0 6.713521929873495</pose>
+</waypoint>
+<waypoint>
+    <time>27.129198237507893</time>
+    <pose>3.9822692975246436 -0.6686826411037861 0.0 0.0 0.0 6.708587614526561</pose>
+</waypoint>
+<waypoint>
+    <time>27.22161801971425</time>
+    <pose>4.0199856518347 -0.7530561722650955 0.0 0.0 0.0 6.703555322092042</pose>
+</waypoint>
+<waypoint>
+    <time>27.31353555556383</time>
+    <pose>4.057065932314326 -0.8371625703345134 0.0 0.0 0.0 6.698423749744823</pose>
+</waypoint>
+<waypoint>
+    <time>27.40494790198702</time>
+    <pose>4.093504271829139 -0.9209985082847522 0.0 0.0 0.0 6.693191575814279</pose>
+</waypoint>
+<waypoint>
+    <time>27.4958522706647</time>
+    <pose>4.129294904817716 -1.0045606697872203 0.0 0.0 0.0 6.6878574602984</pose>
+</waypoint>
+<waypoint>
+    <time>27.58624603015566</time>
+    <pose>4.1644321682038665 -1.0878457493431781 0.0 0.0 0.0 6.682420045441649</pose>
+</waypoint>
+<waypoint>
+    <time>27.67612670802085</time>
+    <pose>4.198910502292698 -1.1708504524145391 0.0 0.0 0.0 6.6768779563811</pose>
+</waypoint>
+<waypoint>
+    <time>27.765491992943275</time>
+    <pose>4.232724451650302 -1.253571495554164 0.0 0.0 0.0 6.6712298018655005</pose>
+</waypoint>
+<waypoint>
+    <time>27.85433973684256</time>
+    <pose>4.265868665966963 -1.3360056065357522 0.0 0.0 0.0 6.665474175051283</pose>
+</waypoint>
+<waypoint>
+    <time>27.942667956982834</time>
+    <pose>4.298337900903725 -1.4181495244832787 0.0 0.0 0.0 6.65960965438121</pose>
+</waypoint>
+<waypoint>
+    <time>28.030474838072557</time>
+    <pose>4.330127018922193 -1.4999999999999971 0.0 0.0 0.0 6.653634804549701</pose>
+</waypoint>
+<waypoint>
+    <time>28.1177587343548</time>
+    <pose>4.361230990097429 -1.5815537952969654 0.0 0.0 0.0 6.647548177560864</pose>
+</waypoint>
+<waypoint>
+    <time>28.204518171686292</time>
+    <pose>4.391644892913842 -1.662807684321125 0.0 0.0 0.0 6.6413483138839275</pose>
+</waypoint>
+<waypoint>
+    <time>28.290751849603406</time>
+    <pose>4.421363915043887 -1.7437584528829266 0.0 0.0 0.0 6.635033743711764</pose>
+</waypoint>
+<waypoint>
+    <time>28.376458643373148</time>
+    <pose>4.450383354109528 -1.824402898783462 0.0 0.0 0.0 6.628602988328312</pose>
+</waypoint>
+<waypoint>
+    <time>28.461637606026937</time>
+    <pose>4.478698618426274 -1.9047378319411379 0.0 0.0 0.0 6.622054561590273</pose>
+</waypoint>
+<waypoint>
+    <time>28.5462879703749</time>
+    <pose>4.5063052277297215 -1.9847600745178755 0.0 0.0 0.0 6.615386971529094</pose>
+</waypoint>
+<waypoint>
+    <time>28.630409150998112</time>
+    <pose>4.533198813884447 -2.064466461044809 0.0 0.0 0.0 6.6085987220793</pose>
+</waypoint>
+<waypoint>
+    <time>28.71400074621601</time>
+    <pose>4.559375121575167 -2.14385383854749 0.0 0.0 0.0 6.601688314938837</pose>
+</waypoint>
+<waypoint>
+    <time>28.797062540026175</time>
+    <pose>4.5848300089800675 -2.222919066670645 0.0 0.0 0.0 6.594654251567727</pose>
+</waypoint>
+<waypoint>
+    <time>28.879594504013127</time>
+    <pose>4.609559448426125 -2.3016590178023755 0.0 0.0 0.0 6.587495035330828</pose>
+</waypoint>
+<waypoint>
+    <time>28.961596799222804</time>
+    <pose>4.633559527026424 -2.3800705771978787 0.0 0.0 0.0 6.580209173790914</pose>
+</waypoint>
+<waypoint>
+    <time>29.043069777999076</time>
+    <pose>4.656826447299269 -2.458150643102665 0.0 0.0 0.0 6.572795181157529</pose>
+</waypoint>
+<waypoint>
+    <time>29.12401398577832</time>
+    <pose>4.679356527769059 -2.535896126875254 0.0 0.0 0.0 6.5652515808978364</pose>
+</waypoint>
+<waypoint>
+    <time>29.204430162837873</time>
+    <pose>4.701146203548793 -2.6133039531093503 0.0 0.0 0.0 6.557576908514781</pose>
+</waypoint>
+<waypoint>
+    <time>29.28431924599392</time>
+    <pose>4.722192026904143 -2.6903710597555017 0.0 0.0 0.0 6.549769714497645</pose>
+</waypoint>
+<waypoint>
+    <time>29.363682370243946</time>
+    <pose>4.742490667798974 -2.7670943982422207 0.0 0.0 0.0 6.54182856745053</pose>
+</waypoint>
+<waypoint>
+    <time>29.44252087034879</time>
+    <pose>4.762038914422256 -2.843470933596587 0.0 0.0 0.0 6.533752057402885</pose>
+</waypoint>
+<waypoint>
+    <time>29.52083628234882</time>
+    <pose>4.780833673696253 -2.9194976445642946 0.0 0.0 0.0 6.525538799306359</pose>
+</waypoint>
+<waypoint>
+    <time>29.598630345008587</time>
+    <pose>4.798871971765945 -2.9951715237291716 0.0 0.0 0.0 6.517187436721647</pose>
+</waypoint>
+<waypoint>
+    <time>29.67590500118382</time>
+    <pose>4.816150954469564 -3.0704895776321286 0.0 0.0 0.0 6.508696645698309</pose>
+</waypoint>
+<waypoint>
+    <time>29.75266239910456</time>
+    <pose>4.832667887790206 -3.1454488268896035 0.0 0.0 0.0 6.500065138849346</pose>
+</waypoint>
+<waypoint>
+    <time>29.828904893567504</time>
+    <pose>4.8484201582884365 -3.2200463063113833 0.0 0.0 0.0 6.491291669622589</pose>
+</waypoint>
+<waypoint>
+    <time>29.904635047030716</time>
+    <pose>4.8634052735158 -3.294279065017927 0.0 0.0 0.0 6.482375036768522</pose>
+</waypoint>
+<waypoint>
+    <time>29.979855630603137</time>
+    <pose>4.877620862409192 -3.3681441665570833 0.0 0.0 0.0 6.47331408900436</pose>
+</waypoint>
+<waypoint>
+    <time>30.05456962492128</time>
+    <pose>4.891064675666041 -3.441638689020234 0.0 0.0 0.0 6.4641077298724285</pose>
+</waypoint>
+<waypoint>
+    <time>30.12878022090499</time>
+    <pose>4.903734586100197 -3.5147597251579117 0.0 0.0 0.0 6.454754922789233</pose>
+</waypoint>
+<waypoint>
+    <time>30.202490820383808</time>
+    <pose>4.915628588978521 -3.58750438249477 0.0 0.0 0.0 6.445254696281024</pose>
+</waypoint>
+<waypoint>
+    <time>30.275705036585315</time>
+    <pose>4.9267448023380815 -3.6598697834440213 0.0 0.0 0.0 6.435606149399234</pose>
+</waypoint>
+<waypoint>
+    <time>30.348426694476323</time>
+    <pose>4.937081467283944 -3.7318530654212556 0.0 0.0 0.0 6.4258084573079675</pose>
+</waypoint>
+<waypoint>
+    <time>30.420659830947617</time>
+    <pose>4.946636948267466 -3.8034513809576844 0.0 0.0 0.0 6.415860877033343</pose>
+</waypoint>
+<waypoint>
+    <time>30.492408694832616</time>
+    <pose>4.955409733345098 -3.8746618978127776 0.0 0.0 0.0 6.405762753363321</pose>
+</waypoint>
+<waypoint>
+    <time>30.5636777467501</time>
+    <pose>4.963398434417602 -3.9454817990862976 0.0 0.0 0.0 6.395513524883435</pose>
+</waypoint>
+<waypoint>
+    <time>30.634471658760912</time>
+    <pose>4.970601787449696 -4.015908283329726 0.0 0.0 0.0 6.385112730132572</pose>
+</waypoint>
+<waypoint>
+    <time>30.704795313828363</time>
+    <pose>4.977018652670062 -4.085938564657087 0.0 0.0 0.0 6.374560013859995</pose>
+</waypoint>
+<waypoint>
+    <time>30.774653805071868</time>
+    <pose>4.9826480147516845 -4.1555698728551445 0.0 0.0 0.0 6.3638551333624855</pose>
+</waypoint>
+<waypoint>
+    <time>30.844052434803345</time>
+    <pose>4.987488982972498 -4.22479945349299 0.0 0.0 0.0 6.352997964878263</pose>
+</waypoint>
+<waypoint>
+    <time>30.912996713335723</time>
+    <pose>4.991540791356341 -4.293624568031002 0.0 0.0 0.0 6.341988510011007</pose>
+</waypoint>
+<waypoint>
+    <time>30.98149235755293</time>
+    <pose>4.994802798794137 -4.362042493929163 0.0 0.0 0.0 6.330826902155438</pose>
+</waypoint>
+<waypoint>
+    <time>31.049545289230917</time>
+    <pose>4.997274489145346 -4.430050524754765 0.0 0.0 0.0 6.319513412892925</pose>
+</waypoint>
+<waypoint>
+    <time>31.117161633099144</time>
+    <pose>4.99895547131963 -4.497645970289479 0.0 0.0 0.0 6.308048458322521</pose>
+</waypoint>
+<waypoint>
+    <time>31.184347714632395</time>
+    <pose>4.999845479338734 -4.564826156635742 0.0 0.0 0.0 6.296432605291203</pose>
+</waypoint>
+<waypoint>
+    <time>31.2511100575629</time>
+    <pose>4.99994437237857 -4.63158842632257 0.0 0.0 0.0 6.284666577483458</pose>
+</waypoint>
+<waypoint>
+    <time>31.317455381103105</time>
+    <pose>4.999252134791502 -4.697930138410647 0.0 0.0 0.0 6.272751261328865</pose>
+</waypoint>
+<waypoint>
+    <time>31.38339059686998</time>
+    <pose>4.99776887610882 -4.763848668596812 0.0 0.0 0.0 6.260687711683432</pose>
+</waypoint>
+<waypoint>
+    <time>31.448922805502114</time>
+    <pose>4.995494831023407 -4.829341409317867 0.0 0.0 0.0 6.248477157239015</pose>
+</waypoint>
+<waypoint>
+    <time>31.514059292961594</time>
+    <pose>4.992430359352613 -4.894405769853705 0.0 0.0 0.0 6.2361210056130645</pose>
+</waypoint>
+<waypoint>
+    <time>31.57880752651334</time>
+    <pose>4.9885759459813075 -4.95903917642983 0.0 0.0 0.0 6.223620848069184</pose>
+</waypoint>
+<waypoint>
+    <time>31.643175150375377</time>
+    <pose>4.983932200785171 -5.023239072319137 0.0 0.0 0.0 6.210978463819016</pose>
+</waypoint>
+<waypoint>
+    <time>31.707169981034458</time>
+    <pose>4.978499858534188 -5.087002917943066 0.0 0.0 0.0 6.198195823854038</pose>
+</waypoint>
+<waypoint>
+    <time>31.770800002222487</time>
+    <pose>4.972279778776387 -5.1503281909720515 0.0 0.0 0.0 6.185275094256619</pose>
+</waypoint>
+<waypoint>
+    <time>31.83407335955033</time>
+    <pose>4.965272945701838 -5.2132123864253 0.0 0.0 0.0 6.172218638939567</pose>
+</waypoint>
+<waypoint>
+    <time>31.896998354796796</time>
+    <pose>4.957480467986922 -5.275653016769897 0.0 0.0 0.0 6.159029021764458</pose>
+</waypoint>
+<waypoint>
+    <time>31.95958343985189</time>
+    <pose>4.948903578618917 -5.337647612019178 0.0 0.0 0.0 6.1457090079905665</pose>
+</waypoint>
+<waypoint>
+    <time>32.02183721031494</time>
+    <pose>4.9395436347008905 -5.399193719830459 0.0 0.0 0.0 6.132261565008429</pose>
+</waypoint>
+<waypoint>
+    <time>32.08376839874964</time>
+    <pose>4.92940211723698 -5.460288905602036 0.0 0.0 0.0 6.118689862314511</pose>
+</waypoint>
+<waypoint>
+    <time>32.1453858675996</time>
+    <pose>4.91848063089805 -5.520930752569492 0.0 0.0 0.0 6.104997270687496</pose>
+</waypoint>
+<waypoint>
+    <time>32.206698601769766</time>
+    <pose>4.906780903767799 -5.581116861901287 0.0 0.0 0.0 6.091187360530434</pose>
+</waypoint>
+<waypoint>
+    <time>32.26771570088072</time>
+    <pose>4.894304787069308 -5.640844852793683 0.0 0.0 0.0 6.077263899348077</pose>
+</waypoint>
+<waypoint>
+    <time>32.328446371204585</time>
+    <pose>4.881054254872148 -5.700112362564873 0.0 0.0 0.0 6.063230848333892</pose>
+</waypoint>
+<waypoint>
+    <time>32.38889991729319</time>
+    <pose>4.867031403780013 -5.758917046748485 0.0 0.0 0.0 6.049092358047916</pose>
+</waypoint>
+<waypoint>
+    <time>32.44908573331081</time>
+    <pose>4.852238452598984 -5.8172565791863 0.0 0.0 0.0 6.034852763172741</pose>
+</waypoint>
+<waypoint>
+    <time>32.50901329408582</time>
+    <pose>4.836677741986451 -5.875128652120278 0.0 0.0 0.0 6.020516576342449</pose>
+</waypoint>
+<waypoint>
+    <time>32.56869214589713</time>
+    <pose>4.820351734080753 -5.9325309762838465 0.0 0.0 0.0 6.006088481047017</pose>
+</waypoint>
+<waypoint>
+    <time>32.62813189701331</time>
+    <pose>4.803263012111606 -5.989461280992449 0.0 0.0 0.0 5.991573323622274</pose>
+</waypoint>
+<waypoint>
+    <time>32.6873422080039</time>
+    <pose>4.785414279991356 -6.045917314233381 0.0 0.0 0.0 5.976976104344635</pose>
+</waypoint>
+<waypoint>
+    <time>32.746332781844025</time>
+    <pose>4.766808361887147 -6.10189684275486 0.0 0.0 0.0 5.962301967657256</pose>
+</waypoint>
+<waypoint>
+    <time>32.80511335383517</time>
+    <pose>4.747448201774068 -6.157397652154377 0.0 0.0 0.0 5.947556191563513</pose>
+</waypoint>
+<waypoint>
+    <time>32.863693681366115</time>
+    <pose>4.7273368629693175 -6.2124175469662894 0.0 0.0 0.0 5.932744176231633</pose>
+</waypoint>
+<waypoint>
+    <time>32.9220835335398</time>
+    <pose>4.706477527647517 -6.266954350748662 0.0 0.0 0.0 5.9178714318627375</pose>
+</waypoint>
+<waypoint>
+    <time>32.98029268069259</time>
+    <pose>4.684873496337191 -6.321005906169377 0.0 0.0 0.0 5.902943565881859</pose>
+</waypoint>
+<waypoint>
+    <time>33.03833088383394</time>
+    <pose>4.662528187398537 -6.374570075091452 0.0 0.0 0.0 5.8879662695198975</pose>
+</waypoint>
+<waypoint>
+    <time>33.09620788403483</time>
+    <pose>4.639445136482547 -6.427644738657633 0.0 0.0 0.0 5.87294530385942</pose>
+</waypoint>
+<waypoint>
+    <time>33.15393339179449</time>
+    <pose>4.615627995971561 -6.480227797374204 0.0 0.0 0.0 5.8578864854253005</pose>
+</waypoint>
+<waypoint>
+    <time>33.21151707641508</time>
+    <pose>4.591080534401371 -6.532317171194045 0.0 0.0 0.0 5.842795671404663</pose>
+</waypoint>
+<waypoint>
+    <time>33.2689685554144</time>
+    <pose>4.565806635864916 -6.583910799598908 0.0 0.0 0.0 5.827678744585436</pose>
+</waypoint>
+<waypoint>
+    <time>33.32629738400688</time>
+    <pose>4.539810299397731 -6.635006641680926 0.0 0.0 0.0 5.812541598106626</pose>
+</waypoint>
+<waypoint>
+    <time>33.383513044682694</time>
+    <pose>4.513095638345171 -6.685602676223339 0.0 0.0 0.0 5.797390120114443</pose>
+</waypoint>
+<waypoint>
+    <time>33.44062493691495</time>
+    <pose>4.485666879711572 -6.735696901780465 0.0 0.0 0.0 5.782230178420524</pose>
+</waypoint>
+<waypoint>
+    <time>33.497642367023815</time>
+    <pose>4.45752836349142 -6.785287336756858 0.0 0.0 0.0 5.767067605257955</pose>
+</waypoint>
+<waypoint>
+    <time>33.55457453822623</time>
+    <pose>4.4286845419826495 -6.834372019485696 0.0 0.0 0.0 5.751908182229402</pose>
+</waypoint>
+<waypoint>
+    <time>33.61143054089848</time>
+    <pose>4.399139979082148 -6.882949008306387 0.0 0.0 0.0 5.736757625540403</pose>
+</waypoint>
+<waypoint>
+    <time>33.668219343078135</time>
+    <pose>4.368899349563645 -6.931016381641371 0.0 0.0 0.0 5.721621571605924</pose>
+</waypoint>
+<waypoint>
+    <time>33.724949781230265</time>
+    <pose>4.337967438338009 -6.97857223807212 0.0 0.0 0.0 5.706505563115746</pose>
+</waypoint>
+<waypoint>
+    <time>33.78163055130169</time>
+    <pose>4.306349139696152 -7.025614696414389 0.0 0.0 0.0 5.691415035637743</pose>
+</waypoint>
+<waypoint>
+    <time>33.83827020008515</time>
+    <pose>4.2740494565346285 -7.072141895792585 0.0 0.0 0.0 5.676355304832491</pose>
+</waypoint>
+<waypoint>
+    <time>33.89487711691386</time>
+    <pose>4.2410734995640125 -7.118151995713411 0.0 0.0 0.0 5.661331554345823</pose>
+</waypoint>
+<waypoint>
+    <time>33.9514595257049</time>
+    <pose>4.207426486500251 -7.163643176138663 0.0 0.0 0.0 5.646348824439194</pose>
+</waypoint>
+<waypoint>
+    <time>34.00802547736802</time>
+    <pose>4.173113741239089 -7.208613637557216 0.0 0.0 0.0 5.631412001408356</pose>
+</waypoint>
+<waypoint>
+    <time>34.06458284259473</time>
+    <pose>4.138140693013656 -7.253061601056228 0.0 0.0 0.0 5.6165258078346</pose>
+</waypoint>
+<waypoint>
+    <time>34.121139305040096</time>
+    <pose>4.102512875535438 -7.296985308391477 0.0 0.0 0.0 5.601694793702704</pose>
+</waypoint>
+<waypoint>
+    <time>34.17770235490816</time>
+    <pose>4.066235926118665 -7.340383022056953 0.0 0.0 0.0 5.5869233284129525</pose>
+</waypoint>
+<waypoint>
+    <time>34.23427928294953</time>
+    <pose>4.029315584788349 -7.383253025353553 0.0 0.0 0.0 5.572215593703808</pose>
+</waypoint>
+<waypoint>
+    <time>34.29087717487774</time>
+    <pose>3.991757693372031 -7.425593622457015 0.0 0.0 0.0 5.557575577496935</pose>
+</waypoint>
+<waypoint>
+    <time>34.34750290620923</time>
+    <pose>3.9535681945754706 -7.4674031384849835 0.0 0.0 0.0 5.543007068664409</pose>
+</waypoint>
+<waypoint>
+    <time>34.40416313752951</time>
+    <pose>3.914753131042318 -7.508679919563272 0.0 0.0 0.0 5.528513652713727</pose>
+</waypoint>
+<waypoint>
+    <time>34.460864310186615</time>
+    <pose>3.875318644398008 -7.549422332891286 0.0 0.0 0.0 5.514098708376496</pose>
+</waypoint>
+<waypoint>
+    <time>34.51761264241081</time>
+    <pose>3.835270974277993 -7.589628766806598 0.0 0.0 0.0 5.4997654050822895</pose>
+</waypoint>
+<waypoint>
+    <time>34.57441412585815</time>
+    <pose>3.794616457340446 -7.629297630848728 0.0 0.0 0.0 5.485516701290376</pose>
+</waypoint>
+<waypoint>
+    <time>34.63127452257361</time>
+    <pose>3.7533615262636215 -7.668427355822034 0.0 0.0 0.0 5.471355343649797</pose>
+</waypoint>
+<waypoint>
+    <time>34.6881993623683</time>
+    <pose>3.7115127087280473 -7.707016393857799 0.0 0.0 0.0 5.457283866950304</pose>
+</waypoint>
+<waypoint>
+    <time>34.74519394060367</time>
+    <pose>3.6690766263836383 -7.745063218475445 0.0 0.0 0.0 5.44330459482522</pose>
+</waypoint>
+<waypoint>
+    <time>34.80226331637453</time>
+    <pose>3.6260599938019875 -7.782566324642939 0.0 0.0 0.0 5.429419641162088</pose>
+</waypoint>
+<waypoint>
+    <time>34.85941231108152</time>
+    <pose>3.582469617413919 -7.8195242288363085 0.0 0.0 0.0 5.415630912174651</pose>
+</waypoint>
+<waypoint>
+    <time>34.91664550738268</time>
+    <pose>3.538312394432524 -7.8559354690983385 0.0 0.0 0.0 5.4019401090887476</pose>
+</waypoint>
+<waypoint>
+    <time>34.97396724851283</time>
+    <pose>3.4935953117618386 -7.891798605096388 0.0 0.0 0.0 5.388348731390947</pose>
+</waypoint>
+<waypoint>
+    <time>35.03138163795877</time>
+    <pose>3.4483254448913114 -7.927112218179383 0.0 0.0 0.0 5.374858080590497</pose>
+</waypoint>
+<waypoint>
+    <time>35.08889253947778</time>
+    <pose>3.402509956776263 -7.961874911433927 0.0 0.0 0.0 5.361469264442592</pose>
+</waypoint>
+<waypoint>
+    <time>35.14650357744605</time>
+    <pose>3.356156096704517 -7.9960853097395574 0.0 0.0 0.0 5.348183201582809</pose>
+</waypoint>
+<waypoint>
+    <time>35.204218137523625</time>
+    <pose>3.309271199149341 -8.029742059823143 0.0 0.0 0.0 5.335000626522202</pose>
+</waypoint>
+<waypoint>
+    <time>35.26203936762196</time>
+    <pose>3.261862682608956 -8.062843830312412 0.0 0.0 0.0 5.321922094954352</pose>
+</waypoint>
+<waypoint>
+    <time>35.31997017915992</time>
+    <pose>3.213938048432697 -8.095389311788624 0.0 0.0 0.0 5.308947989326257</pose>
+</waypoint>
+<waypoint>
+    <time>35.37801324859412</time>
+    <pose>3.1655048796341076 -8.127377216838372 0.0 0.0 0.0 5.296078524628181</pose>
+</waypoint>
+<waypoint>
+    <time>35.43617101920933</time>
+    <pose>3.1165708396910854 -8.158806280104493 0.0 0.0 0.0 5.283313754357231</pose>
+</waypoint>
+<waypoint>
+    <time>35.49444570315471</time>
+    <pose>3.06714367133331 -8.189675258336136 0.0 0.0 0.0 5.270653576614899</pose>
+</waypoint>
+<waypoint>
+    <time>35.552839283711954</time>
+    <pose>3.0172311953171334 -8.219982930437931 0.0 0.0 0.0 5.258097740297765</pose>
+</waypoint>
+<waypoint>
+    <time>35.61135351778142</time>
+    <pose>2.966841309188104 -8.249728097518304 0.0 0.0 0.0 5.245645851345881</pose>
+</waypoint>
+<waypoint>
+    <time>35.66998993857256</time>
+    <pose>2.91598198603137 -8.278909582936896 0.0 0.0 0.0 5.233297379014537</pose>
+</waypoint>
+<waypoint>
+    <time>35.728749858485536</time>
+    <pose>2.8646612732101033 -8.307526232351105 0.0 0.0 0.0 5.221051662137517</pose>
+</waypoint>
+<waypoint>
+    <time>35.78763437217078</time>
+    <pose>2.8128872910921894 -8.335576913761749 0.0 0.0 0.0 5.208907915354212</pose>
+</waypoint>
+<waypoint>
+    <time>35.846644359754244</time>
+    <pose>2.7606682317653535 -8.363060517557862 0.0 0.0 0.0 5.1968652352738935</pose>
+</waypoint>
+<waypoint>
+    <time>35.905780490215925</time>
+    <pose>2.7080123577409543 -8.389975956560551 0.0 0.0 0.0 5.18492260655338</pose>
+</waypoint>
+<waypoint>
+    <time>35.96504322491006</time>
+    <pose>2.6549280006466036 -8.41632216606604 0.0 0.0 0.0 5.173078907868788</pose>
+</waypoint>
+<waypoint>
+    <time>36.02443282121574</time>
+    <pose>2.6014235599078956 -8.442098103887767 0.0 0.0 0.0 5.16133291776096</pose>
+</waypoint>
+<waypoint>
+    <time>36.083949336307136</time>
+    <pose>2.547507501419367 -8.467302750397605 0.0 0.0 0.0 5.1496833203397525</pose>
+</waypoint>
+<waypoint>
+    <time>36.14359263103312</time>
+    <pose>2.4931883562049597 -8.491935108566217 0.0 0.0 0.0 5.138128710833673</pose>
+</waypoint>
+<waypoint>
+    <time>36.20336237389644</time>
+    <pose>2.4384747190681737 -8.515994204002482 0.0 0.0 0.0 5.126667600972048</pose>
+</waypoint>
+<waypoint>
+    <time>36.263258045123195</time>
+    <pose>2.3833752472321397 -8.539479084992031 0.0 0.0 0.0 5.115298424190659</pose>
+</waypoint>
+<waypoint>
+    <time>36.3232789408139</time>
+    <pose>2.3278986589697888 -8.562388822534913 0.0 0.0 0.0 5.104019540653782</pose>
+</waypoint>
+<waypoint>
+    <time>36.38342417716779</time>
+    <pose>2.2720537322243914 -8.584722510382333 0.0 0.0 0.0 5.09282924208499</pose>
+</waypoint>
+<waypoint>
+    <time>36.44369269477264</time>
+    <pose>2.215849303220632 -8.606479265072501 0.0 0.0 0.0 5.081725756403577</pose>
+</waypoint>
+<waypoint>
+    <time>36.50408326295284</time>
+    <pose>2.1592942650664897 -8.62765822596558 0.0 0.0 0.0 5.070707252162972</pose>
+</waypoint>
+<waypoint>
+    <time>36.564594484168836</time>
+    <pose>2.102397566346076 -8.648258555277739 0.0 0.0 0.0 5.059771842789781</pose>
+</waypoint>
+<waypoint>
+    <time>36.625224798461694</time>
+    <pose>2.045168209703734 -8.668279438114274 0.0 0.0 0.0 5.048917590622412</pose>
+</waypoint>
+<waypoint>
+    <time>36.685972487936844</time>
+    <pose>1.9876152504195703 -8.687720082501869 0.0 0.0 0.0 5.038142510751031</pose>
+</waypoint>
+<waypoint>
+    <time>36.74683568128158</time>
+    <pose>1.9297477949766453 -8.706579719419901 0.0 0.0 0.0 5.027444574658782</pose>
+</waypoint>
+<waypoint>
+    <time>36.807812358311246</time>
+    <pose>1.8715749996200965 -8.724857602830872 0.0 0.0 0.0 5.016821713668719</pose>
+</waypoint>
+<waypoint>
+    <time>36.86890035453957</time>
+    <pose>1.8131060689083356 -8.74255300970992 0.0 0.0 0.0 5.006271822197826</pose>
+</waypoint>
+<waypoint>
+    <time>36.930097365768844</time>
+    <pose>1.754350254256655 -8.759665240073423 0.0 0.0 0.0 4.995792760823098</pose>
+</waypoint>
+<waypoint>
+    <time>36.99140095269615</time>
+    <pose>1.6953168524733768 -8.776193617006673 0.0 0.0 0.0 4.9853823591638236</pose>
+</waypoint>
+<waypoint>
+    <time>37.05280854553205</time>
+    <pose>1.6360152042888585 -8.792137486690672 0.0 0.0 0.0 4.975038418585031</pose>
+</waypoint>
+<waypoint>
+    <time>37.11431744862875</time>
+    <pose>1.576454692877516 -8.807496218427985 0.0 0.0 0.0 4.964758714727158</pose>
+</waypoint>
+<waypoint>
+    <time>37.175924845114686</time>
+    <pose>1.5166447423731366 -8.822269204667693 0.0 0.0 0.0 4.954540999868111</pose>
+</waypoint>
+<waypoint>
+    <time>37.237627801533144</time>
+    <pose>1.4565948163777414 -8.83645586102942 0.0 0.0 0.0 4.944383005123168</pose>
+</waypoint>
+<waypoint>
+    <time>37.29942327248269</time>
+    <pose>1.396314416464154 -8.850055626326457 0.0 0.0 0.0 4.934282442489368</pose>
+</waypoint>
+<waypoint>
+    <time>37.361308105257315</time>
+    <pose>1.3358130806726094 -8.863067962587953 0.0 0.0 0.0 4.924237006740071</pose>
+</waypoint>
+<waypoint>
+    <time>37.423279044484694</time>
+    <pose>1.2751003820015552 -8.87549235508021 0.0 0.0 0.0 4.914244377177211</pose>
+</waypoint>
+<waypoint>
+    <time>37.48533273676105</time>
+    <pose>1.214185926892936 -8.887328312327023 0.0 0.0 0.0 4.90430221924615</pose>
+</waypoint>
+<waypoint>
+    <time>37.54746573528133</time>
+    <pose>1.1530793537122004 -8.898575366129144 0.0 0.0 0.0 4.894408186021727</pose>
+</waypoint>
+<waypoint>
+    <time>37.60967450446374</time>
+    <pose>1.091790331223229 -8.909233071582783 0.0 0.0 0.0 4.884559919570056</pose>
+</waypoint>
+<waypoint>
+    <time>37.67195542456776</time>
+    <pose>1.0303285570584646 -8.919301007097223 0.0 0.0 0.0 4.8747550521946605</pose>
+</waypoint>
+<waypoint>
+    <time>37.73430479630494</time>
+    <pose>0.9687037561844917 -8.928778774411487 0.0 0.0 0.0 4.8649912075712525</pose>
+</waypoint>
+<waypoint>
+    <time>37.79671884544202</time>
+    <pose>0.9069256793632586 -8.937665998610095 0.0 0.0 0.0 4.855266001780127</pose>
+</waypoint>
+<waypoint>
+    <time>37.85919372739613</time>
+    <pose>0.8450041016092475 -8.945962328137897 0.0 0.0 0.0 4.845577044240624</pose>
+</waypoint>
+<waypoint>
+    <time>37.921725531821686</time>
+    <pose>0.7829488206427926 -8.953667434813982 0.0 0.0 0.0 4.835921938554939</pose>
+</waypoint>
+<waypoint>
+    <time>37.98431028718913</time>
+    <pose>0.7207696553397934 -8.960781013844642 0.0 0.0 0.0 4.826298283267352</pose>
+</waypoint>
+<waypoint>
+    <time>38.04694396535548</time>
+    <pose>0.6584764441781225 -8.96730278383546 0.0 0.0 0.0 4.816703672545435</pose>
+</waypoint>
+<waypoint>
+    <time>38.10962248612688</time>
+    <pose>0.5960790436808711 -8.973232486802413 0.0 0.0 0.0 4.807135696788405</pose>
+</waypoint>
+<waypoint>
+    <time>38.17234172181345</time>
+    <pose>0.5335873268567981 -8.978569888182088 0.0 0.0 0.0 4.797591943169906</pose>
+</waypoint>
+<waypoint>
+    <time>38.235097501776835</time>
+    <pose>0.4710111816381366 -8.983314776840967 0.0 0.0 0.0 4.78806999611995</pose>
+</waypoint>
+<waypoint>
+    <time>38.29788561697084</time>
+    <pose>0.4083605093160352 -8.987466965083765 0.0 0.0 0.0 4.778567437752414</pose>
+</waypoint>
+<waypoint>
+    <time>38.36070182447575</time>
+    <pose>0.3456452229739236 -8.991026288660871 0.0 0.0 0.0 4.769081848244067</pose>
+</waypoint>
+<waypoint>
+    <time>38.42354185202693</time>
+    <pose>0.282875245918963 -8.993992606774823 0.0 0.0 0.0 4.759610806169938</pose>
+</waypoint>
+<waypoint>
+    <time>38.48640140253832</time>
+    <pose>0.22006051011190955 -8.99636580208591 0.0 0.0 0.0 4.750151888801679</pose>
+</waypoint>
+<waypoint>
+    <time>38.54927615862153</time>
+    <pose>0.15721095459560513 -8.998145780716776 0.0 0.0 0.0 4.740702672373076</pose>
+</waypoint>
+<waypoint>
+    <time>38.612161787101314</time>
+    <pose>0.0943365239223363 -8.999332472256164 0.0 0.0 0.0 4.731260732320001</pose>
+</waypoint>
+<waypoint>
+    <time>38.675053943528155</time>
+    <pose>0.03144716658034129 -8.99992582976169 0.0 0.0 0.0 4.721823643498043</pose>
+</waypoint>
+<waypoint>
+    <time>38.73794827668883</time>
+    <pose>-0.031447166580334404 -8.99992582976169 0.0 0.0 0.0 4.71238898038469</pose>
+</waypoint>
+<waypoint>
+    <time>38.800840433115674</time>
+    <pose>-0.09433652392232941 -8.999332472256164 0.0 0.0 0.0 4.702954317271337</pose>
+</waypoint>
+<waypoint>
+    <time>38.86372606159546</time>
+    <pose>-0.15721095459559825 -8.998145780716776 0.0 0.0 0.0 4.6935172284493785</pose>
+</waypoint>
+<waypoint>
+    <time>38.92660081767867</time>
+    <pose>-0.22006051011190267 -8.99636580208591 0.0 0.0 0.0 4.684075288396303</pose>
+</waypoint>
+<waypoint>
+    <time>38.98946036819006</time>
+    <pose>-0.2828752459189562 -8.993992606774825 0.0 0.0 0.0 4.674626071967729</pose>
+</waypoint>
+<waypoint>
+    <time>39.05230039574124</time>
+    <pose>-0.34564522297392064 -8.991026288660871 0.0 0.0 0.0 4.665167154599441</pose>
+</waypoint>
+<waypoint>
+    <time>39.11511660324615</time>
+    <pose>-0.4083605093160324 -8.987466965083767 0.0 0.0 0.0 4.655696112525317</pose>
+</waypoint>
+<waypoint>
+    <time>39.177904718440146</time>
+    <pose>-0.47101118163812966 -8.983314776840967 0.0 0.0 0.0 4.646210523016961</pose>
+</waypoint>
+<waypoint>
+    <time>39.24066049840353</time>
+    <pose>-0.5335873268567872 -8.978569888182088 0.0 0.0 0.0 4.636707964649402</pose>
+</waypoint>
+<waypoint>
+    <time>39.3033797340901</time>
+    <pose>-0.5960790436808642 -8.973232486802415 0.0 0.0 0.0 4.627186017599501</pose>
+</waypoint>
+<waypoint>
+    <time>39.3660582548615</time>
+    <pose>-0.6584764441781156 -8.96730278383546 0.0 0.0 0.0 4.617642263980946</pose>
+</waypoint>
+<waypoint>
+    <time>39.42869193302785</time>
+    <pose>-0.7207696553397906 -8.960781013844644 0.0 0.0 0.0 4.608074288223973</pose>
+</waypoint>
+<waypoint>
+    <time>39.491276688395295</time>
+    <pose>-0.7829488206427856 -8.95366743481398 0.0 0.0 0.0 4.598479677502</pose>
+</waypoint>
+<waypoint>
+    <time>39.55380849282085</time>
+    <pose>-0.8450041016092404 -8.945962328137897 0.0 0.0 0.0 4.588856022214442</pose>
+</waypoint>
+<waypoint>
+    <time>39.61628337477496</time>
+    <pose>-0.9069256793632477 -8.937665998610095 0.0 0.0 0.0 4.579200916528755</pose>
+</waypoint>
+<waypoint>
+    <time>39.67869742391204</time>
+    <pose>-0.9687037561844848 -8.928778774411487 0.0 0.0 0.0 4.569511958989253</pose>
+</waypoint>
+<waypoint>
+    <time>39.74104679564922</time>
+    <pose>-1.030328557058454 -8.919301007097225 0.0 0.0 0.0 4.559786753198127</pose>
+</waypoint>
+<waypoint>
+    <time>39.80332771575324</time>
+    <pose>-1.0917903312232227 -8.909233071582786 0.0 0.0 0.0 4.550022908574748</pose>
+</waypoint>
+<waypoint>
+    <time>39.86553648493565</time>
+    <pose>-1.1530793537121935 -8.898575366129146 0.0 0.0 0.0 4.540218041199296</pose>
+</waypoint>
+<waypoint>
+    <time>39.92766948345593</time>
+    <pose>-1.2141859268929371 -8.887328312327023 0.0 0.0 0.0 4.530369774747665</pose>
+</waypoint>
+<waypoint>
+    <time>39.98972317573228</time>
+    <pose>-1.2751003820015523 -8.875492355080212 0.0 0.0 0.0 4.520475741523245</pose>
+</waypoint>
+<waypoint>
+    <time>40.05169411495966</time>
+    <pose>-1.3358130806726105 -8.863067962587953 0.0 0.0 0.0 4.510533583592168</pose>
+</waypoint>
+<waypoint>
+    <time>40.11357894773428</time>
+    <pose>-1.3963144164641432 -8.850055626326458 0.0 0.0 0.0 4.500540954029309</pose>
+</waypoint>
+<waypoint>
+    <time>40.17537441868383</time>
+    <pose>-1.4565948163777345 -8.836455861029421 0.0 0.0 0.0 4.490495518280012</pose>
+</waypoint>
+<waypoint>
+    <time>40.23707737510229</time>
+    <pose>-1.516644742373126 -8.822269204667695 0.0 0.0 0.0 4.4803949556462115</pose>
+</waypoint>
+<waypoint>
+    <time>40.29868477158822</time>
+    <pose>-1.5764546928775094 -8.807496218427985 0.0 0.0 0.0 4.470236960901268</pose>
+</waypoint>
+<waypoint>
+    <time>40.36019367468492</time>
+    <pose>-1.6360152042888596 -8.792137486690672 0.0 0.0 0.0 4.460019246042222</pose>
+</waypoint>
+<waypoint>
+    <time>40.42160126752083</time>
+    <pose>-1.6953168524733704 -8.776193617006676 0.0 0.0 0.0 4.449739542184348</pose>
+</waypoint>
+<waypoint>
+    <time>40.48290485444813</time>
+    <pose>-1.754350254256652 -8.759665240073423 0.0 0.0 0.0 4.439395601605557</pose>
+</waypoint>
+<waypoint>
+    <time>40.544101865677405</time>
+    <pose>-1.813106068908329 -8.742553009709923 0.0 0.0 0.0 4.428985199946282</pose>
+</waypoint>
+<waypoint>
+    <time>40.60518986190573</time>
+    <pose>-1.8715749996200899 -8.724857602830873 0.0 0.0 0.0 4.418506138571553</pose>
+</waypoint>
+<waypoint>
+    <time>40.66616653893539</time>
+    <pose>-1.9297477949766426 -8.706579719419901 0.0 0.0 0.0 4.40795624710066</pose>
+</waypoint>
+<waypoint>
+    <time>40.72702973228013</time>
+    <pose>-1.9876152504195674 -8.68772008250187 0.0 0.0 0.0 4.397333386110598</pose>
+</waypoint>
+<waypoint>
+    <time>40.78777742175528</time>
+    <pose>-2.045168209703727 -8.668279438114276 0.0 0.0 0.0 4.386635450018347</pose>
+</waypoint>
+<waypoint>
+    <time>40.84840773604814</time>
+    <pose>-2.10239756634607 -8.64825855527774 0.0 0.0 0.0 4.37586037014697</pose>
+</waypoint>
+<waypoint>
+    <time>40.908918957264135</time>
+    <pose>-2.1592942650664835 -8.627658225965584 0.0 0.0 0.0 4.365006117979626</pose>
+</waypoint>
+<waypoint>
+    <time>40.96930952544433</time>
+    <pose>-2.2158493032206295 -8.606479265072503 0.0 0.0 0.0 4.35407070860638</pose>
+</waypoint>
+<waypoint>
+    <time>41.029578043049185</time>
+    <pose>-2.2720537322243812 -8.584722510382337 0.0 0.0 0.0 4.343052204365806</pose>
+</waypoint>
+<waypoint>
+    <time>41.08972327940307</time>
+    <pose>-2.327898658969778 -8.562388822534915 0.0 0.0 0.0 4.3319487186843855</pose>
+</waypoint>
+<waypoint>
+    <time>41.14974417509377</time>
+    <pose>-2.3833752472321295 -8.539479084992033 0.0 0.0 0.0 4.3207584201156</pose>
+</waypoint>
+<waypoint>
+    <time>41.20963984632053</time>
+    <pose>-2.4384747190681675 -8.515994204002485 0.0 0.0 0.0 4.3094795365787455</pose>
+</waypoint>
+<waypoint>
+    <time>41.269409589183844</time>
+    <pose>-2.4931883562049535 -8.49193510856622 0.0 0.0 0.0 4.2981103597973345</pose>
+</waypoint>
+<waypoint>
+    <time>41.32905288390983</time>
+    <pose>-2.5475075014193562 -8.467302750397609 0.0 0.0 0.0 4.2866492499356825</pose>
+</waypoint>
+<waypoint>
+    <time>41.38856939900123</time>
+    <pose>-2.601423559907885 -8.442098103887771 0.0 0.0 0.0 4.275094640429648</pose>
+</waypoint>
+<waypoint>
+    <time>41.447958995306905</time>
+    <pose>-2.654928000646601 -8.416322166066042 0.0 0.0 0.0 4.2634450430084225</pose>
+</waypoint>
+<waypoint>
+    <time>41.50722173000104</time>
+    <pose>-2.708012357740955 -8.389975956560551 0.0 0.0 0.0 4.251699052900563</pose>
+</waypoint>
+<waypoint>
+    <time>41.56635786046272</time>
+    <pose>-2.7606682317653504 -8.363060517557864 0.0 0.0 0.0 4.239855354216004</pose>
+</waypoint>
+<waypoint>
+    <time>41.62536784804619</time>
+    <pose>-2.8128872910921836 -8.335576913761754 0.0 0.0 0.0 4.227912725495505</pose>
+</waypoint>
+<waypoint>
+    <time>41.68425236173143</time>
+    <pose>-2.8646612732101016 -8.307526232351108 0.0 0.0 0.0 4.215870045415171</pose>
+</waypoint>
+<waypoint>
+    <time>41.743012281644404</time>
+    <pose>-2.915981986031364 -8.2789095829369 0.0 0.0 0.0 4.203726298631862</pose>
+</waypoint>
+<waypoint>
+    <time>41.80164870243555</time>
+    <pose>-2.9668413091880983 -8.24972809751831 0.0 0.0 0.0 4.1914805817548455</pose>
+</waypoint>
+<waypoint>
+    <time>41.86016293650501</time>
+    <pose>-3.0172311953171316 -8.219982930437935 0.0 0.0 0.0 4.179132109423495</pose>
+</waypoint>
+<waypoint>
+    <time>41.91855651706226</time>
+    <pose>-3.067143671333307 -8.189675258336136 0.0 0.0 0.0 4.166680220471615</pose>
+</waypoint>
+<waypoint>
+    <time>41.976831201007634</time>
+    <pose>-3.1165708396910796 -8.158806280104496 0.0 0.0 0.0 4.154124384154488</pose>
+</waypoint>
+<waypoint>
+    <time>42.034988971622845</time>
+    <pose>-3.1655048796341023 -8.127377216838376 0.0 0.0 0.0 4.141464206412145</pose>
+</waypoint>
+<waypoint>
+    <time>42.09303204105705</time>
+    <pose>-3.2139380484326883 -8.09538931178863 0.0 0.0 0.0 4.128699436141194</pose>
+</waypoint>
+<waypoint>
+    <time>42.15096285259501</time>
+    <pose>-3.2618626826089505 -8.062843830312415 0.0 0.0 0.0 4.115829971443127</pose>
+</waypoint>
+<waypoint>
+    <time>42.20878408269334</time>
+    <pose>-3.3092711991493355 -8.029742059823146 0.0 0.0 0.0 4.102855865815042</pose>
+</waypoint>
+<waypoint>
+    <time>42.26649864277091</time>
+    <pose>-3.3561560967045083 -7.9960853097395646 0.0 0.0 0.0 4.089777334247167</pose>
+</waypoint>
+<waypoint>
+    <time>42.32410968073918</time>
+    <pose>-3.402509956776262 -7.961874911433932 0.0 0.0 0.0 4.076594759186595</pose>
+</waypoint>
+<waypoint>
+    <time>42.38162058225819</time>
+    <pose>-3.448325444891306 -7.927112218179388 0.0 0.0 0.0 4.063308696326757</pose>
+</waypoint>
+<waypoint>
+    <time>42.43903497170414</time>
+    <pose>-3.4935953117618324 -7.89179860509639 0.0 0.0 0.0 4.049919880178883</pose>
+</waypoint>
+<waypoint>
+    <time>42.496356712834285</time>
+    <pose>-3.5383123944325185 -7.855935469098342 0.0 0.0 0.0 4.036429229378438</pose>
+</waypoint>
+<waypoint>
+    <time>42.55358990913545</time>
+    <pose>-3.5824696174139135 -7.819524228836313 0.0 0.0 0.0 4.022837851680636</pose>
+</waypoint>
+<waypoint>
+    <time>42.61073890384244</time>
+    <pose>-3.6260599938019857 -7.782566324642943 0.0 0.0 0.0 4.00914704859473</pose>
+</waypoint>
+<waypoint>
+    <time>42.6678082796133</time>
+    <pose>-3.6690766263836374 -7.745063218475449 0.0 0.0 0.0 3.995358319607315</pose>
+</waypoint>
+<waypoint>
+    <time>42.724802857848665</time>
+    <pose>-3.711512708728046 -7.707016393857802 0.0 0.0 0.0 3.98147336594416</pose>
+</waypoint>
+<waypoint>
+    <time>42.78172769764336</time>
+    <pose>-3.753361526263616 -7.668427355822039 0.0 0.0 0.0 3.9674940938190524</pose>
+</waypoint>
+<waypoint>
+    <time>42.838588094358826</time>
+    <pose>-3.794616457340441 -7.629297630848732 0.0 0.0 0.0 3.9534226171196054</pose>
+</waypoint>
+<waypoint>
+    <time>42.895389577806164</time>
+    <pose>-3.835270974277992 -7.5896287668066025 0.0 0.0 0.0 3.939261259479004</pose>
+</waypoint>
+<waypoint>
+    <time>42.952137910030366</time>
+    <pose>-3.8753186443980088 -7.549422332891284 0.0 0.0 0.0 3.925012555687079</pose>
+</waypoint>
+<waypoint>
+    <time>43.008839082687466</time>
+    <pose>-3.914753131042314 -7.508679919563278 0.0 0.0 0.0 3.9106792523928995</pose>
+</waypoint>
+<waypoint>
+    <time>43.065499314007745</time>
+    <pose>-3.9535681945754724 -7.467403138484984 0.0 0.0 0.0 3.896264308055652</pose>
+</waypoint>
+<waypoint>
+    <time>43.12212504533923</time>
+    <pose>-3.991757693372027 -7.425593622457021 0.0 0.0 0.0 3.881770892104965</pose>
+</waypoint>
+<waypoint>
+    <time>43.178722937267445</time>
+    <pose>-4.029315584788347 -7.383253025353556 0.0 0.0 0.0 3.8672023832724447</pose>
+</waypoint>
+<waypoint>
+    <time>43.23529986530881</time>
+    <pose>-4.066235926118661 -7.34038302205696 0.0 0.0 0.0 3.852562367065572</pose>
+</waypoint>
+<waypoint>
+    <time>43.29186291517688</time>
+    <pose>-4.102512875535434 -7.296985308391482 0.0 0.0 0.0 3.8378546323564393</pose>
+</waypoint>
+<waypoint>
+    <time>43.34841937762224</time>
+    <pose>-4.138140693013654 -7.253061601056231 0.0 0.0 0.0 3.8230831670666556</pose>
+</waypoint>
+<waypoint>
+    <time>43.40497674284895</time>
+    <pose>-4.173113741239084 -7.208613637557223 0.0 0.0 0.0 3.808252152934798</pose>
+</waypoint>
+<waypoint>
+    <time>43.461542694512076</time>
+    <pose>-4.2074264865002435 -7.163643176138671 0.0 0.0 0.0 3.793365959361023</pose>
+</waypoint>
+<waypoint>
+    <time>43.51812510330311</time>
+    <pose>-4.241073499564005 -7.1181519957134185 0.0 0.0 0.0 3.778429136330186</pose>
+</waypoint>
+<waypoint>
+    <time>43.574732020131826</time>
+    <pose>-4.274049456534631 -7.072141895792589 0.0 0.0 0.0 3.7634464064235558</pose>
+</waypoint>
+<waypoint>
+    <time>43.631371668915286</time>
+    <pose>-4.3063491396961515 -7.025614696414393 0.0 0.0 0.0 3.7484226559368885</pose>
+</waypoint>
+<waypoint>
+    <time>43.68805243898671</time>
+    <pose>-4.337967438338005 -6.9785722380721245 0.0 0.0 0.0 3.7333629251316367</pose>
+</waypoint>
+<waypoint>
+    <time>43.74478287713884</time>
+    <pose>-4.368899349563639 -6.931016381641373 0.0 0.0 0.0 3.718272397653617</pose>
+</waypoint>
+<waypoint>
+    <time>43.80157167931849</time>
+    <pose>-4.399139979082144 -6.882949008306393 0.0 0.0 0.0 3.7031563891634853</pose>
+</waypoint>
+<waypoint>
+    <time>43.85842768199074</time>
+    <pose>-4.428684541982646 -6.834372019485701 0.0 0.0 0.0 3.6880203352289787</pose>
+</waypoint>
+<waypoint>
+    <time>43.91535985319315</time>
+    <pose>-4.45752836349142 -6.7852873367568645 0.0 0.0 0.0 3.672869778539992</pose>
+</waypoint>
+<waypoint>
+    <time>43.97237728330202</time>
+    <pose>-4.485666879711567 -6.735696901780473 0.0 0.0 0.0 3.6577103555114094</pose>
+</waypoint>
+<waypoint>
+    <time>44.02948917553428</time>
+    <pose>-4.513095638345167 -6.685602676223344 0.0 0.0 0.0 3.642547782348856</pose>
+</waypoint>
+<waypoint>
+    <time>44.086704836210096</time>
+    <pose>-4.5398102993977325 -6.635006641680926 0.0 0.0 0.0 3.6273878406549374</pose>
+</waypoint>
+<waypoint>
+    <time>44.14403366480257</time>
+    <pose>-4.565806635864919 -6.583910799598911 0.0 0.0 0.0 3.6122363626627676</pose>
+</waypoint>
+<waypoint>
+    <time>44.2014851438019</time>
+    <pose>-4.591080534401368 -6.53231717119405 0.0 0.0 0.0 3.5970992161839295</pose>
+</waypoint>
+<waypoint>
+    <time>44.259068828422485</time>
+    <pose>-4.61562799597156 -6.480227797374208 0.0 0.0 0.0 3.5819822893647166</pose>
+</waypoint>
+<waypoint>
+    <time>44.31679433618215</time>
+    <pose>-4.639445136482543 -6.427644738657637 0.0 0.0 0.0 3.5668914753440664</pose>
+</waypoint>
+<waypoint>
+    <time>44.37467133638303</time>
+    <pose>-4.662528187398533 -6.374570075091458 0.0 0.0 0.0 3.551832656909972</pose>
+</waypoint>
+<waypoint>
+    <time>44.43270953952438</time>
+    <pose>-4.684873496337193 -6.321005906169378 0.0 0.0 0.0 3.536811691249496</pose>
+</waypoint>
+<waypoint>
+    <time>44.490918686677176</time>
+    <pose>-4.706477527647512 -6.266954350748671 0.0 0.0 0.0 3.521834394887518</pose>
+</waypoint>
+<waypoint>
+    <time>44.54930853885086</time>
+    <pose>-4.727336862969321 -6.212417546966292 0.0 0.0 0.0 3.506906528906656</pose>
+</waypoint>
+<waypoint>
+    <time>44.607888866381806</time>
+    <pose>-4.747448201774066 -6.157397652154384 0.0 0.0 0.0 3.492033784537736</pose>
+</waypoint>
+<waypoint>
+    <time>44.66666943837295</time>
+    <pose>-4.766808361887144 -6.101896842754868 0.0 0.0 0.0 3.4772217692058622</pose>
+</waypoint>
+<waypoint>
+    <time>44.725660012213076</time>
+    <pose>-4.7854142799913495 -6.04591731423339 0.0 0.0 0.0 3.462475993112128</pose>
+</waypoint>
+<waypoint>
+    <time>44.78487032320366</time>
+    <pose>-4.8032630121116044 -5.989461280992456 0.0 0.0 0.0 3.4478018564247535</pose>
+</waypoint>
+<waypoint>
+    <time>44.84431007431984</time>
+    <pose>-4.820351734080755 -5.932530976283852 0.0 0.0 0.0 3.4332046371471057</pose>
+</waypoint>
+<waypoint>
+    <time>44.903988926131156</time>
+    <pose>-4.83667774198645 -5.875128652120285 0.0 0.0 0.0 3.418689479722362</pose>
+</waypoint>
+<waypoint>
+    <time>44.963916486906164</time>
+    <pose>-4.8522384525989875 -5.817256579186303 0.0 0.0 0.0 3.4042613844269303</pose>
+</waypoint>
+<waypoint>
+    <time>45.02410230292379</time>
+    <pose>-4.867031403780014 -5.758917046748491 0.0 0.0 0.0 3.3899251975966385</pose>
+</waypoint>
+<waypoint>
+    <time>45.08455584901239</time>
+    <pose>-4.881054254872149 -5.700112362564878 0.0 0.0 0.0 3.375685602721464</pose>
+</waypoint>
+<waypoint>
+    <time>45.14528651933626</time>
+    <pose>-4.894304787069307 -5.640844852793686 0.0 0.0 0.0 3.3615471124354825</pose>
+</waypoint>
+<waypoint>
+    <time>45.206303618447215</time>
+    <pose>-4.906780903767798 -5.581116861901295 0.0 0.0 0.0 3.347514061421306</pose>
+</waypoint>
+<waypoint>
+    <time>45.26761635261738</time>
+    <pose>-4.918480630898051 -5.5209307525694955 0.0 0.0 0.0 3.3335906002389404</pose>
+</waypoint>
+<waypoint>
+    <time>45.32923382146734</time>
+    <pose>-4.929402117236978 -5.460288905602043 0.0 0.0 0.0 3.3197806900819016</pose>
+</waypoint>
+<waypoint>
+    <time>45.39116500990204</time>
+    <pose>-4.93954363470089 -5.399193719830466 0.0 0.0 0.0 3.3060880984548677</pose>
+</waypoint>
+<waypoint>
+    <time>45.45341878036509</time>
+    <pose>-4.948903578618918 -5.337647612019182 0.0 0.0 0.0 3.2925163957609467</pose>
+</waypoint>
+<waypoint>
+    <time>45.51600386542018</time>
+    <pose>-4.957480467986923 -5.275653016769901 0.0 0.0 0.0 3.2790689527788137</pose>
+</waypoint>
+<waypoint>
+    <time>45.57892886066664</time>
+    <pose>-4.965272945701838 -5.213212386425308 0.0 0.0 0.0 3.265748939004939</pose>
+</waypoint>
+<waypoint>
+    <time>45.64220221799449</time>
+    <pose>-4.972279778776388 -5.150328190972056 0.0 0.0 0.0 3.2525593218298097</pose>
+</waypoint>
+<waypoint>
+    <time>45.70583223918251</time>
+    <pose>-4.978499858534189 -5.08700291794307 0.0 0.0 0.0 3.239502866512746</pose>
+</waypoint>
+<waypoint>
+    <time>45.76982706984159</time>
+    <pose>-4.98393220078517 -5.023239072319143 0.0 0.0 0.0 3.2265821369153436</pose>
+</waypoint>
+<waypoint>
+    <time>45.83419469370363</time>
+    <pose>-4.988575945981308 -4.959039176429834 0.0 0.0 0.0 3.2137994969503745</pose>
+</waypoint>
+<waypoint>
+    <time>45.898942927255376</time>
+    <pose>-4.992430359352613 -4.894405769853713 0.0 0.0 0.0 3.201157112700197</pose>
+</waypoint>
+<waypoint>
+    <time>45.96407941471486</time>
+    <pose>-4.995494831023407 -4.82934140931787 0.0 0.0 0.0 3.188656955156312</pose>
+</waypoint>
+<waypoint>
+    <time>46.02961162334699</time>
+    <pose>-4.997768876108819 -4.763848668596819 0.0 0.0 0.0 3.176300803530353</pose>
+</waypoint>
+<waypoint>
+    <time>46.09554683911386</time>
+    <pose>-4.999252134791503 -4.697930138410654 0.0 0.0 0.0 3.164090249085961</pose>
+</waypoint>
+<waypoint>
+    <time>46.16189216265406</time>
+    <pose>-4.99994437237857 -4.631588426322578 0.0 0.0 0.0 3.1520266994405146</pose>
+</waypoint>
+<waypoint>
+    <time>46.228654505584565</time>
+    <pose>-4.999845479338735 -4.56482615663575 0.0 0.0 0.0 3.1401113832859204</pose>
+</waypoint>
+<waypoint>
+    <time>46.29584058711782</time>
+    <pose>-4.998955471319632 -4.497645970289483 0.0 0.0 0.0 3.128345355478176</pose>
+</waypoint>
+<waypoint>
+    <time>46.36345693098605</time>
+    <pose>-4.9972744891453456 -4.430050524754774 0.0 0.0 0.0 3.1167295024468697</pose>
+</waypoint>
+<waypoint>
+    <time>46.431509862664036</time>
+    <pose>-4.994802798794138 -4.3620424939291675 0.0 0.0 0.0 3.1052645478764553</pose>
+</waypoint>
+<waypoint>
+    <time>46.500005506881244</time>
+    <pose>-4.991540791356341 -4.293624568031009 0.0 0.0 0.0 3.093951058613929</pose>
+</waypoint>
+<waypoint>
+    <time>46.568949785413615</time>
+    <pose>-4.9874889829725 -4.224799453492998 0.0 0.0 0.0 3.0827894507583817</pose>
+</waypoint>
+<waypoint>
+    <time>46.638348415145096</time>
+    <pose>-4.9826480147516845 -4.155569872855152 0.0 0.0 0.0 3.0717799958911054</pose>
+</waypoint>
+<waypoint>
+    <time>46.708206906388604</time>
+    <pose>-4.977018652670065 -4.085938564657092 0.0 0.0 0.0 3.060922827406894</pose>
+</waypoint>
+<waypoint>
+    <time>46.77853056145605</time>
+    <pose>-4.970601787449698 -4.015908283329734 0.0 0.0 0.0 3.0502179469093944</pose>
+</waypoint>
+<waypoint>
+    <time>46.84932447346687</time>
+    <pose>-4.963398434417603 -3.9454817990863007 0.0 0.0 0.0 3.039665230636803</pose>
+</waypoint>
+<waypoint>
+    <time>46.920593525384355</time>
+    <pose>-4.955409733345098 -3.8746618978127847 0.0 0.0 0.0 3.029264435885954</pose>
+</waypoint>
+<waypoint>
+    <time>46.992342389269346</time>
+    <pose>-4.946636948267469 -3.8034513809576924 0.0 0.0 0.0 3.0190152074060514</pose>
+</waypoint>
+<waypoint>
+    <time>47.064575525740636</time>
+    <pose>-4.937081467283946 -3.731853065421267 0.0 0.0 0.0 3.0089170837360415</pose>
+</waypoint>
+<waypoint>
+    <time>47.13729718363165</time>
+    <pose>-4.926744802338083 -3.659869783444029 0.0 0.0 0.0 2.998969503461422</pose>
+</waypoint>
+<waypoint>
+    <time>47.21051139983315</time>
+    <pose>-4.915628588978522 -3.5875043824947834 0.0 0.0 0.0 2.9891718113701335</pose>
+</waypoint>
+<waypoint>
+    <time>47.284221999311974</time>
+    <pose>-4.9037345861002 -3.51475972515792 0.0 0.0 0.0 2.979523264488363</pose>
+</waypoint>
+<waypoint>
+    <time>47.35843259529569</time>
+    <pose>-4.891064675666042 -3.4416386890202366 0.0 0.0 0.0 2.9700230379801464</pose>
+</waypoint>
+<waypoint>
+    <time>47.43314658961383</time>
+    <pose>-4.877620862409193 -3.36814416655709 0.0 0.0 0.0 2.9606702308969424</pose>
+</waypoint>
+<waypoint>
+    <time>47.50836717318625</time>
+    <pose>-4.8634052735158 -3.2942790650179323 0.0 0.0 0.0 2.951463871765017</pose>
+</waypoint>
+<waypoint>
+    <time>47.584097326649456</time>
+    <pose>-4.84842015828844 -3.2200463063113913 0.0 0.0 0.0 2.9424029240008664</pose>
+</waypoint>
+<waypoint>
+    <time>47.66033982111241</time>
+    <pose>-4.8326678877902065 -3.145448826889606 0.0 0.0 0.0 2.9334862911467936</pose>
+</waypoint>
+<waypoint>
+    <time>47.73709721903314</time>
+    <pose>-4.816150954469565 -3.070489577632138 0.0 0.0 0.0 2.9247128219200302</pose>
+</waypoint>
+<waypoint>
+    <time>47.81437187520838</time>
+    <pose>-4.798871971765946 -2.9951715237291743 0.0 0.0 0.0 2.9160813150710747</pose>
+</waypoint>
+<waypoint>
+    <time>47.892165937868135</time>
+    <pose>-4.780833673696257 -2.9194976445643084 0.0 0.0 0.0 2.907590524047734</pose>
+</waypoint>
+<waypoint>
+    <time>47.97048134986817</time>
+    <pose>-4.762038914422258 -2.8434709335965938 0.0 0.0 0.0 2.899239161463031</pose>
+</waypoint>
+<waypoint>
+    <time>48.04931984997301</time>
+    <pose>-4.742490667798979 -2.7670943982422336 0.0 0.0 0.0 2.8910259033664936</pose>
+</waypoint>
+<waypoint>
+    <time>48.12868297422304</time>
+    <pose>-4.722192026904145 -2.69037105975551 0.0 0.0 0.0 2.8829493933188344</pose>
+</waypoint>
+<waypoint>
+    <time>48.20857205737908</time>
+    <pose>-4.701146203548798 -2.613303953109363 0.0 0.0 0.0 2.8750082462717494</pose>
+</waypoint>
+<waypoint>
+    <time>48.28898823443864</time>
+    <pose>-4.679356527769062 -2.535896126875263 0.0 0.0 0.0 2.8672010522545945</pose>
+</waypoint>
+<waypoint>
+    <time>48.36993244221789</time>
+    <pose>-4.656826447299271 -2.458150643102668 0.0 0.0 0.0 2.8595263798715402</pose>
+</waypoint>
+<waypoint>
+    <time>48.45140542099415</time>
+    <pose>-4.633559527026427 -2.380070577197887 0.0 0.0 0.0 2.8519827796118515</pose>
+</waypoint>
+<waypoint>
+    <time>48.53340771620383</time>
+    <pose>-4.6095594484261255 -2.30165901780238 0.0 0.0 0.0 2.844568786978463</pose>
+</waypoint>
+<waypoint>
+    <time>48.61593968019078</time>
+    <pose>-4.58483000898007 -2.222919066670653 0.0 0.0 0.0 2.8372829254385525</pose>
+</waypoint>
+<waypoint>
+    <time>48.69900147400095</time>
+    <pose>-4.55937512157517 -2.143853838547493 0.0 0.0 0.0 2.8301237092016622</pose>
+</waypoint>
+<waypoint>
+    <time>48.78259306921884</time>
+    <pose>-4.53319881388445 -2.0644664610448147 0.0 0.0 0.0 2.823089645830539</pose>
+</waypoint>
+<waypoint>
+    <time>48.86671424984205</time>
+    <pose>-4.506305227729724 -1.9847600745178835 0.0 0.0 0.0 2.8161792386900757</pose>
+</waypoint>
+<waypoint>
+    <time>48.951364614190005</time>
+    <pose>-4.4786986184262805 -1.9047378319411528 0.0 0.0 0.0 2.8093909892402884</pose>
+</waypoint>
+<waypoint>
+    <time>49.036543576843805</time>
+    <pose>-4.4503833541095315 -1.82440289878347 0.0 0.0 0.0 2.8027233991791136</pose>
+</waypoint>
+<waypoint>
+    <time>49.122250370613536</time>
+    <pose>-4.4213639150438935 -1.74375845288294 0.0 0.0 0.0 2.7961749724410585</pose>
+</waypoint>
+<waypoint>
+    <time>49.20848404853066</time>
+    <pose>-4.391644892913845 -1.662807684321134 0.0 0.0 0.0 2.7897442170576214</pose>
+</waypoint>
+<waypoint>
+    <time>49.295243485862144</time>
+    <pose>-4.361230990097436 -1.581553795296978 0.0 0.0 0.0 2.783429646885462</pose>
+</waypoint>
+<waypoint>
+    <time>49.382527382144396</time>
+    <pose>-4.330127018922195 -1.5000000000000082 0.0 0.0 0.0 2.777229783208498</pose>
+</waypoint>
+<waypoint>
+    <time>49.47033426323413</time>
+    <pose>-4.298337900903728 -1.41814952448328 0.0 0.0 0.0 2.771143156219692</pose>
+</waypoint>
+<waypoint>
+    <time>49.5586624833744</time>
+    <pose>-4.265868665966967 -1.3360056065357593 0.0 0.0 0.0 2.765168306388175</pose>
+</waypoint>
+<waypoint>
+    <time>49.64751022727369</time>
+    <pose>-4.232724451650303 -1.253571495554168 0.0 0.0 0.0 2.759303785718078</pose>
+</waypoint>
+<waypoint>
+    <time>49.736875512196114</time>
+    <pose>-4.198910502292702 -1.170850452414548 0.0 0.0 0.0 2.753548158903893</pose>
+</waypoint>
+<waypoint>
+    <time>49.82675619006131</time>
+    <pose>-4.164432168203868 -1.08784574934318 0.0 0.0 0.0 2.7479000043882653</pose>
+</waypoint>
+<waypoint>
+    <time>49.91714994955227</time>
+    <pose>-4.12929490481772 -1.0045606697872285 0.0 0.0 0.0 2.7423579153277338</pose>
+</waypoint>
+<waypoint>
+    <time>50.008054318229945</time>
+    <pose>-4.093504271829142 -0.9209985082847627 0.0 0.0 0.0 2.736920500470976</pose>
+</waypoint>
+<waypoint>
+    <time>50.09946666465313</time>
+    <pose>-4.057065932314333 -0.8371625703345283 0.0 0.0 0.0 2.7315863849551043</pose>
+</waypoint>
+<waypoint>
+    <time>50.19138420050272</time>
+    <pose>-4.019985651834705 -0.7530561722651041 0.0 0.0 0.0 2.726354211024566</pose>
+</waypoint>
+<waypoint>
+    <time>50.28380398270907</time>
+    <pose>-3.982269297524651 -0.6686826411037996 0.0 0.0 0.0 2.721222638677336</pose>
+</waypoint>
+<waypoint>
+    <time>50.376722915581816</time>
+    <pose>-3.94392283716316 -0.5840453144449633 0.0 0.0 0.0 2.7161903462428203</pose>
+</waypoint>
+<waypoint>
+    <time>50.47013775294097</time>
+    <pose>-3.9049523382295925 -0.4991475403180397 0.0 0.0 0.0 2.7112560308958784</pose>
+</waypoint>
+<waypoint>
+    <time>50.56404510024893</time>
+    <pose>-3.865363966943591 -0.41399267705504433 0.0 0.0 0.0 2.7064184091108645</pose>
+</waypoint>
+<waypoint>
+    <time>50.65844141674236</time>
+    <pose>-3.82516398728945 -0.3285840931577914 0.0 0.0 0.0 2.701676217059741</pose>
+</waypoint>
+<waypoint>
+    <time>50.753323017563645</time>
+    <pose>-3.784358760024962 -0.24292516716462192 0.0 0.0 0.0 2.69702821095793</pose>
+</waypoint>
+<waypoint>
+    <time>50.84868607589133</time>
+    <pose>-3.7429547416749536 -0.15701928751670768 0.0 0.0 0.0 2.692473167361586</pose>
+</waypoint>
+<waypoint>
+    <time>50.94452662506888</time>
+    <pose>-3.700958483509722 -0.07086985242411185 0.0 0.0 0.0 2.6880098834193604</pose>
+</waypoint>
+<waypoint>
+    <time>51.040840560731766</time>
+    <pose>-3.658376630508393 0.015519730268751992 0.0 0.0 0.0 2.683637177082308</pose>
+</waypoint>
+<waypoint>
+    <time>51.137623642932056</time>
+    <pose>-3.6152159203075507 0.10214604321780646 0.0 0.0 0.0 2.6793538872746794</pose>
+</waypoint>
+<waypoint>
+    <time>51.234871498260745</time>
+    <pose>-3.5714831821351067 0.18900565971459973 0.0 0.0 0.0 2.675158874028506</pose>
+</waypoint>
+<waypoint>
+    <time>51.33257962196703</time>
+    <pose>-3.527185335729771 0.2760951438217631 0.0 0.0 0.0 2.6710510185849174</pose>
+</waypoint>
+<waypoint>
+    <time>51.430743380074844</time>
+    <pose>-3.482329390246111 0.363411050509012 0.0 0.0 0.0 2.6670292234645787</pose>
+</waypoint>
+<waypoint>
+    <time>51.529358011496036</time>
+    <pose>-3.4369224431455576 0.45094992578934 0.0 0.0 0.0 2.663092412509874</pose>
+</waypoint>
+<waypoint>
+    <time>51.62841863014046</time>
+    <pose>-3.3909716790733353 0.5387083068557373 0.0 0.0 0.0 2.6592395309008285</pose>
+</waypoint>
+<waypoint>
+    <time>51.72792022702249</time>
+    <pose>-3.3444843687217043 0.6266827222180763 0.0 0.0 0.0 2.655469545147473</pose>
+</waypoint>
+<waypoint>
+    <time>51.82785767236428</time>
+    <pose>-3.297467867679483 0.7148696918405282 0.0 0.0 0.0 2.651781443060128</pose>
+</waypoint>
+<waypoint>
+    <time>51.928225717695355</time>
+    <pose>-3.249929615268234 0.8032657272791467 0.0 0.0 0.0 2.6481742337000003</pose>
+</waypoint>
+<waypoint>
+    <time>52.02901899794876</time>
+    <pose>-3.201877133365134 0.8918673318198878 0.0 0.0 0.0 2.6446469473115415</pose>
+</waypoint>
+<waypoint>
+    <time>52.13023203355374</time>
+    <pose>-3.1533180252127875 0.9806710006169768 0.0 0.0 0.0 2.641198635238617</pose>
+</waypoint>
+<waypoint>
+    <time>52.23185923252473</time>
+    <pose>-3.104259974216223 1.0696732208314577 0.0 0.0 0.0 2.6378283698257823</pose>
+</waypoint>
+<waypoint>
+    <time>52.33389489254709</time>
+    <pose>-3.0547107427271163 1.1588704717702587 0.0 0.0 0.0 2.634535244306385</pose>
+</waypoint>
+<waypoint>
+    <time>52.43633320305922</time>
+    <pose>-3.0046781708156196 1.2482592250253497 0.0 0.0 0.0 2.6313183726787166</pose>
+</waypoint>
+<waypoint>
+    <time>52.53916824733141</time>
+    <pose>-2.9541701750297933 1.3378359446134283 0.0 0.0 0.0 2.628176889571782</pose>
+</waypoint>
+<waypoint>
+    <time>52.64239400454127</time>
+    <pose>-2.9031947471430337 1.4275970871156918 0.0 0.0 0.0 2.625109950101524</pose>
+</waypoint>
+<waypoint>
+    <time>52.74600435184612</time>
+    <pose>-2.85175995288951 1.5175391018180975 0.0 0.0 0.0 2.6221167297191696</pose>
+</waypoint>
+<waypoint>
+    <time>52.84999306645193</time>
+    <pose>-2.7998739306879834 1.6076584308517323 0.0 0.0 0.0 2.6191964240522445</pose>
+</waypoint>
+<waypoint>
+    <time>52.95435382767957</time>
+    <pose>-2.7475448903540345 1.6979515093336395 0.0 0.0 0.0 2.616348248739646</pose>
+</waypoint>
+<waypoint>
+    <time>53.059080219027734</time>
+    <pose>-2.694781111801082 1.7884147655077596 0.0 0.0 0.0 2.6135714392615013</pose>
+</waypoint>
+<waypoint>
+    <time>53.164165730233265</time>
+    <pose>-2.6415909437302614 1.8790446208862506 0.0 0.0 0.0 2.610865250764835</pose>
+</waypoint>
+<waypoint>
+    <time>53.26960375932866</time>
+    <pose>-2.587982802309394 1.9698374903910802 0.0 0.0 0.0 2.6082289578855975</pose>
+</waypoint>
+<waypoint>
+    <time>53.37538761469679</time>
+    <pose>-2.5339651698413665 2.060789782495763 0.0 0.0 0.0 2.6056618545681647</pose>
+</waypoint>
+<waypoint>
+    <time>53.48151051712334</time>
+    <pose>-2.479546593421949 2.1518978993675217 0.0 0.0 0.0 2.6031632538827387</pose>
+</waypoint>
+<waypoint>
+    <time>53.587965601846506</time>
+    <pose>-2.4247356835874445 2.2431582370095136 0.0 0.0 0.0 2.60073248784129</pose>
+</waypoint>
+<waypoint>
+    <time>53.694745920604696</time>
+    <pose>-2.3695411129522177 2.3345671854034924 0.0 0.0 0.0 2.598368907212923</pose>
+</waypoint>
+<waypoint>
+    <time>53.80184444368171</time>
+    <pose>-2.3139716148365017 2.426121128652514 0.0 0.0 0.0 2.5960718813389</pose>
+</waypoint>
+<waypoint>
+    <time>53.90925406195011</time>
+    <pose>-2.2580359818844777 2.517816445124072 0.0 0.0 0.0 2.5938407979479776</pose>
+</waypoint>
+<waypoint>
+    <time>54.0169675889123</time>
+    <pose>-2.201743064673103 2.6096495075932538 0.0 0.0 0.0 2.5916750629726306</pose>
+</waypoint>
+<waypoint>
+    <time>54.12497776274004</time>
+    <pose>-2.145101770311635 2.7016166833863298 0.0 0.0 0.0 2.5895741003664012</pose>
+</waypoint>
+<waypoint>
+    <time>54.23327724831182</time>
+    <pose>-2.088121061032342 2.793714334524353 0.0 0.0 0.0 2.5875373519229514</pose>
+</waypoint>
+<waypoint>
+    <time>54.34185863924892</time>
+    <pose>-2.030809952772366 2.8859388178671646 0.0 0.0 0.0 2.5855642770971197</pose>
+</waypoint>
+<waypoint>
+    <time>54.45071445994956</time>
+    <pose>-1.9731775137472052 2.9782864852574207 0.0 0.0 0.0 2.5836543528283187</pose>
+</waypoint>
+<waypoint>
+    <time>54.55983716762177</time>
+    <pose>-1.9152328630158437 3.0707536836649414 0.0 0.0 0.0 2.5818070733666865</pose>
+</waypoint>
+<waypoint>
+    <time>54.66921915431485</time>
+    <pose>-1.856985169037841 3.163336755331254 0.0 0.0 0.0 2.5800219501021284</pose>
+</waypoint>
+<waypoint>
+    <time>54.778852748949355</time>
+    <pose>-1.7984436482226842 3.256032037914191 0.0 0.0 0.0 2.578298511396685</pose>
+</waypoint>
+<waypoint>
+    <time>54.88873021934613</time>
+    <pose>-1.7396175634714208 3.348835864632872 0.0 0.0 0.0 2.576636302420373</pose>
+</waypoint>
+<waypoint>
+    <time>54.99884377425395</time>
+    <pose>-1.6805162227110866 3.441744564412644 0.0 0.0 0.0 2.5750348849907514</pose>
+</waypoint>
+<waypoint>
+    <time>55.10918556537634</time>
+    <pose>-1.621148977421857 3.534754462030404 0.0 0.0 0.0 2.5734938374164242</pose>
+</waypoint>
+<waypoint>
+    <time>55.21974768939721</time>
+    <pose>-1.5615252211574544 3.6278618782598766 0.0 0.0 0.0 2.5720127543446942</pose>
+</waypoint>
+<waypoint>
+    <time>55.330522190005766</time>
+    <pose>-1.501654388058755 3.721063130017261 0.0 0.0 0.0 2.5705912466135015</pose>
+</waypoint>
+<waypoint>
+    <time>55.441501059920434</time>
+    <pose>-1.4415459513611164 3.8143545305068165 0.0 0.0 0.0 2.5692289411078155</pose>
+</waypoint>
+<waypoint>
+    <time>55.55267624291218</time>
+    <pose>-1.381209421895375 3.907732389366811 0.0 0.0 0.0 2.5679254806206857</pose>
+</waypoint>
+<waypoint>
+    <time>55.6640396358269</time>
+    <pose>-1.3206543465830405 4.001193012815391 0.0 0.0 0.0 2.5666805237189534</pose>
+</waypoint>
+<waypoint>
+    <time>55.77558309060748</time>
+    <pose>-1.2598903069256306 4.0947327037968115 0.0 0.0 0.0 2.5654937446139163</pose>
+</waypoint>
+<waypoint>
+    <time>55.887298416314906</time>
+    <pose>-1.1989269174886805 4.188347762127582 0.0 0.0 0.0 2.564364833036903</pose>
+</waypoint>
+<waypoint>
+    <time>55.99917738114908</time>
+    <pose>-1.1377738243804167 4.282034484642878 0.0 0.0 0.0 2.563293494119921</pose>
+</waypoint>
+<waypoint>
+    <time>56.11121171446915</time>
+    <pose>-1.0764407037254522 4.37578916534307 0.0 0.0 0.0 2.5622794482815108</pose>
+</waypoint>
+<waypoint>
+    <time>56.22339310881317</time>
+    <pose>-1.0149372601338122 4.469608095540229 0.0 0.0 0.0 2.5613224311177856</pose>
+</waypoint>
+<waypoint>
+    <time>56.335713221917686</time>
+    <pose>-0.953273225165325 4.563487564004937 0.0 0.0 0.0 2.5604221932988427</pose>
+</waypoint>
+<waypoint>
+    <time>56.44816367873661</time>
+    <pose>-0.8914583557898861 4.657423857112991 0.0 0.0 0.0 2.5595785004704896</pose>
+</waypoint>
+<waypoint>
+    <time>56.5607360734601</time>
+    <pose>-0.8295024328435696 4.751413258992404 0.0 0.0 0.0 2.558791133161462</pose>
+</waypoint>
+<waypoint>
+    <time>56.67342197153283</time>
+    <pose>-0.767415259481088 4.845452051670298 0.0 0.0 0.0 2.5580598866961477</pose>
+</waypoint>
+<waypoint>
+    <time>56.78621291167234</time>
+    <pose>-0.705206659624599 4.939536515220075 0.0 0.0 0.0 2.5573845711127587</pose>
+</waypoint>
+<waypoint>
+    <time>56.899100407886785</time>
+    <pose>-0.6428864764093509 5.033662927908464 0.0 0.0 0.0 2.55676501108722</pose>
+</waypoint>
+<waypoint>
+    <time>57.01207595149285</time>
+    <pose>-0.5804645706261552 5.127827566342855 0.0 0.0 0.0 2.5562010458625686</pose>
+</waypoint>
+<waypoint>
+    <time>57.12513101313313</time>
+    <pose>-0.5179508191612049 5.222026705618471 0.0 0.0 0.0 2.5556925291840473</pose>
+</waypoint>
+<waypoint>
+    <time>57.238257044793684</time>
+    <pose>-0.4553551134332092 5.316256619465824 0.0 0.0 0.0 2.555239329239903</pose>
+</waypoint>
+<waypoint>
+    <time>57.35144548182117</time>
+    <pose>-0.3926873578283486 5.41051358039803 0.0 0.0 0.0 2.5548413286078633</pose>
+</waypoint>
+<waypoint>
+    <time>57.464687744940036</time>
+    <pose>-0.32995746813310817 5.504793859858288 0.0 0.0 0.0 2.5544984242073423</pose>
+</waypoint>
+<waypoint>
+    <time>57.577975242269595</time>
+    <pose>-0.2671753699652886 5.599093728367424 0.0 0.0 0.0 2.5542105272574243</pose>
+</waypoint>
+<waypoint>
+    <time>57.69129937134088</time>
+    <pose>-0.20435099720356412 5.6934094556713175 0.0 0.0 0.0 2.5539775632406077</pose>
+</waypoint>
+<waypoint>
+    <time>57.80465152111368</time>
+    <pose>-0.14149429041559283 5.7877373108885655 0.0 0.0 0.0 2.553799471872286</pose>
+</waypoint>
+<waypoint>
+    <time>57.91802307399321</time>
+    <pose>-0.07861519528521106 5.8820735626579665 0.0 0.0 0.0 2.5536762070760926</pose>
+</waypoint>
+<waypoint>
+    <time>58.031405407847046</time>
+    <pose>-0.015723661038684496 5.976414479286228 0.0 0.0 0.0 2.553607736964996</pose>
+</waypoint>
+<waypoint>
+    <time>58.14478989802177</time>
+    <pose>0.04717036112947618 6.070756328895469 0.0 0.0 0.0 2.55359404382822</pose>
+</waypoint>
+<waypoint>
+    <time>58.25816791935984</time>
+    <pose>0.11005691963113416 6.165095379570965 0.0 0.0 0.0 2.553635124123974</pose>
+</waypoint>
+<waypoint>
+    <time>58.37153084821622</time>
+    <pose>0.1729260640590781 6.259427899508648 0.0 0.0 0.0 2.5537309884779944</pose>
+</waypoint>
+<waypoint>
+    <time>58.484870064475224</time>
+    <pose>0.23576784676152482 6.353750157162847 0.0 0.0 0.0 2.553881661687911</pose>
+</waypoint>
+<waypoint>
+    <time>58.59817695356723</time>
+    <pose>0.2985723244160408 6.448058421393783 0.0 0.0 0.0 2.554087182733433</pose>
+</waypoint>
+<waypoint>
+    <time>58.71144290848557</time>
+    <pose>0.3613295596029298 6.542348961615278 0.0 0.0 0.0 2.554347604792316</pose>
+</waypoint>
+<waypoint>
+    <time>58.824659331803296</time>
+    <pose>0.4240296223775452 6.636618047942223 0.0 0.0 0.0 2.5546629952621633</pose>
+</waypoint>
+<waypoint>
+    <time>58.93781763769013</time>
+    <pose>0.4866625918415081 6.7308619513381736 0.0 0.0 0.0 2.555033435788019</pose>
+</waypoint>
+<waypoint>
+    <time>59.05090925392955</time>
+    <pose>0.549218557712499 6.825076943762894 0.0 0.0 0.0 2.5554590222957376</pose>
+</waypoint>
+<waypoint>
+    <time>59.163925623935704</time>
+    <pose>0.61168762189228 6.919259298319735 0.0 0.0 0.0 2.5559398650311285</pose>
+</waypoint>
+<waypoint>
+    <time>59.2768582087708</time>
+    <pose>0.6740599000329197 7.013405289403171 0.0 0.0 0.0 2.5564760886048785</pose>
+</waypoint>
+<waypoint>
+    <time>59.38969848916226</time>
+    <pose>0.7363255231006987 7.107511192846069 0.0 0.0 0.0 2.5570678320431997</pose>
+</waypoint>
+<waypoint>
+    <time>59.50243796752032</time>
+    <pose>0.7984746389377451 7.201573286067103 0.0 0.0 0.0 2.5577152488441843</pose>
+</waypoint>
+<waypoint>
+    <time>59.615068169955585</time>
+    <pose>0.8604974138208373 7.295587848217913 0.0 0.0 0.0 2.558418507039885</pose>
+</waypoint>
+<waypoint>
+    <time>59.72758064829692</time>
+    <pose>0.9223840340174584 7.389551160330404 0.0 0.0 0.0 2.559177789264073</pose>
+</waypoint>
+<waypoint>
+    <time>59.83996698210944</time>
+    <pose>0.9841247073385185 7.483459505463734 0.0 0.0 0.0 2.5599932928255646</pose>
+</waypoint>
+<waypoint>
+    <time>59.95221878071288</time>
+    <pose>1.0457096646878339 7.5773091688514675 0.0 0.0 0.0 2.560865229787235</pose>
+</waypoint>
+<waypoint>
+    <time>60.064327685200084</time>
+    <pose>1.1071291616077872 7.67109643804841 0.0 0.0 0.0 2.5617938270505505</pose>
+</waypoint>
+<waypoint>
+    <time>60.17628537045597</time>
+    <pose>1.168373479821257 7.764817603077571 0.0 0.0 0.0 2.5627793264456193</pose>
+</waypoint>
+<waypoint>
+    <time>60.28808354717668</time>
+    <pose>1.2294329287692514 7.858468956576825 0.0 0.0 0.0 2.563821984826727</pose>
+</waypoint>
+<waypoint>
+    <time>60.39971396388921</time>
+    <pose>1.2902978471442454 7.952046793945606 0.0 0.0 0.0 2.5649220741732406</pose>
+</waypoint>
+<waypoint>
+    <time>60.5111684089715</time>
+    <pose>1.350958604418909 8.045547413491496 0.0 0.0 0.0 2.5660798816959707</pose>
+</waypoint>
+<waypoint>
+    <time>60.62243871267281</time>
+    <pose>1.4114056023698527 8.13896711657655 0.0 0.0 0.0 2.567295709948618</pose>
+</waypoint>
+<waypoint>
+    <time>60.733516749134864</time>
+    <pose>1.4716292765964076 8.23230220776373 0.0 0.0 0.0 2.568569876944659</pose>
+</waypoint>
+<waypoint>
+    <time>60.844394438413296</time>
+    <pose>1.5316200980339119 8.325548994962958 0.0 0.0 0.0 2.5699027162791643</pose>
+</waypoint>
+<waypoint>
+    <time>60.95506374849997</time>
+    <pose>1.5913685744615396 8.418703789577279 0.0 0.0 0.0 2.5712945772556632</pose>
+</waypoint>
+<waypoint>
+    <time>61.065516697345714</time>
+    <pose>1.6508652520041764 8.51176290664868 0.0 0.0 0.0 2.5727458250181234</pose>
+</waypoint>
+<waypoint>
+    <time>61.17574535488408</time>
+    <pose>1.71010071662834 8.60472266500395 0.0 0.0 0.0 2.5742568406874073</pose>
+</waypoint>
+<waypoint>
+    <time>61.28574184505558</time>
+    <pose>1.769065595631686 8.697579387400184 0.0 0.0 0.0 2.575828021502639</pose>
+</waypoint>
+<waypoint>
+    <time>61.39549834783314</time>
+    <pose>1.8277505591260916 8.790329400670371 0.0 0.0 0.0 2.577459780967115</pose>
+</waypoint>
+<waypoint>
+    <time>61.505007101248125</time>
+    <pose>1.8861463215138419 8.88296903586858 0.0 0.0 0.0 2.5791525489984353</pose>
+</waypoint>
+<waypoint>
+    <time>61.61426040341773</time>
+    <pose>1.9442436429569334 8.975494628415186 0.0 0.0 0.0 2.580906772082984</pose>
+</waypoint>
+<waypoint>
+    <time>61.72325061457318</time>
+    <pose>2.0020333308390184 9.06790251824176 0.0 0.0 0.0 2.582722913434466</pose>
+</waypoint>
+<waypoint>
+    <time>61.83197015908927</time>
+    <pose>2.0595062412199594 9.160189049935886 0.0 0.0 0.0 2.584601453156159</pose>
+</waypoint>
+<waypoint>
+    <time>61.94041152751517</time>
+    <pose>2.1166532802826707 9.252350572885787 0.0 0.0 0.0 2.5865428884068677</pose>
+</waypoint>
+<waypoint>
+    <time>62.04856727860638</time>
+    <pose>2.1734654057719736 9.344383441424647 0.0 0.0 0.0 2.5885477335702465</pose>
+</waypoint>
+<waypoint>
+    <time>62.15643004135844</time>
+    <pose>2.229933628425379 9.436284014974945 0.0 0.0 0.0 2.5906165204273024</pose>
+</waypoint>
+<waypoint>
+    <time>62.26399251704187</time>
+    <pose>2.2860490133953895 9.52804865819234 0.0 0.0 0.0 2.592749798331499</pose>
+</waypoint>
+<waypoint>
+    <time>62.37124748123897</time>
+    <pose>2.341802681663301 9.619673741109583 0.0 0.0 0.0 2.594948134386764</pose>
+</waypoint>
+<waypoint>
+    <time>62.478187785882156</time>
+    <pose>2.397185811444043 9.711155639280024 0.0 0.0 0.0 2.5972121136273714</pose>
+</waypoint>
+<waypoint>
+    <time>62.58480636129436</time>
+    <pose>2.4521896395820995 9.802490733921065 0.0 0.0 0.0 2.5995423391997616</pose>
+</waypoint>
+<waypoint>
+    <time>62.69109621823114</time>
+    <pose>2.506805462938022 9.893675412057219 0.0 0.0 0.0 2.6019394325458935</pose>
+</waypoint>
+<waypoint>
+    <time>62.79705044992501</time>
+    <pose>2.5610246397655674 9.984706066663136 0.0 0.0 0.0 2.6044040335874916</pose>
+</waypoint>
+<waypoint>
+    <time>62.9026622341318</time>
+    <pose>2.614838591079004 10.075579096806173 0.0 0.0 0.0 2.6069368009108866</pose>
+</waypoint>
+<waypoint>
+    <time>63.007924835179445</time>
+    <pose>2.668238802010608 10.166290907788952 0.0 0.0 0.0 2.609538411951922</pose>
+</waypoint>
+<waypoint>
+    <time>63.11283160601891</time>
+    <pose>2.7212168231578944 10.256837911291449 0.0 0.0 0.0 2.6122095631803957</pose>
+</waypoint>
+<waypoint>
+    <time>63.21737599027782</time>
+    <pose>2.77376427192058 10.347216525513009 0.0 0.0 0.0 2.614950970283454</pose>
+</waypoint>
+<waypoint>
+    <time>63.321551524316654</time>
+    <pose>2.8258728338269643 10.437423175314034 0.0 0.0 0.0 2.61776336834715</pose>
+</waypoint>
+<waypoint>
+    <time>63.42535183928744</time>
+    <pose>2.8775342638494448 10.527454292357342 0.0 0.0 0.0 2.620647512035891</pose>
+</waypoint>
+<waypoint>
+    <time>63.52877066319555</time>
+    <pose>2.928740387709194 10.617306315249412 0.0 0.0 0.0 2.623604175768617</pose>
+</waypoint>
+<waypoint>
+    <time>63.63180182296417</time>
+    <pose>2.9794831031694824 10.706975689681169 0.0 0.0 0.0 2.6266341538911444</pose>
+</waypoint>
+<waypoint>
+    <time>63.73443924650194</time>
+    <pose>3.0297543813177388 10.796458868568674 0.0 0.0 0.0 2.6297382608438333</pose>
+</waypoint>
+<waypoint>
+    <time>63.836676964773574</time>
+    <pose>3.0795462678358927 10.885752312193347 0.0 0.0 0.0 2.632917331323667</pose>
+</waypoint>
+<waypoint>
+    <time>63.938509113873785</time>
+    <pose>3.1288508842590264 10.97485248834208 0.0 0.0 0.0 2.636172220439656</pose>
+</waypoint>
+<waypoint>
+    <time>64.03992993710436</time>
+    <pose>3.1776604292219144 11.063755872446873 0.0 0.0 0.0 2.639503803860795</pose>
+</waypoint>
+<waypoint>
+    <time>64.14093378705475</time>
+    <pose>3.2259671796934626 11.152458947724341 0.0 0.0 0.0 2.6429129779550458</pose>
+</waypoint>
+<waypoint>
+    <time>64.24151512768584</time>
+    <pose>3.273763492198667 11.24095820531475 0.0 0.0 0.0 2.646400659918751</pose>
+</waypoint>
+<waypoint>
+    <time>64.34166853641746</time>
+    <pose>3.321041804028067 11.329250144420897 0.0 0.0 0.0 2.649967787894462</pose>
+</waypoint>
+<waypoint>
+    <time>64.44138870621907</time>
+    <pose>3.3677946344343312 11.417331272446514 0.0 0.0 0.0 2.653615321076577</pose>
+</waypoint>
+<waypoint>
+    <time>64.54067044770426</time>
+    <pose>3.4140145858159405 11.505198105134472 0.0 0.0 0.0 2.657344239802791</pose>
+</waypoint>
+<waypoint>
+    <time>64.63950869122864</time>
+    <pose>3.4596943448877306 11.592847166704624 0.0 0.0 0.0 2.661155545629935</pose>
+</waypoint>
+<waypoint>
+    <time>64.73789848899119</time>
+    <pose>3.504826683837984 11.68027498999124 0.0 0.0 0.0 2.6650502613928877</pose>
+</waypoint>
+<waypoint>
+    <time>64.83583501713926</time>
+    <pose>3.5494044614721436 11.767478116580232 0.0 0.0 0.0 2.6690294312442377</pose>
+</waypoint>
+<waypoint>
+    <time>64.93331357787673</time>
+    <pose>3.5934206243426883 11.854453096945871 0.0 0.0 0.0 2.673094120673201</pose>
+</waypoint>
+<waypoint>
+    <time>65.03032960157586</time>
+    <pose>3.636868207865241 11.94119649058735 0.0 0.0 0.0 2.677245416501908</pose>
+</waypoint>
+<waypoint>
+    <time>65.12687864889196</time>
+    <pose>3.679740337420511 12.027704866164756 0.0 0.0 0.0 2.68148442685637</pose>
+</waypoint>
+<waypoint>
+    <time>65.22295641288149</time>
+    <pose>3.7220302294420944 12.113974801634939 0.0 0.0 0.0 2.6858122811107314</pose>
+</waypoint>
+<waypoint>
+    <time>65.31855872112274</time>
+    <pose>3.76373119248977 12.200002884386747 0.0 0.0 0.0 2.6902301298014972</pose>
+</waypoint>
+<waypoint>
+    <time>65.41368153783948</time>
+    <pose>3.804836628308337 12.28578571137614 0.0 0.0 0.0 2.694739144510085</pose>
+</waypoint>
+<waypoint>
+    <time>65.50832096602669</time>
+    <pose>3.845340032871578 12.371319889260702 0.0 0.0 0.0 2.6993405177103087</pose>
+</waypoint>
+<waypoint>
+    <time>65.60247324957864</time>
+    <pose>3.885234997411438 12.456602034533963 0.0 0.0 0.0 2.7040354625785814</pose>
+</waypoint>
+<waypoint>
+    <time>65.69613477541847</time>
+    <pose>3.9245152094320224 12.541628773659161 0.0 0.0 0.0 2.708825212763339</pose>
+</waypoint>
+<waypoint>
+    <time>65.78930207562924</time>
+    <pose>3.9631744537084224 12.626396743202736 0.0 0.0 0.0 2.7137110221110254</pose>
+</waypoint>
+<waypoint>
+    <time>65.88197182958565</time>
+    <pose>4.00120661327016 12.7109025899674 0.0 0.0 0.0 2.7186941643448472</pose>
+</waypoint>
+<waypoint>
+    <time>65.97414086608605</time>
+    <pose>4.038605670369028 12.795142971124701 0.0 0.0 0.0 2.723775932693412</pose>
+</waypoint>
+<waypoint>
+    <time>66.06580616548413</time>
+    <pose>4.0753657074313105 12.879114554347359 0.0 0.0 0.0 2.728957639464989</pose>
+</waypoint>
+<waypoint>
+    <time>66.1569648618194</time>
+    <pose>4.111480907994044 12.96281401794098 0.0 0.0 0.0 2.7342406155640266</pose>
+</waypoint>
+<waypoint>
+    <time>66.24761424494598</time>
+    <pose>4.146945557625411 13.046238050975555 0.0 0.0 0.0 2.7396262099457074</pose>
+</waypoint>
+<waypoint>
+    <time>66.33775176265843</time>
+    <pose>4.181754044828877 13.129383353416339 0.0 0.0 0.0 2.745115789004477</pose>
+</waypoint>
+<waypoint>
+    <time>66.42737502281406</time>
+    <pose>4.215900861931109 13.212246636254465 0.0 0.0 0.0 2.7507107358920466</pose>
+</waypoint>
+<waypoint>
+    <time>66.51648179545025</time>
+    <pose>4.249380605953429 13.294824621636987 0.0 0.0 0.0 2.7564124497602998</pose>
+</waypoint>
+<waypoint>
+    <time>66.60507001489586</time>
+    <pose>4.282187979466727 13.37711404299662 0.0 0.0 0.0 2.7622223449248478</pose>
+</waypoint>
+<waypoint>
+    <time>66.69313778187525</time>
+    <pose>4.3143177914296515 13.45911164518085 0.0 0.0 0.0 2.7681418499433796</pose>
+</waypoint>
+<waypoint>
+    <time>66.7806833656036</time>
+    <pose>4.345764958009994 13.54081418458082 0.0 0.0 0.0 2.774172406604874</pose>
+</waypoint>
+<waypoint>
+    <time>66.86770520587166</time>
+    <pose>4.376524503389065 13.622218429259535 0.0 0.0 0.0 2.780315468823396</pose>
+</waypoint>
+<waypoint>
+    <time>66.95420191511863</time>
+    <pose>4.406591560549032 13.703321159079767 0.0 0.0 0.0 2.786572501431901</pose>
+</waypoint>
+<waypoint>
+    <time>67.04017228049086</time>
+    <pose>4.435961372043019 13.784119165831434 0.0 0.0 0.0 2.7929449788698664</pose>
+</waypoint>
+<waypoint>
+    <time>67.12561526588449</time>
+    <pose>4.4646292907478395 13.864609253358466 0.0 0.0 0.0 2.799434383759643</pose>
+</waypoint>
+<waypoint>
+    <time>67.21053001396984</time>
+    <pose>4.492590780599334 13.944788237685305 0.0 0.0 0.0 2.8060422053650984</pose>
+</waypoint>
+<waypoint>
+    <time>67.29491584819493</time>
+    <pose>4.519841417310078 14.024652947142764 0.0 0.0 0.0 2.812769937927396</pose>
+</waypoint>
+<waypoint>
+    <time>67.3787722747658</time>
+    <pose>4.54637688906944 14.1042002224936 0.0 0.0 0.0 2.8196190788714106</pose>
+</waypoint>
+<waypoint>
+    <time>67.46209898460029</time>
+    <pose>4.572192997225827 14.183426917057368 0.0 0.0 0.0 2.8265911268768105</pose>
+</waypoint>
+<waypoint>
+    <time>67.54489585525296</time>
+    <pose>4.597285656951026 14.262329896835002 0.0 0.0 0.0 2.8336875798082373</pose>
+</waypoint>
+<waypoint>
+    <time>67.62716295280698</time>
+    <pose>4.62165089788654 14.340906040632703 0.0 0.0 0.0 2.84090993249815</pose>
+</waypoint>
+<waypoint>
+    <time>67.70890053373024</time>
+    <pose>4.645284864771812 14.41915224018547 0.0 0.0 0.0 2.848259674376473</pose>
+</waypoint>
+<waypoint>
+    <time>67.79010904669131</time>
+    <pose>4.668183818054229 14.497065400280007 0.0 0.0 0.0 2.8557382869415378</pose>
+</waypoint>
+<waypoint>
+    <time>67.87078913433153</time>
+    <pose>4.690344134480829 14.574642438877172 0.0 0.0 0.0 2.863347241066192</pose>
+</waypoint>
+<waypoint>
+    <time>67.9509416349888</time>
+    <pose>4.711762307671594 14.651880287233944 0.0 0.0 0.0 2.871087994134207</pose>
+</waypoint>
+<waypoint>
+    <time>68.03056758436827</time>
+    <pose>4.732434948674263 14.728775890024718 0.0 0.0 0.0 2.8789619870011633</pose>
+</waypoint>
+<waypoint>
+    <time>68.10966821715536</time>
+    <pose>4.752358786500556 14.805326205462277 0.0 0.0 0.0 2.886970640775707</pose>
+</waypoint>
+<waypoint>
+    <time>68.18824496856546</time>
+    <pose>4.7715306686437415 14.881528205418006 0.0 0.0 0.0 2.895115353416149</pose>
+</waypoint>
+<waypoint>
+    <time>68.26629947582518</time>
+    <pose>4.7899475615774465 14.957378875541785 0.0 0.0 0.0 2.9033974961391893</pose>
+</waypoint>
+<waypoint>
+    <time>68.34383357957886</time>
+    <pose>4.807606551235625 15.032875215381132 0.0 0.0 0.0 2.9118184096368456</pose>
+</waypoint>
+<waypoint>
+    <time>68.42084932521452</time>
+    <pose>4.824504843473695 15.10801423849997 0.0 0.0 0.0 2.9203794000993692</pose>
+</waypoint>
+<waypoint>
+    <time>68.4973489641024</time>
+    <pose>4.840639764510592 15.182792972596694 0.0 0.0 0.0 2.9290817350426117</pose>
+</waypoint>
+<waypoint>
+    <time>68.57333495473945</time>
+    <pose>4.85600876135188 15.25720845962182 0.0 0.0 0.0 2.937926638938143</pose>
+</waypoint>
+<waypoint>
+    <time>68.64880996379235</time>
+    <pose>4.870609402193679 15.331257755894928 0.0 0.0 0.0 2.946915288647367</pose>
+</waypoint>
+<waypoint>
+    <time>68.7237768670316</time>
+    <pose>4.884439376807462 15.404937932221168 0.0 0.0 0.0 2.9560488086597836</pose>
+</waypoint>
+<waypoint>
+    <time>68.7982387501488</time>
+    <pose>4.897496496905585 15.47824607400708 0.0 0.0 0.0 2.965328266138919</pose>
+</waypoint>
+<waypoint>
+    <time>68.87219890944876</time>
+    <pose>4.909778696487531 15.5511792813759 0.0 0.0 0.0 2.974754665779246</pose>
+</waypoint>
+<waypoint>
+    <time>68.94566085240798</time>
+    <pose>4.921284032166845 15.623734669282323 0.0 0.0 0.0 2.98432894447981</pose>
+</waypoint>
+<waypoint>
+    <time>69.01862829809056</time>
+    <pose>4.932010683478572 15.695909367626532 0.0 0.0 0.0 2.9940519658416407</pose>
+</waypoint>
+<waypoint>
+    <time>69.09110517741237</time>
+    <pose>4.941956953167363 15.767700521367834 0.0 0.0 0.0 3.0039245144980358</pose>
+</waypoint>
+<waypoint>
+    <time>69.16309563324394</time>
+    <pose>4.951121267455992 15.839105290637502 0.0 0.0 0.0 3.0139472902882396</pose>
+</waypoint>
+<waypoint>
+    <time>69.23460402034242</time>
+    <pose>4.959502176294384 15.91012085085122 0.0 0.0 0.0 3.0241209022879105</pose>
+</waypoint>
+<waypoint>
+    <time>69.30563490510254</time>
+    <pose>4.967098353589051 15.98074439282068 0.0 0.0 0.0 3.034445862711099</pose>
+</waypoint>
+<waypoint>
+    <time>69.37619306511651</time>
+    <pose>4.973908597412929 16.050973122864853 0.0 0.0 0.0 3.0449225807013813</pose>
+</waypoint>
+<waypoint>
+    <time>69.44628348853232</time>
+    <pose>4.9799318301955235 16.12080426292038 0.0 0.0 0.0 3.0555513560320278</pose>
+</waypoint>
+<waypoint>
+    <time>69.5159113732001</time>
+    <pose>4.985167098893453 16.19023505065154 0.0 0.0 0.0 3.066332372737265</pose>
+</waypoint>
+<waypoint>
+    <time>69.58508212559583</time>
+    <pose>4.989613575141215 16.259262739559475 0.0 0.0 0.0 3.077265692700003</pose>
+</waypoint>
+<waypoint>
+    <time>69.65380135951204</time>
+    <pose>4.993270555382283 16.327884599090876 0.0 0.0 0.0 3.0883512492231078</pose>
+</waypoint>
+<waypoint>
+    <time>69.72207489450452</time>
+    <pose>4.9961374609804 16.39609791474595 0.0 0.0 0.0 3.099588840614795</pose>
+</waypoint>
+<waypoint>
+    <time>69.78990875408486</time>
+    <pose>4.99821383831115 16.463899988185837 0.0 0.0 0.0 3.1109781238207974</pose>
+</waypoint>
+<waypoint>
+    <time>69.85730916364852</time>
+    <pose>4.999499358833744 16.531288137339338 0.0 0.0 0.0 3.1225186081390928</pose>
+</waypoint>
+<waypoint>
+    <time>69.9242825481278</time>
+    <pose>4.99999381914299 16.598259696508975 0.0 0.0 0.0 3.1342096490547027</pose>
+</waypoint>
+<waypoint>
+    <time>69.99083552936068</time>
+    <pose>4.999697141001469 16.66481201647653 0.0 0.0 0.0 3.1460504422360263</pose>
+</waypoint>
+<waypoint>
+    <time>70.0569749231653</time>
+    <pose>4.998609371351943 16.730942464607722 0.0 0.0 0.0 3.1580400177345243</pose>
+</waypoint>
+<waypoint>
+    <time>70.12270773611183</time>
+    <pose>4.996730682309907 16.796648424956448 0.0 0.0 0.0 3.1701772344335755</pose>
+</waypoint>
+<waypoint>
+    <time>70.18804116198288</time>
+    <pose>4.994061371136347 16.861927298368194 0.0 0.0 0.0 3.182460774792824</pose>
+</waypoint>
+<waypoint>
+    <time>70.25298257791498</time>
+    <pose>4.990601860190731 16.92677650258291 0.0 0.0 0.0 3.1948891399368784</pose>
+</waypoint>
+<waypoint>
+    <time>70.31753954021407</time>
+    <pose>4.986352696864165 16.991193472337084 0.0 0.0 0.0 3.2074606451376644</pose>
+</waypoint>
+<waypoint>
+    <time>70.38171977983922</time>
+    <pose>4.981314553492772 17.055175659465316 0.0 0.0 0.0 3.2201734157411943</pose>
+</waypoint>
+<waypoint>
+    <time>70.44553119754903</time>
+    <pose>4.975488227251332 17.118720533000992 0.0 0.0 0.0 3.2330253835899065</pose>
+</waypoint>
+<waypoint>
+    <time>70.50898185870722</time>
+    <pose>4.9688746400271215 17.181825579276534 0.0 0.0 0.0 3.2460142839910135</pose>
+</waypoint>
+<waypoint>
+    <time>70.57207998774408</time>
+    <pose>4.9614748382740705 17.244488302022738 0.0 0.0 0.0 3.2591376532813463</pose>
+</waypoint>
+<waypoint>
+    <time>70.6348339622727</time>
+    <pose>4.9532899928471625 17.306706222467536 0.0 0.0 0.0 3.272392827037969</pose>
+</waypoint>
+<waypoint>
+    <time>70.6972523068595</time>
+    <pose>4.94432139881718 17.36847687943411 0.0 0.0 0.0 3.2857769389811886</pose>
+</waypoint>
+<waypoint>
+    <time>70.75934368645042</time>
+    <pose>4.934570475265801 17.429797829438165 0.0 0.0 0.0 3.299286920615332</pose>
+</waypoint>
+<waypoint>
+    <time>70.82111689945573</time>
+    <pose>4.924038765061042 17.490666646784668 0.0 0.0 0.0 3.3129195016485107</pose>
+</waypoint>
+<waypoint>
+    <time>70.88258087049762</time>
+    <pose>4.912727934613141 17.551080923663708 0.0 0.0 0.0 3.3266712112292263</pose>
+</waypoint>
+<waypoint>
+    <time>70.94374464282723</time>
+    <pose>4.900639773610885 17.611038270245857 0.0 0.0 0.0 3.340538380033136</pose>
+</waypoint>
+<waypoint>
+    <time>71.00461737041839</time>
+    <pose>4.887776194738431 17.670536314776584 0.0 0.0 0.0 3.3545171432280716</pose>
+</waypoint>
+<waypoint>
+    <time>71.06520830974836</time>
+    <pose>4.874139233372671 17.729572703670197 0.0 0.0 0.0 3.3686034443395743</pose>
+</waypoint>
+<waypoint>
+    <time>71.1255268112765</time>
+    <pose>4.859731047261172 17.788145101602815 0.0 0.0 0.0 3.382793040032956</pose>
+</waypoint>
+<waypoint>
+    <time>71.18558231063469</time>
+    <pose>4.844553916180751 17.846251191604885 0.0 0.0 0.0 3.397081505820519</pose>
+</waypoint>
+<waypoint>
+    <time>71.24538431954412</time>
+    <pose>4.828610241576779 17.903888675152714 0.0 0.0 0.0 3.411464242695833</pose>
+</waypoint>
+<waypoint>
+    <time>71.30494241647587</time>
+    <pose>4.811902546183173 17.96105527225948 0.0 0.0 0.0 3.425936484688232</pose>
+</waypoint>
+<waypoint>
+    <time>71.36426623707352</time>
+    <pose>4.794433473623251 18.01774872156536 0.0 0.0 0.0 3.440493307323441</pose>
+</waypoint>
+<waypoint>
+    <time>71.42336546435835</time>
+    <pose>4.776205787991435 18.073966780427018 0.0 0.0 0.0 3.455129636966915</pose>
+</waypoint>
+<waypoint>
+    <time>71.48224981873918</time>
+    <pose>4.757222373415885 18.12970722500632 0.0 0.0 0.0 3.4698402610191916</pose>
+</waypoint>
+<waypoint>
+    <time>71.54092904784997</time>
+    <pose>4.737486233602154 18.184967850358284 0.0 0.0 0.0 3.4846198389226517</pose>
+</waypoint>
+<waypoint>
+    <time>71.59941291624062</time>
+    <pose>4.717000491357907 18.239746470518313 0.0 0.0 0.0 3.4994629139324065</pose>
+</waypoint>
+<waypoint>
+    <time>71.6577111949465</time>
+    <pose>4.695768388098841 18.294040918588664 0.0 0.0 0.0 3.5143639255944255</pose>
+</waypoint>
+<waypoint>
+    <time>71.71583365096444</time>
+    <pose>4.673793283335759 18.347849046824173 0.0 0.0 0.0 3.529317222868208</pose>
+</waypoint>
+<waypoint>
+    <time>71.77379003666314</time>
+    <pose>4.651078654143023 18.401168726717188 0.0 0.0 0.0 3.544317077822394</pose>
+</waypoint>
+<waypoint>
+    <time>71.8315900791571</time>
+    <pose>4.627628094608394 18.45399784908181 0.0 0.0 0.0 3.5593576998268164</pose>
+</waypoint>
+<waypoint>
+    <time>71.88924346967347</time>
+    <pose>4.603445315264321 18.506334324137264 0.0 0.0 0.0 3.5744332501583473</pose>
+</waypoint>
+<waypoint>
+    <time>71.94675985294214</time>
+    <pose>4.57853414250085 18.558176081590656 0.0 0.0 0.0 3.5895378569326586</pose>
+</waypoint>
+<waypoint>
+    <time>72.00414881663862</time>
+    <pose>4.552898517960184 18.609521070718763 0.0 0.0 0.0 3.604665630272085</pose>
+</waypoint>
+<waypoint>
+    <time>72.06141988091052</time>
+    <pose>4.526542497912986 18.66036726044925 0.0 0.0 0.0 3.6198106776138563</pose>
+</waypoint>
+<waypoint>
+    <time>72.11858248801695</time>
+    <pose>4.499470252616595 18.71071263944094 0.0 0.0 0.0 3.634967119065142</pose>
+</waypoint>
+<waypoint>
+    <time>72.17564599211059</time>
+    <pose>4.471686065655142 18.76055521616342 0.0 0.0 0.0 3.650129102708038</pose>
+</waypoint>
+<waypoint>
+    <time>72.23261964919111</time>
+    <pose>4.44319433326178 18.809893018975806 0.0 0.0 0.0 3.665290819758778</pose>
+</waypoint>
+<waypoint>
+    <time>72.28951260725793</time>
+    <pose>4.413999563623102 18.858724096204742 0.0 0.0 0.0 3.6804465194886644</pose>
+</waypoint>
+<waypoint>
+    <time>72.34633389668932</time>
+    <pose>4.384106376165771 18.907046516221612 0.0 0.0 0.0 3.6955905238151368</pose>
+</waypoint>
+<waypoint>
+    <time>72.40309242087332</time>
+    <pose>4.353519500825644 18.9548583675189 0.0 0.0 0.0 3.710717241475745</pose>
+</waypoint>
+<waypoint>
+    <time>72.45979694711525</time>
+    <pose>4.32224377729933 19.00215775878589 0.0 0.0 0.0 3.725821181703592</pose>
+</waypoint>
+<waypoint>
+    <time>72.51645609784416</time>
+    <pose>4.290284154278442 19.048942818983388 0.0 0.0 0.0 3.740896967327301</pose>
+</waypoint>
+<waypoint>
+    <time>72.57307834213982</time>
+    <pose>4.257645688666561 19.095211697417817 0.0 0.0 0.0 3.7559393472249405</pose>
+</waypoint>
+<waypoint>
+    <time>72.62967198759948</time>
+    <pose>4.2243335447790935 19.140962563814366 0.0 0.0 0.0 3.7709432080698067</pose>
+</waypoint>
+<waypoint>
+    <time>72.68624517256202</time>
+    <pose>4.190352993526135 19.18619360838943 0.0 0.0 0.0 3.785903585311848</pose>
+</waypoint>
+<waypoint>
+    <time>72.74280585870515</time>
+    <pose>4.155709411578474 19.23090304192216 0.0 0.0 0.0 3.8008156733473886</pose>
+</waypoint>
+<waypoint>
+    <time>72.79936182402945</time>
+    <pose>4.120408280516827 19.275089095825308 0.0 0.0 0.0 3.8156748348382887</pose>
+</waypoint>
+<waypoint>
+    <time>72.8559206562407</time>
+    <pose>4.084455185964531 19.31875002221509 0.0 0.0 0.0 3.830476609150478</pose>
+</waypoint>
+<waypoint>
+    <time>72.91248974654049</time>
+    <pose>4.047855816703726 19.36188409398042 0.0 0.0 0.0 3.845216719887061</pose>
+</waypoint>
+<waypoint>
+    <time>72.96907628383245</time>
+    <pose>4.010615963775223 19.404489604851182 0.0 0.0 0.0 3.8598910815065386</pose>
+</waypoint>
+<waypoint>
+    <time>73.02568724934999</time>
+    <pose>3.972741519562222 19.44656486946572 0.0 0.0 0.0 3.8744958050154272</pose>
+</waypoint>
+<waypoint>
+    <time>73.0823294117091</time>
+    <pose>3.9342384768579555 19.488108223437546 0.0 0.0 0.0 3.8890272027414436</pose>
+</waypoint>
+<waypoint>
+    <time>73.13900932238818</time>
+    <pose>3.8951129279174643 19.529118023421134 0.0 0.0 0.0 3.903481792194505</pose>
+</waypoint>
+<waypoint>
+    <time>73.19573331163487</time>
+    <pose>3.855371063493626 19.569592647176965 0.0 0.0 0.0 3.917856299032483</pose>
+</waypoint>
+<waypoint>
+    <time>73.25250748479803</time>
+    <pose>3.8150191718576427 19.609530493635656 0.0 0.0 0.0 3.9321476591550377</pose>
+</waypoint>
+<waypoint>
+    <time>73.30933771908177</time>
+    <pose>3.7740636378039984 19.648929982961345 0.0 0.0 0.0 3.9463530199533463</pose>
+</waypoint>
+<waypoint>
+    <time>73.36622966071634</time>
+    <pose>3.7325109416402693 19.687789556614135 0.0 0.0 0.0 3.960469740749871</pose>
+</waypoint>
+<waypoint>
+    <time>73.42318872253989</time>
+    <pose>3.690367658161698 19.72610767741179 0.0 0.0 0.0 3.974495392466082</pose>
+</waypoint>
+<waypoint>
+    <time>73.48022008198306</time>
+    <pose>3.6476404556109516 19.763882829590493 0.0 0.0 0.0 3.9884277565605943</pose>
+</waypoint>
+<waypoint>
+    <time>73.53732867944812</time>
+    <pose>3.60433609462293 19.801113518864867 0.0 0.0 0.0 4.002264823281066</pose>
+</waypoint>
+<waypoint>
+    <time>73.59451921707218</time>
+    <pose>3.5604614271551314 19.837798272487028 0.0 0.0 0.0 4.016004789279867</pose>
+</waypoint>
+<waypoint>
+    <time>73.6517961578642</time>
+    <pose>3.516023395403427 19.87393563930487 0.0 0.0 0.0 4.029646054640102</pose>
+</waypoint>
+<waypoint>
+    <time>73.70916372520385</time>
+    <pose>3.4710290307036185 19.909524189819482 0.0 0.0 0.0 4.043187219364205</pose>
+</waypoint>
+<waypoint>
+    <time>73.76662590268992</time>
+    <pose>3.425485452418909 19.944562516241653 0.0 0.0 0.0 4.056627079374695</pose>
+</waypoint>
+<waypoint>
+    <time>73.8241864343255</time>
+    <pose>3.3793998668133995 19.979049232547606 0.0 0.0 0.0 4.069964622079285</pose>
+</waypoint>
+<waypoint>
+    <time>73.88184882502632</time>
+    <pose>3.3327795659118657 20.012982974533788 0.0 0.0 0.0 4.083199021549551</pose>
+</waypoint>
+<waypoint>
+    <time>73.93961634143886</time>
+    <pose>3.285631926345947 20.046362399870883 0.0 0.0 0.0 4.096329633364191</pose>
+</waypoint>
+<waypoint>
+    <time>73.99749201305377</time>
+    <pose>3.23796440818698 20.079186188156836 0.0 0.0 0.0 4.1093559891640545</pose>
+</waypoint>
+<waypoint>
+    <time>74.05547863360094</time>
+    <pose>3.1897845537655667 20.111453040969163 0.0 0.0 0.0 4.122277790966063</pose>
+</waypoint>
+<waypoint>
+    <time>74.11357876271154</time>
+    <pose>3.141099986478219 20.14316168191626 0.0 0.0 0.0 4.135094905281329</pose>
+</waypoint>
+<waypoint>
+    <time>74.17179472783319</time>
+    <pose>3.0919184095810848 20.17431085668792 0.0 0.0 0.0 4.147807357079399</pose>
+</waypoint>
+<waypoint>
+    <time>74.23012862638384</time>
+    <pose>3.0422476049710925 20.204899333104944 0.0 0.0 0.0 4.160415323639535</pose>
+</waypoint>
+<waypoint>
+    <time>74.2885823281307</time>
+    <pose>2.992095431954643 20.234925901167877 0.0 0.0 0.0 4.172919128326725</pose>
+</waypoint>
+<waypoint>
+    <time>74.3471574777801</time>
+    <pose>2.941469826004029 20.264389373104876 0.0 0.0 0.0 4.185319234327387</pose>
+</waypoint>
+<waypoint>
+    <time>74.4058554977652</time>
+    <pose>2.8903787975018607 20.2932885834187 0.0 0.0 0.0 4.197616238378243</pose>
+</waypoint>
+<waypoint>
+    <time>74.46467759121823</time>
+    <pose>2.838830430473544 20.321622388932802 0.0 0.0 0.0 4.209810864517962</pose>
+</waypoint>
+<waypoint>
+    <time>74.52362474511436</time>
+    <pose>2.786832881308218 20.349389668836565 0.0 0.0 0.0 4.221903957887555</pose>
+</waypoint>
+<waypoint>
+    <time>74.58269773357513</time>
+    <pose>2.7343943774681407 20.37658932472963 0.0 0.0 0.0 4.233896478607793</pose>
+</waypoint>
+<waypoint>
+    <time>74.64189712131922</time>
+    <pose>2.6815232161869216 20.403220280665334 0.0 0.0 0.0 4.245789495750945</pose>
+</waypoint>
+<waypoint>
+    <time>74.70122326724925</time>
+    <pose>2.6282277631566093 20.42928148319332 0.0 0.0 0.0 4.257584181430827</pose>
+</waypoint>
+<waypoint>
+    <time>74.76067632816348</time>
+    <pose>2.5745164512040715 20.454771901401124 0.0 0.0 0.0 4.2692818050259564</pose>
+</waypoint>
+<waypoint>
+    <time>74.82025626258206</time>
+    <pose>2.5203977789566303 20.479690526955046 0.0 0.0 0.0 4.28088372755022</pose>
+</waypoint>
+<waypoint>
+    <time>74.87996283467753</time>
+    <pose>2.465880309497381 20.50403637413997 0.0 0.0 0.0 4.292391396187007</pose>
+</waypoint>
+<waypoint>
+    <time>74.93979561830034</time>
+    <pose>2.410972669010245 20.527808479898397 0.0 0.0 0.0 4.30380633899308</pose>
+</waypoint>
+<waypoint>
+    <time>74.99975400109015</time>
+    <pose>2.3556835454150917 20.55100590386851 0.0 0.0 0.0 4.315130159784247</pose>
+</waypoint>
+<waypoint>
+    <time>75.05983718866452</time>
+    <pose>2.300021686993064 20.573627728421396 0.0 0.0 0.0 4.326364533208409</pose>
+</waypoint>
+<waypoint>
+    <time>75.12004420887692</time>
+    <pose>2.243995901002313 20.595673058697358 0.0 0.0 0.0 4.337511200011303</pose>
+</waypoint>
+<waypoint>
+    <time>75.18037391613656</time>
+    <pose>2.1876150522845315 20.617141022641245 0.0 0.0 0.0 4.34857196249912</pose>
+</waypoint>
+<waypoint>
+    <time>75.24082499578297</time>
+    <pose>2.130888061862179 20.638030771037037 0.0 0.0 0.0 4.359548680199036</pose>
+</waypoint>
+<waypoint>
+    <time>75.30139596850874</time>
+    <pose>2.0738239055270458 20.65834147754138 0.0 0.0 0.0 4.370443265720861</pose>
+</waypoint>
+<waypoint>
+    <time>75.36208519482445</time>
+    <pose>2.0164316124199106 20.67807233871629 0.0 0.0 0.0 4.381257680818074</pose>
+</waypoint>
+<waypoint>
+    <time>75.42289087955983</time>
+    <pose>1.9587202636019962 20.697222574060937 0.0 0.0 0.0 4.391993932646744</pose>
+</waypoint>
+<waypoint>
+    <time>75.48381107639634</time>
+    <pose>1.9006989906179872 20.71579142604252 0.0 0.0 0.0 4.402654070222548</pose>
+</waypoint>
+<waypoint>
+    <time>75.54484369242586</time>
+    <pose>1.8423769740512606 20.733778160126224 0.0 0.0 0.0 4.41324018107052</pose>
+</waypoint>
+<waypoint>
+    <time>75.60598649273157</time>
+    <pose>1.783763442071165 20.75118206480428 0.0 0.0 0.0 4.423754388065207</pose>
+</waypoint>
+<waypoint>
+    <time>75.66723710498651</time>
+    <pose>1.7248676689729612 20.768002451624128 0.0 0.0 0.0 4.434198846457392</pose>
+</waypoint>
+<waypoint>
+    <time>75.72859302406651</time>
+    <pose>1.6656989737102952 20.784238655215624 0.0 0.0 0.0 4.444575741082003</pose>
+</waypoint>
+<waypoint>
+    <time>75.79005161667396</time>
+    <pose>1.6062667184207216 20.79989003331738 0.0 0.0 0.0 4.454887283741763</pose>
+</waypoint>
+<waypoint>
+    <time>75.85161012596954</time>
+    <pose>1.5465803069443531 20.814955966802145 0.0 0.0 0.0 4.465135710762617</pose>
+</waypoint>
+<waypoint>
+    <time>75.91326567620915</time>
+    <pose>1.486649183335864 20.829435859701338 0.0 0.0 0.0 4.4753232807129155</pose>
+</waypoint>
+<waypoint>
+    <time>75.9750152773836</time>
+    <pose>1.4264828303702588 20.84332913922858 0.0 0.0 0.0 4.4854522722828</pose>
+</waypoint>
+<waypoint>
+    <time>76.03685582985926</time>
+    <pose>1.3660907680423333 20.856635255802367 0.0 0.0 0.0 4.495524982314683</pose>
+</waypoint>
+<waypoint>
+    <time>76.09878412901735</time>
+    <pose>1.3054825520604516 20.86935368306783 0.0 0.0 0.0 4.5055437239810985</pose>
+</waypoint>
+<waypoint>
+    <time>76.16079686989073</time>
+    <pose>1.2446677723344635 20.881483917917528 0.0 0.0 0.0 4.515510825102197</pose>
+</waypoint>
+<waypoint>
+    <time>76.22289065179653</time>
+    <pose>1.1836560514584111 20.893025480511355 0.0 0.0 0.0 4.525428626595813</pose>
+</waypoint>
+<waypoint>
+    <time>76.28506198296368</time>
+    <pose>1.1224570431878707 20.903977914295545 0.0 0.0 0.0 4.535299481054002</pose>
+</waypoint>
+<waypoint>
+    <time>76.34730728515419</time>
+    <pose>1.0610804309125508 20.914340786020688 0.0 0.0 0.0 4.545125751440955</pose>
+</waypoint>
+<waypoint>
+    <time>76.40962289827769</time>
+    <pose>0.9995359261240295 20.924113685758932 0.0 0.0 0.0 4.554909809902034</pose>
+</waypoint>
+<waypoint>
+    <time>76.47200508499843</time>
+    <pose>0.9378332668791972 20.933296226920117 0.0 0.0 0.0 4.564654036682266</pose>
+</waypoint>
+<waypoint>
+    <time>76.53445003533447</time>
+    <pose>0.8759822162593534 20.94188804626715 0.0 0.0 0.0 4.5743608191425755</pose>
+</waypoint>
+<waypoint>
+    <time>76.59695387124872</time>
+    <pose>0.8139925608254736 20.949888803930293 0.0 0.0 0.0 4.584032550872577</pose>
+</waypoint>
+<waypoint>
+    <time>76.65951265123176</time>
+    <pose>0.7518741090696905 20.957298183420694 0.0 0.0 0.0 4.593671630888532</pose>
+</waypoint>
+<waypoint>
+    <time>76.72212237487656</time>
+    <pose>0.6896366898632723 20.96411589164284 0.0 0.0 0.0 4.603280462915295</pose>
+</waypoint>
+<waypoint>
+    <time>76.78477898744484</time>
+    <pose>0.6272901509014912 20.970341658906165 0.0 0.0 0.0 4.612861454741166</pose>
+</waypoint>
+<waypoint>
+    <time>76.84747838442584</time>
+    <pose>0.5648443571453705 20.975975238935746 0.0 0.0 0.0 4.622417017643418</pose>
+</waypoint>
+<waypoint>
+    <time>76.91021641608744</time>
+    <pose>0.5023091892608503 20.98101640888201 0.0 0.0 0.0 4.631949565877224</pose>
+</waypoint>
+<waypoint>
+    <time>76.9729888920202</time>
+    <pose>0.4396945420553131 20.985464969329566 0.0 0.0 0.0 4.641461516220841</pose>
+</waypoint>
+<waypoint>
+    <time>77.03579158567474</time>
+    <pose>0.37701032291201747 20.9893207443051 0.0 0.0 0.0 4.6509552875733515</pose>
+</waypoint>
+<waypoint>
+    <time>77.09862023889318</time>
+    <pose>0.3142664502224178 20.992583581284322 0.0 0.0 0.0 4.6604333005984335</pose>
+</waypoint>
+<waypoint>
+    <time>77.16147056643499</time>
+    <pose>0.25147285181684415 20.995253351198006 0.0 0.0 0.0 4.669897977407827</pose>
+</waypoint>
+<waypoint>
+    <time>77.22433826049831</time>
+    <pose>0.18863946339359483 20.9973299484371 0.0 0.0 0.0 4.679351741280237</pose>
+</waypoint>
+<waypoint>
+    <time>77.28721899523708</time>
+    <pose>0.1257762269468934 20.99881329085688 0.0 0.0 0.0 4.688797016409454</pose>
+</waypoint>
+<waypoint>
+    <time>77.35010843127502</time>
+    <pose>0.06289308919371515 20.999703319780245 0.0 0.0 0.0 4.6982362276756495</pose>
+</waypoint>
+<waypoint>
+    <time>77.41300222021701</time>
+    <pose>5.948815842530379e-15 21.0 0.0 0.0 0.0 4.707671800436997</pose>
+</waypoint>
+
+
+        </trajectory>
+      </script>
+
+    </actor>
+
+
+  </world>
+</sdf>
