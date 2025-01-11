@@ -1,0 +1,34 @@
+[4.808s] Invoking command in '/home/patryk/ros2_ws/build/controller': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/patryk/ros2_ws/build/controller/build --no-deps install_data
+[5.121s] Traceback (most recent call last):
+[5.122s]   File "setup.py", line 1, in <module>
+[5.123s]     from setuptools import setup
+[5.124s]   File "/home/patryk/.local/lib/python3.6/site-packages/setuptools/__init__.py", line 16, in <module>
+[5.125s]     import setuptools.version
+[5.125s]   File "/home/patryk/.local/lib/python3.6/site-packages/setuptools/version.py", line 1, in <module>
+[5.126s]     import pkg_resources
+[5.127s]   File "/home/patryk/.local/lib/python3.6/site-packages/pkg_resources/__init__.py", line 33, in <module>
+[5.127s]     import email.parser
+[5.128s]   File "/usr/lib/python3.6/email/parser.py", line 12, in <module>
+[5.129s]     from email.feedparser import FeedParser, BytesFeedParser
+[5.130s]   File "/usr/lib/python3.6/email/feedparser.py", line 27, in <module>
+[5.130s]     from email._policybase import compat32
+[5.131s]   File "/usr/lib/python3.6/email/_policybase.py", line 9, in <module>
+[5.131s]     from email.utils import _has_surrogates
+[5.132s]   File "/usr/lib/python3.6/email/utils.py", line 126, in <module>
+[5.133s]     ''', re.VERBOSE | re.IGNORECASE)
+[5.134s]   File "/usr/lib/python3.6/re.py", line 233, in compile
+[5.134s]     return _compile(pattern, flags)
+[5.135s]   File "/usr/lib/python3.6/re.py", line 301, in _compile
+[5.135s]     p = sre_compile.compile(pattern, flags)
+[5.136s]   File "/usr/lib/python3.6/sre_compile.py", line 566, in compile
+[5.137s]     code = _code(p, flags)
+[5.137s]   File "/usr/lib/python3.6/sre_compile.py", line 551, in _code
+[5.138s]     _compile(code, p.data, flags)
+[5.139s]   File "/usr/lib/python3.6/sre_compile.py", line 73, in _compile
+[5.140s]     not (flags & SRE_FLAG_LOCALE) and
+[5.140s]   File "/usr/lib/python3.6/enum.py", line 806, in __and__
+[5.141s]     return self.__class__(self._value_ & self.__class__(other)._value_)
+[5.142s]   File "/usr/lib/python3.6/enum.py", line 293, in __call__
+[5.143s]     return cls.__new__(cls, value)
+[5.145s] KeyboardInterrupt
+[5.179s] Invoked command in '/home/patryk/ros2_ws/build/controller' returned '1': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/patryk/ros2_ws/build/controller/build --no-deps install_data

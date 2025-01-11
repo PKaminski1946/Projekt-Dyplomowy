@@ -1,0 +1,4 @@
+Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': /usr/local/bin/cmake --build /home/patryk/ros2_ws/build/px4_msgs -- -j4 -l4
+Invoking command in '/home/patryk/ros2_ws/build/px4_msgs': /usr/local/bin/cmake --install /home/patryk/ros2_ws/build/px4_msgs
+Invoked command in '/home/patryk/ros2_ws/build/px4_msgs' returned '0': /usr/local/bin/cmake --install /home/patryk/ros2_ws/build/px4_msgs

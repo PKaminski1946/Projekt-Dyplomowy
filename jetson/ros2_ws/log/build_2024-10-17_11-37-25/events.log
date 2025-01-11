@@ -1,0 +1,205 @@
+[0.000000] (-) TimerEvent: {}
+[0.000643] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.002571] (controller) JobStarted: {'identifier': 'controller'}
+[0.099905] (-) TimerEvent: {}
+[0.204225] (-) TimerEvent: {}
+[0.305469] (-) TimerEvent: {}
+[0.406233] (-) TimerEvent: {}
+[0.507175] (-) TimerEvent: {}
+[0.607938] (-) TimerEvent: {}
+[0.708692] (-) TimerEvent: {}
+[0.809405] (-) TimerEvent: {}
+[0.910480] (-) TimerEvent: {}
+[1.011198] (-) TimerEvent: {}
+[1.111992] (-) TimerEvent: {}
+[1.212893] (-) TimerEvent: {}
+[1.313622] (-) TimerEvent: {}
+[1.414594] (-) TimerEvent: {}
+[1.515328] (-) TimerEvent: {}
+[1.616269] (-) TimerEvent: {}
+[1.717394] (-) TimerEvent: {}
+[1.818128] (-) TimerEvent: {}
+[1.918832] (-) TimerEvent: {}
+[2.019795] (-) TimerEvent: {}
+[2.120983] (-) TimerEvent: {}
+[2.221699] (-) TimerEvent: {}
+[2.322426] (-) TimerEvent: {}
+[2.423411] (-) TimerEvent: {}
+[2.524265] (-) TimerEvent: {}
+[2.624996] (-) TimerEvent: {}
+[2.725710] (-) TimerEvent: {}
+[2.826679] (-) TimerEvent: {}
+[2.927568] (-) TimerEvent: {}
+[3.028271] (-) TimerEvent: {}
+[3.129008] (-) TimerEvent: {}
+[3.229708] (-) TimerEvent: {}
+[3.330431] (-) TimerEvent: {}
+[3.431245] (-) TimerEvent: {}
+[3.531991] (-) TimerEvent: {}
+[3.632813] (-) TimerEvent: {}
+[3.733674] (-) TimerEvent: {}
+[3.834480] (-) TimerEvent: {}
+[3.935219] (-) TimerEvent: {}
+[4.035917] (-) TimerEvent: {}
+[4.136800] (-) TimerEvent: {}
+[4.237597] (-) TimerEvent: {}
+[4.338429] (-) TimerEvent: {}
+[4.439424] (-) TimerEvent: {}
+[4.540344] (-) TimerEvent: {}
+[4.641144] (-) TimerEvent: {}
+[4.741858] (-) TimerEvent: {}
+[4.842571] (-) TimerEvent: {}
+[4.943346] (-) TimerEvent: {}
+[5.044068] (-) TimerEvent: {}
+[5.144808] (-) TimerEvent: {}
+[5.245546] (-) TimerEvent: {}
+[5.346711] (-) TimerEvent: {}
+[5.447484] (-) TimerEvent: {}
+[5.548274] (-) TimerEvent: {}
+[5.649725] (-) TimerEvent: {}
+[5.750513] (-) TimerEvent: {}
+[5.851197] (-) TimerEvent: {}
+[5.952154] (-) TimerEvent: {}
+[6.052925] (-) TimerEvent: {}
+[6.153662] (-) TimerEvent: {}
+[6.254532] (-) TimerEvent: {}
+[6.355238] (-) TimerEvent: {}
+[6.455935] (-) TimerEvent: {}
+[6.556912] (-) TimerEvent: {}
+[6.657907] (-) TimerEvent: {}
+[6.758600] (-) TimerEvent: {}
+[6.859527] (-) TimerEvent: {}
+[6.960315] (-) TimerEvent: {}
+[7.061143] (-) TimerEvent: {}
+[7.162438] (-) TimerEvent: {}
+[7.263227] (-) TimerEvent: {}
+[7.363921] (-) TimerEvent: {}
+[7.464703] (-) TimerEvent: {}
+[7.565579] (-) TimerEvent: {}
+[7.666327] (-) TimerEvent: {}
+[7.767431] (-) TimerEvent: {}
+[7.868288] (-) TimerEvent: {}
+[7.969133] (-) TimerEvent: {}
+[8.069837] (-) TimerEvent: {}
+[8.170564] (-) TimerEvent: {}
+[8.271338] (-) TimerEvent: {}
+[8.372053] (-) TimerEvent: {}
+[8.472882] (-) TimerEvent: {}
+[8.573590] (-) TimerEvent: {}
+[8.674590] (-) TimerEvent: {}
+[8.775433] (-) TimerEvent: {}
+[8.876226] (-) TimerEvent: {}
+[8.976976] (-) TimerEvent: {}
+[9.077791] (-) TimerEvent: {}
+[9.178577] (-) TimerEvent: {}
+[9.279586] (-) TimerEvent: {}
+[9.380366] (-) TimerEvent: {}
+[9.481176] (-) TimerEvent: {}
+[9.581948] (-) TimerEvent: {}
+[9.682733] (-) TimerEvent: {}
+[9.783448] (-) TimerEvent: {}
+[9.884226] (-) TimerEvent: {}
+[9.985056] (-) TimerEvent: {}
+[10.086210] (-) TimerEvent: {}
+[10.187509] (-) TimerEvent: {}
+[10.288539] (-) TimerEvent: {}
+[10.373292] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controller', 'build', '--build-base', '/home/patryk/ros2_ws/build/controller/build', 'install', '--record', '/home/patryk/ros2_ws/build/controller/install.log', '--install-scripts', '$base/lib/controller', '--single-version-externally-managed'], 'cwd': '/home/patryk/ros2_ws/src/controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GTK_CSD': '0', 'USER': 'patryk', 'LANGUAGE': 'en_US', 'LC_TIME': 'pl_PL.UTF-8', 'OSPL_INFOFILE': '<stdout>', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '5568', 'XDG_SESSION_TYPE': 'x11', 'LD_LIBRARY_PATH': '/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:', 'SHLVL': '1', 'OLDPWD': '/home/patryk', 'OSPL_URI': 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml', 'HOME': '/home/patryk', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.5', 'PYENV_SHELL': 'bash', 'OSPL_VERBOSITY': '2', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'GTK_MODULES': 'gail:atk-bridge', 'ROS_PYTHON_VERSION': '3', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'LC_MONETARY': 'pl_PL.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'OSPL_TMPL_PATH': '/usr/etc/opensplice/idlpp', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux', 'ROS_DISTRO': 'dashing', 'LOGNAME': 'patryk', 'JETSON_SERIAL_NUMBER': '1420322025424', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'JETSON_CODENAME': 'Batuu', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig', 'XDG_SESSION_ID': 'c1', 'TERM': 'xterm-256color', 'LIB_DARKNET': '/home/patryk/darknet/libdarknet.so', 'SAL_USE_VCLPLUGIN': 'gtk', 'OSPL_ERRORFILE': '<stderr>', 'PATH': '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_US', 'XDG_MENU_PREFIX': 'lxde-', 'LC_ADDRESS': 'pl_PL.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'OSPL_HOME': '/usr', 'XDG_CURRENT_DESKTOP': 'LXDE', 'LC_TELEPHONE': 'pl_PL.UTF-8', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_CONFIG_HOME': '/home/patryk/.config', 'JETSON_SOC': 'tegra210', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/patryk/.Xauthority', 'XDG_DATA_HOME': '/home/patryk/.local/share', 'AMENT_PREFIX_PATH': '/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux', 'SSH_AUTH_SOCK': '/tmp/ssh-tRIqK0h52akQ/agent.4900', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/patryk', 'LC_NAME': 'pl_PL.UTF-8', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'pl_PL.UTF-8', '_LXSESSION_PID': '4900', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pl_PL.UTF-8', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/patryk/ros2_ws/build/controller', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'LC_NUMERIC': 'pl_PL.UTF-8', 'PYTHONPATH': '/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages', 'LC_PAPER': 'pl_PL.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '4.6.5', 'VTE_VERSION': '5202', 'CMAKE_PREFIX_PATH': '/home/patryk/ros2_dashing/ros2-linux', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[10.459671] (-) TimerEvent: {}
+[10.560941] (-) TimerEvent: {}
+[10.661755] (-) TimerEvent: {}
+[10.762414] (-) TimerEvent: {}
+[10.863145] (-) TimerEvent: {}
+[10.963860] (-) TimerEvent: {}
+[11.064586] (-) TimerEvent: {}
+[11.165289] (-) TimerEvent: {}
+[11.266008] (-) TimerEvent: {}
+[11.366718] (-) TimerEvent: {}
+[11.467538] (-) TimerEvent: {}
+[11.568374] (-) TimerEvent: {}
+[11.669128] (-) TimerEvent: {}
+[11.769818] (-) TimerEvent: {}
+[11.870733] (-) TimerEvent: {}
+[11.971640] (-) TimerEvent: {}
+[12.072348] (-) TimerEvent: {}
+[12.173107] (-) TimerEvent: {}
+[12.273874] (-) TimerEvent: {}
+[12.374577] (-) TimerEvent: {}
+[12.475299] (-) TimerEvent: {}
+[12.576037] (-) TimerEvent: {}
+[12.677070] (-) TimerEvent: {}
+[12.777794] (-) TimerEvent: {}
+[12.878569] (-) TimerEvent: {}
+[12.979253] (-) TimerEvent: {}
+[13.080049] (-) TimerEvent: {}
+[13.181038] (-) TimerEvent: {}
+[13.281862] (-) TimerEvent: {}
+[13.382740] (-) TimerEvent: {}
+[13.483509] (-) TimerEvent: {}
+[13.584401] (-) TimerEvent: {}
+[13.685377] (-) TimerEvent: {}
+[13.786134] (-) TimerEvent: {}
+[13.886850] (-) TimerEvent: {}
+[13.987771] (-) TimerEvent: {}
+[14.088524] (-) TimerEvent: {}
+[14.189187] (-) TimerEvent: {}
+[14.290205] (-) TimerEvent: {}
+[14.391516] (-) TimerEvent: {}
+[14.492199] (-) TimerEvent: {}
+[14.592985] (-) TimerEvent: {}
+[14.693757] (-) TimerEvent: {}
+[14.794431] (-) TimerEvent: {}
+[14.895249] (-) TimerEvent: {}
+[14.996109] (-) TimerEvent: {}
+[15.096848] (-) TimerEvent: {}
+[15.197540] (-) TimerEvent: {}
+[15.298349] (-) TimerEvent: {}
+[15.399261] (-) TimerEvent: {}
+[15.499986] (-) TimerEvent: {}
+[15.600791] (-) TimerEvent: {}
+[15.701552] (-) TimerEvent: {}
+[15.802299] (-) TimerEvent: {}
+[15.903074] (-) TimerEvent: {}
+[16.003736] (-) TimerEvent: {}
+[16.104400] (-) TimerEvent: {}
+[16.205181] (-) TimerEvent: {}
+[16.305994] (-) TimerEvent: {}
+[16.406731] (-) TimerEvent: {}
+[16.507376] (-) TimerEvent: {}
+[16.608223] (-) TimerEvent: {}
+[16.709680] (-) TimerEvent: {}
+[16.810342] (-) TimerEvent: {}
+[16.835855] (controller) StderrLine: {'line': b"/home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[16.837221] (controller) StderrLine: {'line': b'  % (opt, underscore_opt)\n'}
+[16.910605] (-) TimerEvent: {}
+[17.011429] (-) TimerEvent: {}
+[17.110903] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[17.111750] (-) TimerEvent: {}
+[17.118233] (controller) StdoutLine: {'line': b'writing ../../build/controller/controller.egg-info/PKG-INFO\n'}
+[17.120648] (controller) StdoutLine: {'line': b'writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt\n'}
+[17.121971] (controller) StdoutLine: {'line': b'writing entry points to ../../build/controller/controller.egg-info/entry_points.txt\n'}
+[17.122711] (controller) StdoutLine: {'line': b'writing requirements to ../../build/controller/controller.egg-info/requires.txt\n'}
+[17.123434] (controller) StdoutLine: {'line': b'writing top-level names to ../../build/controller/controller.egg-info/top_level.txt\n'}
+[17.166962] (controller) StdoutLine: {'line': b"reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[17.175361] (controller) StdoutLine: {'line': b"writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[17.176542] (controller) StdoutLine: {'line': b'running build\n'}
+[17.177436] (controller) StdoutLine: {'line': b'running build_py\n'}
+[17.178976] (controller) StdoutLine: {'line': b'copying controller/controller.py -> /home/patryk/ros2_ws/build/controller/build/lib/controller\n'}
+[17.181766] (controller) StdoutLine: {'line': b'running install\n'}
+[17.183734] (controller) StdoutLine: {'line': b'running install_lib\n'}
+[17.190251] (controller) StdoutLine: {'line': b'copying /home/patryk/ros2_ws/build/controller/build/lib/controller/controller.py -> /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller\n'}
+[17.204247] (controller) StdoutLine: {'line': b'byte-compiling /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller/controller.py to controller.cpython-36.pyc\n'}
+[17.211948] (-) TimerEvent: {}
+[17.215932] (controller) StdoutLine: {'line': b'running install_data\n'}
+[17.222202] (controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[17.234112] (controller) StdoutLine: {'line': b"removing '/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[17.235554] (controller) StdoutLine: {'line': b'Copying ../../build/controller/controller.egg-info to /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info\n'}
+[17.247771] (controller) StdoutLine: {'line': b'running install_scripts\n'}
+[17.312206] (-) TimerEvent: {}
+[17.413083] (-) TimerEvent: {}
+[17.416585] (controller) StdoutLine: {'line': b'Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller\n'}
+[17.419399] (controller) StdoutLine: {'line': b"writing list of installed files to '/home/patryk/ros2_ws/build/controller/install.log'\n"}
+[17.513372] (-) TimerEvent: {}
+[17.558897] (controller) CommandEnded: {'returncode': 0}
+[17.613568] (-) TimerEvent: {}
+[17.660534] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[17.665830] (-) EventReactorShutdown: {}

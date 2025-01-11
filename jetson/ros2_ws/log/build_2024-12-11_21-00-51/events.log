@@ -1,0 +1,950 @@
+[0.000000] (-) TimerEvent: {}
+[0.000870] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.001176] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.001670] (controller) JobStarted: {'identifier': 'controller'}
+[0.074952] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.094935] (-) TimerEvent: {}
+[0.196085] (-) TimerEvent: {}
+[0.297073] (-) TimerEvent: {}
+[0.397860] (-) TimerEvent: {}
+[0.498648] (-) TimerEvent: {}
+[0.599340] (-) TimerEvent: {}
+[0.700055] (-) TimerEvent: {}
+[0.800747] (-) TimerEvent: {}
+[0.901435] (-) TimerEvent: {}
+[1.002104] (-) TimerEvent: {}
+[1.102825] (-) TimerEvent: {}
+[1.203538] (-) TimerEvent: {}
+[1.304238] (-) TimerEvent: {}
+[1.404982] (-) TimerEvent: {}
+[1.505697] (-) TimerEvent: {}
+[1.606529] (-) TimerEvent: {}
+[1.707207] (-) TimerEvent: {}
+[1.807957] (-) TimerEvent: {}
+[1.908783] (-) TimerEvent: {}
+[1.927084] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[1.929799] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[1.934286] (px4_msgs) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/patryk/ros2_ws/build/px4_msgs', '--', '-j4', '-l4'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5447'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.6'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-dN7tmj0mBDPl/agent.4909'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4909'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages:/usr/local/lib'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[2.009121] (-) TimerEvent: {}
+[2.110110] (-) TimerEvent: {}
+[2.116250] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 0.7.6 (/home/patryk/ros2_dashing/ros2-linux/share/ament_cmake/cmake)\n'}
+[2.210338] (-) TimerEvent: {}
+[2.311119] (-) TimerEvent: {}
+[2.411929] (-) TimerEvent: {}
+[2.417155] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found suitable version "3.6.9", minimum required is "3") \n'}
+[2.418068] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/patryk/.pyenv/shims/python3\n'}
+[2.512069] (-) TimerEvent: {}
+[2.612832] (-) TimerEvent: {}
+[2.713525] (-) TimerEvent: {}
+[2.814277] (-) TimerEvent: {}
+[2.915040] (-) TimerEvent: {}
+[3.015765] (-) TimerEvent: {}
+[3.116500] (-) TimerEvent: {}
+[3.217195] (-) TimerEvent: {}
+[3.317905] (-) TimerEvent: {}
+[3.418635] (-) TimerEvent: {}
+[3.519394] (-) TimerEvent: {}
+[3.620123] (-) TimerEvent: {}
+[3.720863] (-) TimerEvent: {}
+[3.821545] (-) TimerEvent: {}
+[3.922258] (-) TimerEvent: {}
+[3.926967] (px4_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.022422] (-) TimerEvent: {}
+[4.039828] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 0.7.0 (/home/patryk/ros2_dashing/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[4.122649] (-) TimerEvent: {}
+[4.223405] (-) TimerEvent: {}
+[4.324213] (-) TimerEvent: {}
+[4.424970] (-) TimerEvent: {}
+[4.525770] (-) TimerEvent: {}
+[4.626631] (-) TimerEvent: {}
+[4.694340] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/patryk/ros2_ws/build/controller/build', '--no-deps', 'install_data'], 'cwd': '/home/patryk/ros2_ws/build/controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'patryk', 'LANGUAGE': 'en_US', 'LC_TIME': 'pl_PL.UTF-8', 'OSPL_INFOFILE': '<stdout>', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '5447', 'XDG_SESSION_TYPE': 'x11', 'LD_LIBRARY_PATH': '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:', 'SHLVL': '1', 'OLDPWD': '/home/patryk', 'OSPL_URI': 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml', 'HOME': '/home/patryk', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.6', 'PYENV_SHELL': 'bash', 'OSPL_VERBOSITY': '2', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'GTK_MODULES': 'gail:atk-bridge', 'ROS_PYTHON_VERSION': '3', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'LC_MONETARY': 'pl_PL.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'OSPL_TMPL_PATH': '/usr/etc/opensplice/idlpp', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux', 'ROS_DISTRO': 'dashing', 'LOGNAME': 'patryk', 'JETSON_SERIAL_NUMBER': '1420322025424', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'JETSON_CODENAME': 'Batuu', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig', 'XDG_SESSION_ID': 'c1', 'TERM': 'xterm-256color', 'LIB_DARKNET': '/home/patryk/darknet/libdarknet.so', 'SAL_USE_VCLPLUGIN': 'gtk', 'OSPL_ERRORFILE': '<stderr>', 'PATH': '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_US', 'XDG_MENU_PREFIX': 'lxde-', 'LC_ADDRESS': 'pl_PL.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'OSPL_HOME': '/usr', 'XDG_CURRENT_DESKTOP': 'LXDE', 'LC_TELEPHONE': 'pl_PL.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_CONFIG_HOME': '/home/patryk/.config', 'JETSON_SOC': 'tegra210', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/patryk/.Xauthority', 'XDG_DATA_HOME': '/home/patryk/.local/share', 'AMENT_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux', 'SSH_AUTH_SOCK': '/tmp/ssh-dN7tmj0mBDPl/agent.4909', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/patryk', 'LC_NAME': 'pl_PL.UTF-8', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', 'LC_MEASUREMENT': 'pl_PL.UTF-8', '_LXSESSION_PID': '4909', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pl_PL.UTF-8', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/patryk/ros2_ws/build/controller', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'LC_NUMERIC': 'pl_PL.UTF-8', 'PYTHONPATH': '/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages:/usr/local/lib', 'LC_PAPER': 'pl_PL.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '', 'VTE_VERSION': '5202', 'CMAKE_PREFIX_PATH': '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[4.726868] (-) TimerEvent: {}
+[4.827727] (-) TimerEvent: {}
+[4.928493] (-) TimerEvent: {}
+[4.985489] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 0.7.10 (/home/patryk/ros2_dashing/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[5.028725] (-) TimerEvent: {}
+[5.129486] (-) TimerEvent: {}
+[5.230234] (-) TimerEvent: {}
+[5.330990] (-) TimerEvent: {}
+[5.431741] (-) TimerEvent: {}
+[5.532544] (-) TimerEvent: {}
+[5.633326] (-) TimerEvent: {}
+[5.734019] (-) TimerEvent: {}
+[5.834756] (-) TimerEvent: {}
+[5.864386] (px4_msgs) StdoutLine: {'line': b'-- Found PrismTech OpenSplice: /usr/share/opensplice/cmake\n'}
+[5.934927] (-) TimerEvent: {}
+[6.035619] (-) TimerEvent: {}
+[6.136412] (-) TimerEvent: {}
+[6.237219] (-) TimerEvent: {}
+[6.245925] (controller) StderrLine: {'line': b"/home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[6.246674] (controller) StderrLine: {'line': b'  % (opt, underscore_opt)\n'}
+[6.337434] (-) TimerEvent: {}
+[6.438181] (-) TimerEvent: {}
+[6.507982] (controller) StdoutLine: {'line': b'running develop\n'}
+[6.538355] (-) TimerEvent: {}
+[6.639119] (-) TimerEvent: {}
+[6.731332] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found version "3.6.9") \n'}
+[6.739447] (-) TimerEvent: {}
+[6.840208] (-) TimerEvent: {}
+[6.940892] (-) TimerEvent: {}
+[7.041667] (-) TimerEvent: {}
+[7.142424] (-) TimerEvent: {}
+[7.243161] (-) TimerEvent: {}
+[7.343996] (-) TimerEvent: {}
+[7.444709] (-) TimerEvent: {}
+[7.545484] (-) TimerEvent: {}
+[7.590931] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[7.591948] (controller) StdoutLine: {'line': b'writing controller.egg-info/PKG-INFO\n'}
+[7.593338] (controller) StdoutLine: {'line': b'writing dependency_links to controller.egg-info/dependency_links.txt\n'}
+[7.593961] (controller) StdoutLine: {'line': b'writing entry points to controller.egg-info/entry_points.txt\n'}
+[7.594634] (controller) StdoutLine: {'line': b'writing requirements to controller.egg-info/requires.txt\n'}
+[7.595231] (controller) StdoutLine: {'line': b'writing top-level names to controller.egg-info/top_level.txt\n'}
+[7.607928] (controller) StdoutLine: {'line': b"reading manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[7.613503] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[7.645714] (-) TimerEvent: {}
+[7.746566] (-) TimerEvent: {}
+[7.829528] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_opensplice_c\n'}
+[7.846793] (-) TimerEvent: {}
+[7.916621] (controller) StdoutLine: {'line': b'running build_ext\n'}
+[7.917485] (controller) StdoutLine: {'line': b'Creating /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller.egg-link (link to .)\n'}
+[7.920242] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp;rosidl_typesupport_opensplice_cpp\n'}
+[7.921439] (controller) StdoutLine: {'line': b'Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller\n'}
+[7.922522] (controller) StdoutLine: {'line': b'\n'}
+[7.923144] (controller) StdoutLine: {'line': b'Installed /home/patryk/ros2_ws/build/controller\n'}
+[7.923965] (controller) StdoutLine: {'line': b'running install_data\n'}
+[7.947071] (-) TimerEvent: {}
+[8.048000] (-) TimerEvent: {}
+[8.066779] (controller) CommandEnded: {'returncode': 0}
+[8.140086] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[8.148121] (-) TimerEvent: {}
+[8.248779] (-) TimerEvent: {}
+[8.349469] (-) TimerEvent: {}
+[8.450219] (-) TimerEvent: {}
+[8.550964] (-) TimerEvent: {}
+[8.651714] (-) TimerEvent: {}
+[8.752459] (-) TimerEvent: {}
+[8.853224] (-) TimerEvent: {}
+[8.953976] (-) TimerEvent: {}
+[9.054732] (-) TimerEvent: {}
+[9.155469] (-) TimerEvent: {}
+[9.236482] (px4_msgs) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 0.7.2 (/home/patryk/ros2_dashing/ros2-linux/share/rmw_implementation_cmake/cmake)\n'}
+[9.255671] (-) TimerEvent: {}
+[9.356369] (-) TimerEvent: {}
+[9.457131] (-) TimerEvent: {}
+[9.523986] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/patryk/.pyenv/shims/python3 (found suitable version "3.6.9", minimum required is "3.5") \n'}
+[9.529116] (px4_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.7.11 (/home/patryk/ros2_dashing/ros2-linux/share/python_cmake_module/cmake)\n'}
+[9.557424] (-) TimerEvent: {}
+[9.658495] (-) TimerEvent: {}
+[9.759292] (-) TimerEvent: {}
+[9.839783] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/patryk/.pyenv/shims/python3\n'}
+[9.840638] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m\n'}
+[9.841124] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.6m.so\n'}
+[9.859505] (-) TimerEvent: {}
+[9.960262] (-) TimerEvent: {}
+[10.061153] (-) TimerEvent: {}
+[10.163028] (-) TimerEvent: {}
+[10.263783] (-) TimerEvent: {}
+[10.364582] (-) TimerEvent: {}
+[10.465332] (-) TimerEvent: {}
+[10.566064] (-) TimerEvent: {}
+[10.666763] (-) TimerEvent: {}
+[10.767508] (-) TimerEvent: {}
+[10.868366] (-) TimerEvent: {}
+[10.969587] (-) TimerEvent: {}
+[11.070342] (-) TimerEvent: {}
+[11.171113] (-) TimerEvent: {}
+[11.271924] (-) TimerEvent: {}
+[11.372685] (-) TimerEvent: {}
+[11.473448] (-) TimerEvent: {}
+[11.574216] (-) TimerEvent: {}
+[11.671661] (px4_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.7.12 (/home/patryk/ros2_dashing/ros2-linux/share/ament_lint_auto/cmake)\n'}
+[11.674335] (-) TimerEvent: {}
+[11.775127] (-) TimerEvent: {}
+[11.846897] (px4_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[11.857263] (px4_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[11.875325] (-) TimerEvent: {}
+[11.917063] (px4_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.975558] (-) TimerEvent: {}
+[12.076364] (-) TimerEvent: {}
+[12.177132] (-) TimerEvent: {}
+[12.277885] (-) TimerEvent: {}
+[12.378661] (-) TimerEvent: {}
+[12.480571] (-) TimerEvent: {}
+[12.581848] (-) TimerEvent: {}
+[12.685321] (-) TimerEvent: {}
+[12.788725] (-) TimerEvent: {}
+[12.893030] (-) TimerEvent: {}
+[12.997714] (-) TimerEvent: {}
+[13.100250] (-) TimerEvent: {}
+[13.203315] (-) TimerEvent: {}
+[13.307021] (-) TimerEvent: {}
+[13.412463] (-) TimerEvent: {}
+[13.515102] (-) TimerEvent: {}
+[13.524597] (px4_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[13.556227] (px4_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/patryk/ros2_ws/build/px4_msgs\n'}
+[13.611488] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[13.613589] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__dds_opensplice_idl\x1b[0m\n'}
+[13.614303] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__cpp\x1b[0m\n'}
+[13.615207] (-) TimerEvent: {}
+[13.689903] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[13.690666] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating DDS interfaces\x1b[0m\n'}
+[13.715421] (-) TimerEvent: {}
+[13.816379] (-) TimerEvent: {}
+[13.917495] (-) TimerEvent: {}
+[14.018366] (-) TimerEvent: {}
+[14.120214] (-) TimerEvent: {}
+[14.221241] (-) TimerEvent: {}
+[14.322017] (-) TimerEvent: {}
+[14.423084] (-) TimerEvent: {}
+[14.524181] (-) TimerEvent: {}
+[14.625001] (-) TimerEvent: {}
+[14.726098] (-) TimerEvent: {}
+[14.826870] (-) TimerEvent: {}
+[14.927655] (-) TimerEvent: {}
+[15.028496] (-) TimerEvent: {}
+[15.129211] (-) TimerEvent: {}
+[15.503681] (-) TimerEvent: {}
+[15.604402] (-) TimerEvent: {}
+[15.705148] (-) TimerEvent: {}
+[15.806192] (-) TimerEvent: {}
+[15.906951] (-) TimerEvent: {}
+[16.007670] (-) TimerEvent: {}
+[16.108658] (-) TimerEvent: {}
+[16.209382] (-) TimerEvent: {}
+[16.310111] (-) TimerEvent: {}
+[16.410854] (-) TimerEvent: {}
+[16.511638] (-) TimerEvent: {}
+[16.612353] (-) TimerEvent: {}
+[16.713075] (-) TimerEvent: {}
+[16.813859] (-) TimerEvent: {}
+[16.914638] (-) TimerEvent: {}
+[17.015449] (-) TimerEvent: {}
+[17.116378] (-) TimerEvent: {}
+[17.217102] (-) TimerEvent: {}
+[17.317828] (-) TimerEvent: {}
+[17.418605] (-) TimerEvent: {}
+[17.519386] (-) TimerEvent: {}
+[17.620157] (-) TimerEvent: {}
+[17.720881] (-) TimerEvent: {}
+[17.821659] (-) TimerEvent: {}
+[17.922441] (-) TimerEvent: {}
+[18.023289] (-) TimerEvent: {}
+[18.124275] (-) TimerEvent: {}
+[18.225003] (-) TimerEvent: {}
+[18.325783] (-) TimerEvent: {}
+[18.426570] (-) TimerEvent: {}
+[18.527352] (-) TimerEvent: {}
+[18.628112] (-) TimerEvent: {}
+[18.728831] (-) TimerEvent: {}
+[18.829550] (-) TimerEvent: {}
+[18.930284] (-) TimerEvent: {}
+[19.031067] (-) TimerEvent: {}
+[19.131844] (-) TimerEvent: {}
+[19.232566] (-) TimerEvent: {}
+[19.333346] (-) TimerEvent: {}
+[19.434076] (-) TimerEvent: {}
+[19.534849] (-) TimerEvent: {}
+[19.635629] (-) TimerEvent: {}
+[19.736457] (-) TimerEvent: {}
+[19.837176] (-) TimerEvent: {}
+[19.937960] (-) TimerEvent: {}
+[20.038743] (-) TimerEvent: {}
+[20.139517] (-) TimerEvent: {}
+[20.379774] (-) TimerEvent: {}
+[20.480584] (-) TimerEvent: {}
+[20.581310] (-) TimerEvent: {}
+[20.682387] (-) TimerEvent: {}
+[20.783499] (-) TimerEvent: {}
+[20.884566] (-) TimerEvent: {}
+[20.985673] (-) TimerEvent: {}
+[21.045876] (px4_msgs) StdoutLine: {'line': b'[  4%] Built target px4_msgs__dds_opensplice_idl\n'}
+[21.085877] (-) TimerEvent: {}
+[21.186628] (-) TimerEvent: {}
+[21.287370] (-) TimerEvent: {}
+[21.388237] (-) TimerEvent: {}
+[21.489075] (-) TimerEvent: {}
+[21.532322] (px4_msgs) StdoutLine: {'line': b'[  4%] Built target px4_msgs__cpp\n'}
+[21.551983] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[21.552766] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[21.553639] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[21.589264] (-) TimerEvent: {}
+[21.690690] (-) TimerEvent: {}
+[21.791424] (-) TimerEvent: {}
+[21.892150] (-) TimerEvent: {}
+[21.993195] (-) TimerEvent: {}
+[22.094288] (-) TimerEvent: {}
+[22.195396] (-) TimerEvent: {}
+[22.289659] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_generator_c\x1b[0m\n'}
+[22.295607] (-) TimerEvent: {}
+[22.396630] (-) TimerEvent: {}
+[22.459950] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/manual_control_setpoint__functions.c.o\x1b[0m\n'}
+[22.496850] (-) TimerEvent: {}
+[22.597883] (-) TimerEvent: {}
+[22.698788] (-) TimerEvent: {}
+[22.799533] (-) TimerEvent: {}
+[22.900590] (-) TimerEvent: {}
+[23.001718] (-) TimerEvent: {}
+[23.102761] (-) TimerEvent: {}
+[23.203891] (-) TimerEvent: {}
+[23.304621] (-) TimerEvent: {}
+[23.307765] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/vehicle_local_position__functions.c.o\x1b[0m\n'}
+[23.404793] (-) TimerEvent: {}
+[23.505485] (-) TimerEvent: {}
+[23.545279] (px4_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking C shared library libpx4_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[23.605696] (-) TimerEvent: {}
+[23.706404] (-) TimerEvent: {}
+[23.807126] (-) TimerEvent: {}
+[23.907963] (-) TimerEvent: {}
+[24.008687] (-) TimerEvent: {}
+[24.111365] (-) TimerEvent: {}
+[24.212226] (-) TimerEvent: {}
+[24.312943] (-) TimerEvent: {}
+[24.413665] (-) TimerEvent: {}
+[24.514434] (-) TimerEvent: {}
+[24.615145] (-) TimerEvent: {}
+[24.715921] (-) TimerEvent: {}
+[24.816704] (-) TimerEvent: {}
+[24.917432] (-) TimerEvent: {}
+[25.018158] (-) TimerEvent: {}
+[25.118888] (-) TimerEvent: {}
+[25.219673] (-) TimerEvent: {}
+[25.718198] (-) TimerEvent: {}
+[25.818930] (-) TimerEvent: {}
+[25.920158] (-) TimerEvent: {}
+[26.020887] (-) TimerEvent: {}
+[26.121613] (-) TimerEvent: {}
+[26.222349] (-) TimerEvent: {}
+[26.323082] (-) TimerEvent: {}
+[26.423961] (-) TimerEvent: {}
+[26.524683] (-) TimerEvent: {}
+[26.625719] (-) TimerEvent: {}
+[26.726739] (-) TimerEvent: {}
+[26.827807] (-) TimerEvent: {}
+[26.928865] (-) TimerEvent: {}
+[27.029883] (-) TimerEvent: {}
+[27.130911] (-) TimerEvent: {}
+[27.232048] (-) TimerEvent: {}
+[27.333089] (-) TimerEvent: {}
+[27.434108] (-) TimerEvent: {}
+[27.535134] (-) TimerEvent: {}
+[27.637310] (-) TimerEvent: {}
+[27.709611] (px4_msgs) StdoutLine: {'line': b'[ 13%] Built target px4_msgs__rosidl_generator_c\n'}
+[27.737495] (-) TimerEvent: {}
+[27.744291] (px4_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for PrismTech OpenSplice\x1b[0m\n'}
+[27.837684] (-) TimerEvent: {}
+[27.938405] (-) TimerEvent: {}
+[28.039445] (-) TimerEvent: {}
+[28.140494] (-) TimerEvent: {}
+[28.241523] (-) TimerEvent: {}
+[28.342556] (-) TimerEvent: {}
+[28.443603] (-) TimerEvent: {}
+[28.544364] (-) TimerEvent: {}
+[28.645410] (-) TimerEvent: {}
+[28.746451] (-) TimerEvent: {}
+[28.847176] (-) TimerEvent: {}
+[28.948159] (-) TimerEvent: {}
+[28.970518] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[29.018665] (px4_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o\x1b[0m\n'}
+[29.048362] (-) TimerEvent: {}
+[29.149036] (-) TimerEvent: {}
+[29.250223] (-) TimerEvent: {}
+[29.332744] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[29.350407] (-) TimerEvent: {}
+[29.371812] (px4_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o\x1b[0m\n'}
+[29.450629] (-) TimerEvent: {}
+[29.551753] (-) TimerEvent: {}
+[29.652863] (-) TimerEvent: {}
+[29.753952] (-) TimerEvent: {}
+[29.855056] (-) TimerEvent: {}
+[29.956217] (-) TimerEvent: {}
+[30.057345] (-) TimerEvent: {}
+[30.084361] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[30.136442] (px4_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/dds_fastrtps/manual_control_setpoint__type_support.cpp.o\x1b[0m\n'}
+[30.157549] (-) TimerEvent: {}
+[30.258389] (-) TimerEvent: {}
+[30.344876] (px4_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/px4_msgs/msg/vehicle_local_position__type_support.cpp.o\x1b[0m\n'}
+[30.361549] (-) TimerEvent: {}
+[30.375376] (px4_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/px4_msgs/msg/vehicle_local_position__type_support.cpp.o\x1b[0m\n'}
+[30.461747] (-) TimerEvent: {}
+[30.562715] (-) TimerEvent: {}
+[30.663510] (-) TimerEvent: {}
+[30.764636] (-) TimerEvent: {}
+[30.865526] (-) TimerEvent: {}
+[30.966505] (-) TimerEvent: {}
+[31.067341] (-) TimerEvent: {}
+[31.168164] (-) TimerEvent: {}
+[31.269002] (-) TimerEvent: {}
+[31.290089] (px4_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[31.369194] (-) TimerEvent: {}
+[31.405799] (px4_msgs) StdoutLine: {'line': b'[ 23%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[31.424040] (px4_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[31.426685] (px4_msgs) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[31.469387] (-) TimerEvent: {}
+[31.522110] (px4_msgs) StdoutLine: {'line': b'[ 26%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[31.541801] (px4_msgs) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[31.569579] (-) TimerEvent: {}
+[31.671197] (-) TimerEvent: {}
+[31.727814] (px4_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/px4_msgs/msg/dds_fastrtps/vehicle_local_position__type_support.cpp.o\x1b[0m\n'}
+[31.771388] (-) TimerEvent: {}
+[31.872497] (-) TimerEvent: {}
+[31.973540] (-) TimerEvent: {}
+[32.074606] (-) TimerEvent: {}
+[32.175680] (-) TimerEvent: {}
+[32.276640] (-) TimerEvent: {}
+[32.377428] (-) TimerEvent: {}
+[32.478169] (-) TimerEvent: {}
+[32.579250] (-) TimerEvent: {}
+[32.680010] (-) TimerEvent: {}
+[32.781115] (-) TimerEvent: {}
+[32.882205] (-) TimerEvent: {}
+[32.982957] (-) TimerEvent: {}
+[33.084070] (-) TimerEvent: {}
+[33.185131] (-) TimerEvent: {}
+[33.286210] (-) TimerEvent: {}
+[33.289558] (px4_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[33.386394] (-) TimerEvent: {}
+[33.487487] (-) TimerEvent: {}
+[33.561715] (px4_msgs) StdoutLine: {'line': b'[ 30%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[33.581555] (px4_msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[33.587664] (-) TimerEvent: {}
+[33.688783] (-) TimerEvent: {}
+[33.789878] (-) TimerEvent: {}
+[33.890605] (-) TimerEvent: {}
+[33.991640] (-) TimerEvent: {}
+[34.092697] (-) TimerEvent: {}
+[34.193403] (-) TimerEvent: {}
+[34.294437] (-) TimerEvent: {}
+[34.395158] (-) TimerEvent: {}
+[34.496104] (-) TimerEvent: {}
+[34.597139] (-) TimerEvent: {}
+[34.698190] (-) TimerEvent: {}
+[34.798908] (-) TimerEvent: {}
+[34.899633] (-) TimerEvent: {}
+[35.000696] (-) TimerEvent: {}
+[35.101718] (-) TimerEvent: {}
+[35.202760] (-) TimerEvent: {}
+[35.303512] (-) TimerEvent: {}
+[35.404569] (-) TimerEvent: {}
+[35.505474] (-) TimerEvent: {}
+[35.607550] (-) TimerEvent: {}
+[35.708263] (-) TimerEvent: {}
+[35.809042] (-) TimerEvent: {}
+[35.910148] (-) TimerEvent: {}
+[36.011206] (-) TimerEvent: {}
+[36.112328] (-) TimerEvent: {}
+[36.201315] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_cpp\x1b[0m\n'}
+[36.212491] (-) TimerEvent: {}
+[36.313189] (-) TimerEvent: {}
+[36.414225] (-) TimerEvent: {}
+[36.501257] (px4_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/manual_control_setpoint__type_support.cpp.o\x1b[0m\n'}
+[36.514408] (-) TimerEvent: {}
+[36.615138] (-) TimerEvent: {}
+[36.715941] (-) TimerEvent: {}
+[36.816970] (-) TimerEvent: {}
+[36.918027] (-) TimerEvent: {}
+[37.019077] (-) TimerEvent: {}
+[37.120232] (-) TimerEvent: {}
+[37.221393] (-) TimerEvent: {}
+[37.322467] (-) TimerEvent: {}
+[37.423551] (-) TimerEvent: {}
+[37.524649] (-) TimerEvent: {}
+[37.625717] (-) TimerEvent: {}
+[37.726788] (-) TimerEvent: {}
+[37.827579] (-) TimerEvent: {}
+[37.928675] (-) TimerEvent: {}
+[38.029743] (-) TimerEvent: {}
+[38.130684] (-) TimerEvent: {}
+[38.231757] (-) TimerEvent: {}
+[38.332495] (-) TimerEvent: {}
+[38.433556] (-) TimerEvent: {}
+[38.534319] (-) TimerEvent: {}
+[38.635094] (-) TimerEvent: {}
+[38.735956] (-) TimerEvent: {}
+[38.798751] (px4_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/vehicle_local_position__type_support.cpp.o\x1b[0m\n'}
+[38.836137] (-) TimerEvent: {}
+[38.924897] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[38.936311] (-) TimerEvent: {}
+[38.955125] (px4_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/manual_control_setpoint__type_support.cpp.o\x1b[0m\n'}
+[39.036520] (-) TimerEvent: {}
+[39.048029] (px4_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/px4_msgs/msg/vehicle_local_position__type_support.cpp.o\x1b[0m\n'}
+[39.134483] (px4_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[39.136680] (-) TimerEvent: {}
+[39.226655] (px4_msgs) StdoutLine: {'line': b'[ 39%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[39.236887] (-) TimerEvent: {}
+[39.240910] (px4_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.cpp.o\x1b[0m\n'}
+[39.337094] (-) TimerEvent: {}
+[39.438247] (-) TimerEvent: {}
+[39.452119] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[39.484792] (px4_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/manual_control_setpoint__type_support.c.o\x1b[0m\n'}
+[39.538470] (-) TimerEvent: {}
+[39.573418] (px4_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/px4_msgs/msg/vehicle_local_position__type_support.c.o\x1b[0m\n'}
+[39.638668] (-) TimerEvent: {}
+[39.656354] (px4_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.cpp.o\x1b[0m\n'}
+[39.665668] (px4_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking C shared library libpx4_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[39.728918] (px4_msgs) StdoutLine: {'line': b'[ 46%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[39.738863] (-) TimerEvent: {}
+[39.743088] (px4_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.cpp.o\x1b[0m\n'}
+[39.839121] (-) TimerEvent: {}
+[39.939977] (-) TimerEvent: {}
+[40.040768] (-) TimerEvent: {}
+[40.141909] (-) TimerEvent: {}
+[40.242693] (-) TimerEvent: {}
+[40.278851] (px4_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.cpp.o\x1b[0m\n'}
+[40.342893] (-) TimerEvent: {}
+[40.444076] (-) TimerEvent: {}
+[40.545177] (-) TimerEvent: {}
+[40.646323] (-) TimerEvent: {}
+[40.747478] (-) TimerEvent: {}
+[40.848276] (-) TimerEvent: {}
+[40.949357] (-) TimerEvent: {}
+[41.002572] (px4_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.cpp.o\x1b[0m\n'}
+[41.049563] (-) TimerEvent: {}
+[41.106352] (px4_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.cpp.o\x1b[0m\n'}
+[41.149737] (-) TimerEvent: {}
+[41.186206] (px4_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.cpp.o\x1b[0m\n'}
+[41.249921] (-) TimerEvent: {}
+[41.357905] (-) TimerEvent: {}
+[41.437648] (px4_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_cpp.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.cpp.o\x1b[0m\n'}
+[41.458109] (-) TimerEvent: {}
+[41.558893] (-) TimerEvent: {}
+[41.659691] (-) TimerEvent: {}
+[41.760563] (-) TimerEvent: {}
+[41.836515] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[41.860809] (-) TimerEvent: {}
+[41.878409] (px4_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/manual_control_setpoint__type_support_c.cpp.o\x1b[0m\n'}
+[41.889780] (px4_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/px4_msgs/msg/vehicle_local_position__type_support_c.cpp.o\x1b[0m\n'}
+[41.961017] (-) TimerEvent: {}
+[42.061892] (-) TimerEvent: {}
+[42.163245] (-) TimerEvent: {}
+[42.264572] (-) TimerEvent: {}
+[42.365785] (-) TimerEvent: {}
+[42.436976] (px4_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_opensplice_cpp.so\x1b[0m\n'}
+[42.466141] (-) TimerEvent: {}
+[42.567213] (-) TimerEvent: {}
+[42.668077] (-) TimerEvent: {}
+[42.768945] (-) TimerEvent: {}
+[42.864509] (px4_msgs) StdoutLine: {'line': b'[ 60%] Built target px4_msgs__rosidl_typesupport_opensplice_cpp\n'}
+[42.869179] (-) TimerEvent: {}
+[42.905489] (px4_msgs) StdoutLine: {'line': b'[ 62%] \x1b[34m\x1b[1mGenerating C type support for PrismTech OpenSplice\x1b[0m\n'}
+[42.969419] (-) TimerEvent: {}
+[43.070600] (-) TimerEvent: {}
+[43.171750] (-) TimerEvent: {}
+[43.259501] (px4_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[43.272023] (-) TimerEvent: {}
+[43.372866] (-) TimerEvent: {}
+[43.473754] (-) TimerEvent: {}
+[43.518472] (px4_msgs) StdoutLine: {'line': b'[ 63%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[43.573961] (-) TimerEvent: {}
+[43.674983] (-) TimerEvent: {}
+[43.776041] (-) TimerEvent: {}
+[43.877109] (-) TimerEvent: {}
+[43.977860] (-) TimerEvent: {}
+[44.078621] (-) TimerEvent: {}
+[44.179338] (-) TimerEvent: {}
+[44.280039] (-) TimerEvent: {}
+[44.380749] (-) TimerEvent: {}
+[44.481455] (-) TimerEvent: {}
+[44.582153] (-) TimerEvent: {}
+[44.682908] (-) TimerEvent: {}
+[44.783565] (-) TimerEvent: {}
+[44.884248] (-) TimerEvent: {}
+[44.984951] (-) TimerEvent: {}
+[45.085659] (-) TimerEvent: {}
+[45.186476] (-) TimerEvent: {}
+[45.287179] (-) TimerEvent: {}
+[45.387933] (-) TimerEvent: {}
+[45.488642] (-) TimerEvent: {}
+[45.589348] (-) TimerEvent: {}
+[45.690054] (-) TimerEvent: {}
+[45.790758] (-) TimerEvent: {}
+[45.891497] (-) TimerEvent: {}
+[45.992254] (-) TimerEvent: {}
+[46.092959] (-) TimerEvent: {}
+[46.193691] (-) TimerEvent: {}
+[46.294479] (-) TimerEvent: {}
+[46.395225] (-) TimerEvent: {}
+[46.495987] (-) TimerEvent: {}
+[46.596630] (-) TimerEvent: {}
+[46.697351] (-) TimerEvent: {}
+[46.798067] (-) TimerEvent: {}
+[46.898825] (-) TimerEvent: {}
+[46.999554] (-) TimerEvent: {}
+[47.100273] (-) TimerEvent: {}
+[47.200929] (-) TimerEvent: {}
+[47.301630] (-) TimerEvent: {}
+[47.402291] (-) TimerEvent: {}
+[47.503001] (-) TimerEvent: {}
+[47.603709] (-) TimerEvent: {}
+[47.704447] (-) TimerEvent: {}
+[47.805148] (-) TimerEvent: {}
+[47.905844] (-) TimerEvent: {}
+[48.006561] (-) TimerEvent: {}
+[48.107228] (-) TimerEvent: {}
+[48.207974] (-) TimerEvent: {}
+[48.308671] (-) TimerEvent: {}
+[48.409374] (-) TimerEvent: {}
+[48.510085] (-) TimerEvent: {}
+[48.610752] (-) TimerEvent: {}
+[48.711410] (-) TimerEvent: {}
+[48.812161] (-) TimerEvent: {}
+[48.912871] (-) TimerEvent: {}
+[49.013587] (-) TimerEvent: {}
+[49.114314] (-) TimerEvent: {}
+[49.215057] (-) TimerEvent: {}
+[49.315791] (-) TimerEvent: {}
+[49.416510] (-) TimerEvent: {}
+[49.517178] (-) TimerEvent: {}
+[49.617885] (-) TimerEvent: {}
+[49.718598] (-) TimerEvent: {}
+[49.819315] (-) TimerEvent: {}
+[49.920087] (-) TimerEvent: {}
+[50.020773] (-) TimerEvent: {}
+[50.121465] (-) TimerEvent: {}
+[50.222221] (-) TimerEvent: {}
+[50.306267] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_c\x1b[0m\n'}
+[50.322469] (-) TimerEvent: {}
+[50.423176] (-) TimerEvent: {}
+[50.523908] (-) TimerEvent: {}
+[50.607472] (px4_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_c/px4_msgs/msg/dds_opensplice_c/vehicle_local_position__type_support_c.cpp.o\x1b[0m\n'}
+[50.608352] (px4_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_c/px4_msgs/msg/dds_opensplice_c/manual_control_setpoint__type_support_c.cpp.o\x1b[0m\n'}
+[50.609285] (px4_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.cpp.o\x1b[0m\n'}
+[50.610375] (px4_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.cpp.o\x1b[0m\n'}
+[50.624212] (-) TimerEvent: {}
+[50.725374] (-) TimerEvent: {}
+[50.826505] (-) TimerEvent: {}
+[50.927656] (-) TimerEvent: {}
+[51.005555] (px4_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.cpp.o\x1b[0m\n'}
+[51.028029] (-) TimerEvent: {}
+[51.128824] (-) TimerEvent: {}
+[51.229697] (-) TimerEvent: {}
+[51.258770] (px4_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.cpp.o\x1b[0m\n'}
+[51.329911] (-) TimerEvent: {}
+[51.431119] (-) TimerEvent: {}
+[51.539368] (-) TimerEvent: {}
+[51.640589] (-) TimerEvent: {}
+[51.741781] (-) TimerEvent: {}
+[51.842992] (-) TimerEvent: {}
+[51.944206] (-) TimerEvent: {}
+[52.045380] (-) TimerEvent: {}
+[52.051911] (px4_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.cpp.o\x1b[0m\n'}
+[52.145824] (-) TimerEvent: {}
+[52.246954] (-) TimerEvent: {}
+[52.296168] (px4_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.cpp.o\x1b[0m\n'}
+[52.347170] (-) TimerEvent: {}
+[52.449042] (-) TimerEvent: {}
+[52.489709] (px4_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.cpp.o\x1b[0m\n'}
+[52.549249] (-) TimerEvent: {}
+[52.578181] (px4_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c.dir/rosidl_typesupport_opensplice_cpp/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.cpp.o\x1b[0m\n'}
+[52.649481] (-) TimerEvent: {}
+[52.750570] (-) TimerEvent: {}
+[52.851380] (-) TimerEvent: {}
+[52.952328] (-) TimerEvent: {}
+[53.053111] (-) TimerEvent: {}
+[53.153925] (-) TimerEvent: {}
+[53.254739] (-) TimerEvent: {}
+[53.355547] (-) TimerEvent: {}
+[53.456369] (-) TimerEvent: {}
+[53.557122] (-) TimerEvent: {}
+[53.634976] (px4_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libpx4_msgs__rosidl_typesupport_opensplice_c.so\x1b[0m\n'}
+[53.657380] (-) TimerEvent: {}
+[53.758226] (-) TimerEvent: {}
+[53.859086] (-) TimerEvent: {}
+[53.959999] (-) TimerEvent: {}
+[53.978711] (px4_msgs) StdoutLine: {'line': b'[ 82%] Built target px4_msgs__rosidl_typesupport_opensplice_c\n'}
+[54.015758] (px4_msgs) StdoutLine: {'line': b'[ 82%] Built target px4_msgs\n'}
+[54.035266] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__py\x1b[0m\n'}
+[54.057436] (px4_msgs) StdoutLine: {'line': b'[ 84%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[54.060171] (-) TimerEvent: {}
+[54.160947] (-) TimerEvent: {}
+[54.261852] (-) TimerEvent: {}
+[54.362577] (-) TimerEvent: {}
+[54.463280] (-) TimerEvent: {}
+[54.563992] (-) TimerEvent: {}
+[54.664706] (-) TimerEvent: {}
+[54.765409] (-) TimerEvent: {}
+[54.866117] (-) TimerEvent: {}
+[54.966817] (-) TimerEvent: {}
+[55.067470] (-) TimerEvent: {}
+[55.168241] (-) TimerEvent: {}
+[55.268945] (-) TimerEvent: {}
+[55.369649] (-) TimerEvent: {}
+[55.470351] (-) TimerEvent: {}
+[55.571093] (-) TimerEvent: {}
+[55.671835] (-) TimerEvent: {}
+[55.772535] (-) TimerEvent: {}
+[55.873583] (-) TimerEvent: {}
+[55.974281] (-) TimerEvent: {}
+[56.075044] (-) TimerEvent: {}
+[56.175830] (-) TimerEvent: {}
+[56.276575] (-) TimerEvent: {}
+[56.377276] (-) TimerEvent: {}
+[56.477972] (-) TimerEvent: {}
+[56.578690] (-) TimerEvent: {}
+[56.679384] (-) TimerEvent: {}
+[56.780131] (-) TimerEvent: {}
+[56.880833] (-) TimerEvent: {}
+[56.981482] (-) TimerEvent: {}
+[57.082228] (-) TimerEvent: {}
+[57.183012] (-) TimerEvent: {}
+[57.283710] (-) TimerEvent: {}
+[57.384449] (-) TimerEvent: {}
+[57.485151] (-) TimerEvent: {}
+[57.585905] (-) TimerEvent: {}
+[57.686618] (-) TimerEvent: {}
+[57.787346] (-) TimerEvent: {}
+[57.888042] (-) TimerEvent: {}
+[57.988739] (-) TimerEvent: {}
+[58.089446] (-) TimerEvent: {}
+[58.190159] (-) TimerEvent: {}
+[58.291237] (-) TimerEvent: {}
+[58.391993] (-) TimerEvent: {}
+[58.492737] (-) TimerEvent: {}
+[58.593487] (-) TimerEvent: {}
+[58.694231] (-) TimerEvent: {}
+[58.794959] (-) TimerEvent: {}
+[58.895653] (-) TimerEvent: {}
+[58.996380] (-) TimerEvent: {}
+[59.097095] (-) TimerEvent: {}
+[59.197812] (-) TimerEvent: {}
+[59.298511] (-) TimerEvent: {}
+[59.399330] (-) TimerEvent: {}
+[59.500054] (-) TimerEvent: {}
+[59.600754] (-) TimerEvent: {}
+[59.701421] (-) TimerEvent: {}
+[59.802158] (-) TimerEvent: {}
+[59.902898] (-) TimerEvent: {}
+[60.003616] (-) TimerEvent: {}
+[60.104363] (-) TimerEvent: {}
+[60.205074] (-) TimerEvent: {}
+[60.305833] (-) TimerEvent: {}
+[60.406555] (-) TimerEvent: {}
+[60.507270] (-) TimerEvent: {}
+[60.607985] (-) TimerEvent: {}
+[60.708696] (-) TimerEvent: {}
+[60.809411] (-) TimerEvent: {}
+[60.910120] (-) TimerEvent: {}
+[61.010827] (-) TimerEvent: {}
+[61.111534] (-) TimerEvent: {}
+[61.212301] (-) TimerEvent: {}
+[61.312976] (-) TimerEvent: {}
+[61.413692] (-) TimerEvent: {}
+[61.514412] (-) TimerEvent: {}
+[61.615113] (-) TimerEvent: {}
+[61.717074] (-) TimerEvent: {}
+[61.817764] (-) TimerEvent: {}
+[61.918422] (-) TimerEvent: {}
+[62.019116] (-) TimerEvent: {}
+[62.119816] (-) TimerEvent: {}
+[62.220576] (-) TimerEvent: {}
+[62.321276] (-) TimerEvent: {}
+[62.422026] (-) TimerEvent: {}
+[62.522741] (-) TimerEvent: {}
+[62.623545] (-) TimerEvent: {}
+[62.724230] (-) TimerEvent: {}
+[62.824982] (-) TimerEvent: {}
+[62.925742] (-) TimerEvent: {}
+[63.026463] (-) TimerEvent: {}
+[63.127176] (-) TimerEvent: {}
+[63.227936] (-) TimerEvent: {}
+[63.328652] (-) TimerEvent: {}
+[63.429319] (-) TimerEvent: {}
+[63.530030] (-) TimerEvent: {}
+[63.630744] (-) TimerEvent: {}
+[63.731464] (-) TimerEvent: {}
+[63.832217] (-) TimerEvent: {}
+[63.932905] (-) TimerEvent: {}
+[64.033566] (-) TimerEvent: {}
+[64.134289] (-) TimerEvent: {}
+[64.234992] (-) TimerEvent: {}
+[64.335708] (-) TimerEvent: {}
+[64.436455] (-) TimerEvent: {}
+[64.537170] (-) TimerEvent: {}
+[64.637885] (-) TimerEvent: {}
+[64.738609] (-) TimerEvent: {}
+[64.839320] (-) TimerEvent: {}
+[64.940044] (-) TimerEvent: {}
+[65.040757] (-) TimerEvent: {}
+[65.141465] (-) TimerEvent: {}
+[65.242181] (-) TimerEvent: {}
+[65.342886] (-) TimerEvent: {}
+[65.443595] (-) TimerEvent: {}
+[65.544401] (-) TimerEvent: {}
+[65.645134] (-) TimerEvent: {}
+[65.745839] (-) TimerEvent: {}
+[65.846548] (-) TimerEvent: {}
+[65.947255] (-) TimerEvent: {}
+[66.047972] (-) TimerEvent: {}
+[66.148680] (-) TimerEvent: {}
+[66.249323] (-) TimerEvent: {}
+[66.350019] (-) TimerEvent: {}
+[66.450733] (-) TimerEvent: {}
+[66.551458] (-) TimerEvent: {}
+[66.652223] (-) TimerEvent: {}
+[66.752939] (-) TimerEvent: {}
+[66.854968] (-) TimerEvent: {}
+[66.955691] (-) TimerEvent: {}
+[67.056456] (-) TimerEvent: {}
+[67.157170] (-) TimerEvent: {}
+[67.257876] (-) TimerEvent: {}
+[67.358594] (-) TimerEvent: {}
+[67.459317] (-) TimerEvent: {}
+[67.560032] (-) TimerEvent: {}
+[67.660769] (-) TimerEvent: {}
+[67.761478] (-) TimerEvent: {}
+[67.862249] (-) TimerEvent: {}
+[67.963041] (-) TimerEvent: {}
+[68.063768] (-) TimerEvent: {}
+[68.164545] (-) TimerEvent: {}
+[68.265205] (-) TimerEvent: {}
+[68.365900] (-) TimerEvent: {}
+[68.466569] (-) TimerEvent: {}
+[68.567266] (-) TimerEvent: {}
+[68.667975] (-) TimerEvent: {}
+[68.768660] (-) TimerEvent: {}
+[68.869413] (-) TimerEvent: {}
+[68.970227] (-) TimerEvent: {}
+[69.035349] (px4_msgs) StdoutLine: {'line': b'[ 84%] Built target px4_msgs__py\n'}
+[69.056497] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__python\x1b[0m\n'}
+[69.070474] (-) TimerEvent: {}
+[69.122314] (px4_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__python.dir/rosidl_generator_py/px4_msgs/msg/_manual_control_setpoint_s.c.o\x1b[0m\n'}
+[69.123079] (px4_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__python.dir/rosidl_generator_py/px4_msgs/msg/_vehicle_local_position_s.c.o\x1b[0m\n'}
+[69.170711] (-) TimerEvent: {}
+[69.271501] (-) TimerEvent: {}
+[69.372442] (-) TimerEvent: {}
+[69.473252] (-) TimerEvent: {}
+[69.574057] (-) TimerEvent: {}
+[69.674864] (-) TimerEvent: {}
+[69.775657] (-) TimerEvent: {}
+[69.777882] (px4_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/px4_msgs/libpx4_msgs__python.so\x1b[0m\n'}
+[69.869009] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__python\n'}
+[69.875919] (-) TimerEvent: {}
+[69.893015] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[69.893756] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[69.894764] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_opensplice_c__pyext\x1b[0m\n'}
+[69.895267] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target px4_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[69.947700] (px4_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[69.960500] (px4_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[69.970772] (px4_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[69.976038] (-) TimerEvent: {}
+[69.986175] (px4_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_typesupport_opensplice_c__pyext.dir/rosidl_generator_py/px4_msgs/_px4_msgs_s.ep.rosidl_typesupport_opensplice_c.c.o\x1b[0m\n'}
+[70.076234] (-) TimerEvent: {}
+[70.177035] (-) TimerEvent: {}
+[70.267303] (px4_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[70.269090] (px4_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[70.277265] (-) TimerEvent: {}
+[70.280662] (px4_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[70.287846] (px4_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[70.355173] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[70.377526] (-) TimerEvent: {}
+[70.400280] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[70.413553] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_opensplice_c__pyext\n'}
+[70.434500] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[70.454891] (px4_msgs) CommandEnded: {'returncode': 0}
+[70.477795] (-) TimerEvent: {}
+[70.578877] (-) TimerEvent: {}
+[70.679970] (-) TimerEvent: {}
+[70.780710] (-) TimerEvent: {}
+[70.836732] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'install'}
+[70.855545] (px4_msgs) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/patryk/ros2_ws/build/px4_msgs'], 'cwd': '/home/patryk/ros2_ws/build/px4_msgs', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'patryk'), ('LANGUAGE', 'en_US'), ('LC_TIME', 'pl_PL.UTF-8'), ('OSPL_INFOFILE', '<stdout>'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '5447'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/patryk/ros2_ws/install/px4_msgs/lib:/home/patryk/ros2_dashing/ros2-linux/opt/yaml_cpp_vendor/lib:/home/patryk/ros2_dashing/ros2-linux/opt/rviz_ogre_vendor/lib:/usr/lib:/home/patryk/ros2_dashing/ros2-linux/lib:/usr/local/cuda-10.2/lib64:'), ('SHLVL', '1'), ('OLDPWD', '/home/patryk'), ('OSPL_URI', 'file:///home/patryk/ros2_dashing/ros2-linux/share/opensplice_cmake_module/config/ros_ospl.xml'), ('HOME', '/home/patryk'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.6'), ('PYENV_SHELL', 'bash'), ('OSPL_VERBOSITY', '2'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('OSPL_TMPL_PATH', '/usr/etc/opensplice/idlpp'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/patryk/ros2_ws/install:/home/patryk/ros2_dashing/ros2-linux'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'patryk'), ('JETSON_SERIAL_NUMBER', '1420322025424'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('JETSON_CODENAME', 'Batuu'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/patryk/ros2_dashing/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/patryk/ros2_dashing/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_ID', 'c1'), ('TERM', 'xterm-256color'), ('LIB_DARKNET', '/home/patryk/darknet/libdarknet.so'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('OSPL_ERRORFILE', '<stderr>'), ('PATH', '/home/patryk/ros2_dashing/ros2-linux/bin:/usr/local/cuda-10.2/bin:/home/patryk/.pyenv/plugins/pyenv-virtualenv/shims:/home/patryk/.pyenv/shims:~/.pyenv/bin:/home/patryk/.local/bin:/home/patryk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_US'), ('XDG_MENU_PREFIX', 'lxde-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('OSPL_HOME', '/usr'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_CONFIG_HOME', '/home/patryk/.config'), ('JETSON_SOC', 'tegra210'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/patryk/.Xauthority'), ('XDG_DATA_HOME', '/home/patryk/.local/share'), ('AMENT_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_ws/install/controller:/home/patryk/ros2_dashing/ros2-linux'), ('SSH_AUTH_SOCK', '/tmp/ssh-dN7tmj0mBDPl/agent.4909'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/patryk'), ('LC_NAME', 'pl_PL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('_LXSESSION_PID', '4909'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/patryk/ros2_ws/build/px4_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('PYTHONPATH', '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages:/home/patryk/ros2_ws/build/controller:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/usr/local/lib:/usr/local/lib/python3.6/pyrealsense2:/home/patryk/ros2_dashing/ros2-linux/lib/python3.6/site-packages:/usr/local/lib'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('VTE_VERSION', '5202'), ('CMAKE_PREFIX_PATH', '/home/patryk/ros2_ws/install/px4_msgs:/home/patryk/ros2_dashing/ros2-linux:/home/patryk/ros2_ws/install/controller'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[70.873008] (px4_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[70.880080] (px4_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[70.880798] (-) TimerEvent: {}
+[70.883450] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/rosidl_interfaces/px4_msgs\n'}
+[70.887642] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so\n'}
+[70.890763] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/library_path.sh\n'}
+[70.895032] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_cpp.so\n'}
+[70.901914] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_c.h\n'}
+[70.903636] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[70.905426] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_fastrtps_c.h\n'}
+[70.910180] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[70.916760] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.h\n'}
+[70.918551] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__functions.h\n'}
+[70.920421] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.h\n'}
+[70.922262] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__type_support.h\n'}
+[70.923959] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[70.925730] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position.h\n'}
+[70.927419] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__functions.h\n'}
+[70.929145] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__struct.h\n'}
+[70.930812] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__type_support.h\n'}
+[70.935130] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so\n'}
+[70.942105] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[70.943818] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[70.945585] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[70.949773] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[70.955606] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint.hpp\n'}
+[70.957338] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__struct.hpp\n'}
+[70.959023] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__traits.hpp\n'}
+[70.960729] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position.hpp\n'}
+[70.962410] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__struct.hpp\n'}
+[70.964100] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__traits.hpp\n'}
+[70.969698] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_c.h\n'}
+[70.971398] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[70.973149] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_introspection_c.h\n'}
+[70.977248] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so\n'}
+[70.980967] (-) TimerEvent: {}
+[70.984120] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h\n'}
+[70.985867] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_c__visibility_control.h\n'}
+[70.987564] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_opensplice_c.h\n'}
+[70.991712] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_c.so\n'}
+[70.997210] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.idl\n'}
+[70.998911] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.idl\n'}
+[71.010254] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_.h\n'}
+[71.012305] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps.h\n'}
+[71.017382] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_Dcps_impl.h\n'}
+[71.018143] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ManualControlSetpoint_SplDcps.h\n'}
+[71.018597] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_.h\n'}
+[71.019918] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps.h\n'}
+[71.021699] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_Dcps_impl.h\n'}
+[71.023378] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/VehicleLocalPosition_SplDcps.h\n'}
+[71.025176] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_ManualControlSetpoint_.h\n'}
+[71.026938] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/dds_opensplice/ccpp_VehicleLocalPosition_.h\n'}
+[71.028658] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_cpp.hpp\n'}
+[71.030330] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/rosidl_typesupport_opensplice_cpp__visibility_control.h\n'}
+[71.032080] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_opensplice_cpp.hpp\n'}
+[71.036352] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_opensplice_cpp.so\n'}
+[71.041953] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[71.043611] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/include/px4_msgs/msg/vehicle_local_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[71.047805] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[71.050889] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/pythonpath.sh\n'}
+[71.053872] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py\n'}
+[71.059296] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/__init__.py\n'}
+[71.061053] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_manual_control_setpoint.py\n'}
+[71.062749] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/msg/_vehicle_local_position.py\n'}
+[71.067013] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[71.071188] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[71.075327] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[71.079394] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/px4_msgs_s__rosidl_typesupport_opensplice_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[71.081072] (-) TimerEvent: {}
+[71.083698] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/lib/libpx4_msgs__python.so\n'}
+[71.086833] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.idl\n'}
+[71.089812] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/VehicleLocalPosition.idl\n'}
+[71.092830] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/ManualControlSetpoint.msg\n'}
+[71.095784] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/msg/VehicleLocalPosition.msg\n'}
+[71.098864] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/package_run_dependencies/px4_msgs\n'}
+[71.101957] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/parent_prefix_path/px4_msgs\n'}
+[71.104951] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/ament_prefix_path.sh\n'}
+[71.108127] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/environment/path.sh\n'}
+[71.111511] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.bash\n'}
+[71.114495] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.sh\n'}
+[71.117626] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/local_setup.zsh\n'}
+[71.120847] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/ament_index/resource_index/packages/px4_msgs\n'}
+[71.123827] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[71.126841] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[71.129782] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[71.132843] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[71.135815] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[71.138889] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig.cmake\n'}
+[71.140730] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/cmake/px4_msgsConfig-version.cmake\n'}
+[71.143573] (px4_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/patryk/ros2_ws/install/px4_msgs/share/px4_msgs/package.xml\n'}
+[71.181279] (-) TimerEvent: {}
+[71.282033] (-) TimerEvent: {}
+[71.382774] (-) TimerEvent: {}
+[71.443234] (px4_msgs) StdoutLine: {'line': b"Compiling '/home/patryk/ros2_ws/install/px4_msgs/lib/python3.6/site-packages/px4_msgs/__init__.py'...\n"}
+[71.470715] (px4_msgs) CommandEnded: {'returncode': 0}
+[71.482959] (-) TimerEvent: {}
+[71.583825] (-) TimerEvent: {}
+[71.685183] (-) TimerEvent: {}
+[71.785857] (-) TimerEvent: {}
+[71.886718] (-) TimerEvent: {}
+[71.952492] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 0}
+[71.956353] (-) EventReactorShutdown: {}

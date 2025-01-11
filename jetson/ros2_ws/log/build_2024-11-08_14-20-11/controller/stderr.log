@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "setup.py", line 1, in <module>
+    from setuptools import setup
+  File "/home/patryk/.local/lib/python3.6/site-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/home/patryk/.local/lib/python3.6/site-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/home/patryk/.local/lib/python3.6/site-packages/pkg_resources/__init__.py", line 33, in <module>
+    import email.parser
+  File "/usr/lib/python3.6/email/parser.py", line 12, in <module>
+    from email.feedparser import FeedParser, BytesFeedParser
+  File "/usr/lib/python3.6/email/feedparser.py", line 27, in <module>
+    from email._policybase import compat32
+  File "/usr/lib/python3.6/email/_policybase.py", line 9, in <module>
+    from email.utils import _has_surrogates
+  File "/usr/lib/python3.6/email/utils.py", line 126, in <module>
+    ''', re.VERBOSE | re.IGNORECASE)
+  File "/usr/lib/python3.6/re.py", line 233, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python3.6/re.py", line 301, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.6/sre_compile.py", line 566, in compile
+    code = _code(p, flags)
+  File "/usr/lib/python3.6/sre_compile.py", line 551, in _code
+    _compile(code, p.data, flags)
+  File "/usr/lib/python3.6/sre_compile.py", line 73, in _compile
+    not (flags & SRE_FLAG_LOCALE) and
+  File "/usr/lib/python3.6/enum.py", line 806, in __and__
+    return self.__class__(self._value_ & self.__class__(other)._value_)
+  File "/usr/lib/python3.6/enum.py", line 293, in __call__
+    return cls.__new__(cls, value)
+KeyboardInterrupt

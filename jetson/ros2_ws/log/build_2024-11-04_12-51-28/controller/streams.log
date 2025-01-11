@@ -1,0 +1,23 @@
+[4.822s] Invoking command in '/home/patryk/ros2_ws/src/controller': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/patryk/ros2_ws/build/controller/build install --record /home/patryk/ros2_ws/build/controller/install.log --install-scripts $base/lib/controller --single-version-externally-managed
+[6.305s] /home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[6.305s]   % (opt, underscore_opt)
+[6.467s] running egg_info
+[6.470s] writing ../../build/controller/controller.egg-info/PKG-INFO
+[6.472s] writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt
+[6.474s] writing entry points to ../../build/controller/controller.egg-info/entry_points.txt
+[6.475s] writing requirements to ../../build/controller/controller.egg-info/requires.txt
+[6.475s] writing top-level names to ../../build/controller/controller.egg-info/top_level.txt
+[6.488s] reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[6.495s] writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'
+[6.496s] running build
+[6.496s] running build_py
+[6.498s] running install
+[6.500s] running install_lib
+[6.506s] running install_data
+[6.508s] running install_egg_info
+[6.515s] removing '/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info' (and everything under it)
+[6.517s] Copying ../../build/controller/controller.egg-info to /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller-0.0.0-py3.6.egg-info
+[6.520s] running install_scripts
+[6.605s] Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller
+[6.608s] writing list of installed files to '/home/patryk/ros2_ws/build/controller/install.log'
+[6.722s] Invoked command in '/home/patryk/ros2_ws/src/controller' returned '0': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controller build --build-base /home/patryk/ros2_ws/build/controller/build install --record /home/patryk/ros2_ws/build/controller/install.log --install-scripts $base/lib/controller --single-version-externally-managed

@@ -1,0 +1,7 @@
+{
+  "package_name": "px4_msgs",
+  "non_idl_tuples": [
+    "/home/patryk/ros2_ws/src/px4_msgs:msg/ManualControlSetpoint.msg",
+    "/home/patryk/ros2_ws/src/px4_msgs:msg/VehicleLocalPosition.msg"
+  ]
+}

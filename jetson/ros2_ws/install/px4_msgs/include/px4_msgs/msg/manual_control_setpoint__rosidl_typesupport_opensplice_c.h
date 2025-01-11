@@ -1,0 +1,1 @@
+/home/patryk/ros2_ws/build/px4_msgs/rosidl_typesupport_opensplice_c/px4_msgs/msg/manual_control_setpoint__rosidl_typesupport_opensplice_c.h

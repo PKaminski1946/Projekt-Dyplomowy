@@ -1,0 +1,19 @@
+[6.261s] Invoking command in '/home/patryk/ros2_ws/build/controller': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/patryk/ros2_ws/build/controller/build --no-deps install_data
+[7.858s] /home/patryk/.local/lib/python3.6/site-packages/setuptools/dist.py:720: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[7.858s]   % (opt, underscore_opt)
+[8.119s] running develop
+[9.146s] running egg_info
+[9.147s] writing controller.egg-info/PKG-INFO
+[9.147s] writing dependency_links to controller.egg-info/dependency_links.txt
+[9.148s] writing entry points to controller.egg-info/entry_points.txt
+[9.149s] writing requirements to controller.egg-info/requires.txt
+[9.149s] writing top-level names to controller.egg-info/top_level.txt
+[9.167s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[9.173s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[9.473s] running build_ext
+[9.474s] Creating /home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages/controller.egg-link (link to .)
+[9.477s] Installing controller script to /home/patryk/ros2_ws/install/controller/lib/controller
+[9.478s] 
+[9.479s] Installed /home/patryk/ros2_ws/build/controller
+[9.480s] running install_data
+[9.631s] Invoked command in '/home/patryk/ros2_ws/build/controller' returned '0': PYTHONPATH=/home/patryk/ros2_ws/build/controller/prefix_override:/home/patryk/ros2_ws/install/controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/patryk/ros2_ws/build/controller/build --no-deps install_data
