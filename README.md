@@ -1,6 +1,9 @@
 # Projekt Dyplomowy
 Repozytorium zawiera wszystkie pliki wykorzystane w trakcie realizacji projektu dyplomowego.
 
+## Arduino
+Folder 'arduino' zawiera skrypt wykorzystany w ramach układu przełączającego.
+
 ## Jetson Nano
 
 W folderze 'jetson' zostały umieszczone pliki wykorzystywane na platformie Jetson Nano. Skrypt kontrolera wykorzystywanego w ramach symulacji HIL zrealizowany został w ramach 'node' ROS2 znajdującego się w folderze ros2_ws. Pozostałe skrypty znajdujące się w folderze odpowiadają za wyświetlanie przetworzonego strumienia wideo oraz jego zapis. Znajduje się tam również zmodyfikowany skrypt kontrolera przystosowany do współpracy z rzeczywistym sprzętem.
